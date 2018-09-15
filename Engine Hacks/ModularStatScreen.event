@@ -11,7 +11,7 @@
   POIN MSS_page1|1 MSS_page2|1 MSS_page3|1 MSS_page4|1
 
   ORG $88690
-  BYTE 4 //make 4 pages
+  BYTE 3 //make 4 pages
 
   ORG $88650
   POIN NewPageNameGraphic
@@ -214,11 +214,11 @@ NewPageNamePalette:
 	New_Palettes:
 	#include "MSS/Display Growths Options/New Palette.txt"
 
-  TxtData0x0D4B:
-  String(Donate to Circles)
-  BYTE 0
-  ALIGN 4
-  setText(0x0D4B,TxtData0x0D4B)
+//  TxtData0x0D4B:
+//  String(Donate to Circles)
+//  BYTE 0
+//  ALIGN 4
+//  setText(0x0D4B,TxtData0x0D4B)
   
   /*stat screen R menu is at 8a00b38
 find by breaking on key press while R menu open
