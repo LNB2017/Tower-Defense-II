@@ -4,7 +4,7 @@
 #include "_Common.event"
 
 pMovModifiers: // Movement
-	POIN prAddUnitBaseMov prAddUnitMovBonus prRallyMov prSkillCelerity prNullifyIfGuardAI prNullifyIfFreeze
+	POIN prAddUnitBaseMov prAddUnitMovBonus prRallyMov prSkillCelerity prNullifyIfGuardAI prNullifyIfFreeze prTDMove
 WORD 0
 
 prAddUnitBaseMov: // byte 0x12 in ROM class data is base class movement
@@ -30,4 +30,9 @@ prRallyMov:
 	#incbin "_asm/RallyMov.bin"
 	WORD DebuffTable
 
+prTDMove:
+	#incbin "_asm/TDMove.bin"
+	POIN SkillTester
+	WORD PassableID
+	
 #endif // MODULAR_GETTER_MOVEMENT_EVENT

@@ -1,0 +1,143 @@
+//make pathfinding arrow not screw up
+
+//Modify global mov cap, according to Venno (gonna change it to 30)
+#define ExtraMov 45 //(max value minus 0xF)
+#define MovCap 0x0F+ExtraMov
+#define YCoord 0x41+ExtraMov
+#define Add55 0x55+(ExtraMov*2)
+#define Move_Ram_Loc 0x203FB00
+
+PUSH
+
+//Change movement cap
+ORG $18286
+BYTE MovCap
+ORG $18290
+BYTE MovCap
+ORG $87310
+BYTE MovCap
+
+//Change place that everything is written to
+ORG $59DBA0
+WORD Move_Ram_Loc
+
+//Change y coord location by adding 0x50 instead of 0x41 at certain spots
+ORG $32ACC //write when selecting new character (also when moving) (seems to be related to the cursor blinking)
+BYTE YCoord
+ORG $32B3C //read when selecting a character, also when returning cursor onto character
+BYTE YCoord
+ORG $32FA0 //read after moving
+BYTE YCoord
+ORG $331C2 //read
+BYTE YCoord
+ORG $330AE //read
+BYTE YCoord
+ORG $33120 //read
+BYTE YCoord
+ORG $32C6A //read; not sure under what circumstances this is called (same with rest)
+BYTE YCoord
+ORG $32A44
+BYTE YCoord
+ORG $32C1C
+BYTE YCoord
+ORG $32C46
+BYTE YCoord
+ORG $32CE0
+BYTE YCoord
+ORG $32D4E
+BYTE YCoord
+ORG $32DD4
+BYTE YCoord
+
+//Change whatever's after the y coordinates to be shifted down by 0x1E (2*0xF)
+//For cases that are add (register)
+ORG $32AE2
+BYTE Add55
+ORG $32F54
+BYTE Add55
+ORG $32E80
+BYTE Add55
+ORG $32A3A
+BYTE Add55
+ORG $32D58
+BYTE Add55
+ORG $32FEA
+BYTE Add55
+//This one is in the same vein, but adds 0x2C and then 0x29, rather than 0x55 directly
+ORG $32A10
+BYTE Add55-0x29 
+
+POP
+
+/*
+Project: Modify movement. Success uncertain.
+ROM: FE8
+
+0x03004BB0 is where movement table is written to
+Called at 1A4CC (pathfinder modifies this), function beginning at 1A570, 1B9E4? (just loads that and bx's), 40DCC, 40E04, 40E34
+
+break on read to 3004BB0 yields a read at 3003CDC; follow this
+
+According to Hextator's doc, in FE7:
+0x0202E3E0 - Points to pointers detailed below (except for first) (not in order)
+0x0202E3F8 - Row pointers for unit map (byte per tile with value == byte at +0x0B in unit struct)
+0x0202EBB8 - Row pointers for terrain map
+0x0202F370 - Row pointers for fog map (true for visible, false for fog; byte per tile)
+0x0202FB28 - Row pointers for unknown map
+0x020302E0 - Row pointers for movement cost map
+0x03000448 - Row pointers for attack map? (true for can, false for can't?; byte per tile)
+0x03000C00 - Row pointers for move remaining map
+
+If this is true, than the FE8 equivalents appear to be in a table beginning at 202E4D4:
+Offset		Points to	What it is
+0x202E4D4 	N/A			Map width and map height, as halfwords
+0x202E4D8	0x202E4FC	Pointer to another part of this table; might be where the table ends and the actual maps begin?
+0x202E4DC	0x202ECB4	Row pointers for terrain map
+0x202E4E0	0x3000818	Row pointers for attack map? (true for can, false for can't?; byte per tile)
+0x202E4E4	0x3000FD0	Row pointers for red/green squares to display (I think) (hex says move remaining map, whatever that means)
+0x202E4E8	0x202F46C	Row pointers for fog map
+0x202E4EC	0x202FC24	?? (hex says unknown map row pointers)
+0x202E4F0	0x20303DC	Row pointers for movement cost map
+
+Movement arrow graphics at 1396 (A03054), loaded at 32E30
+203A958:
+0x0E: x coord that's being moved to (ie, once you select a square to move to) (updates as soon as A is pressed)
+0x0F: y coord
+0x10: # of squares moved (updates once character has actually moved here)
+
+203A990:
++29: cursor coordinate x (only when character is selected)
++2A: cursor coordinate y 
++2B: total movement
++2C: how long the pathing arrow is at the moment(actually, how many squares you're moving)
++2D: 203A9BD: x coords of squares being passed through (beginning with the square you're currently on)
++41: 203A9D1: y coords of squares being passed through (beginning with the square you're currently on)
++55: 203A9E5: seems to be a counter of how many squares can still be moved. The byte before this has maximum movement, but 0x55 is what gets added
+Set break on read/write at 203A9BE (an x coord):
+break on read at 3308A (unsigned), 331C0 (signed), 33102 (unsigned) (to display the cursor blinking?)
+33092 as well?
+Set break at 330D4; r0 = a number between 0 and the number of squares traversed
+loads pointer at 59DBA0, which happens to be 203A990 (beginning of this struct, I suppose)
+add 2C to that; that's the byte showing squares that you're moving
+
+Set break on read/write at 203A9D2 (a y coord) (these are all reads, btw)
+330AE has a add r1,#0x41 (r1 = 203A990)
+331C2 ditto
+33120 as well
+Now for the writes:
+32ACC for the y coord has an add 0x41
+Could change the 0x41 to a larger number to increase range? But there's some stuff after the y coords, beginning at 203A9E4. Maybe it's movement remaining?
+Set break on read/write to that.
+Gets read at 32B00. Gets written to at 32A1A. Only gets written to when another character is selected; selecting the same one only breaks on read.
+To write to: Takes 203A990, adds 2C (where the path counter is), adds 29 (total of 0x55) to that at 32A10, adds the current path counter (since this is only seen when selecting a new counter, do we assume it's always 0xFFFFFFFF?). Loads maximum movement in r1 (adds 2B to 203A990) and stores that at this place. So I guess this is "how much longer can you keep moving". 
+32AE2 has a add r2,0x55 (203A9E5)
+This means, I guess, that you could have a max of (FF-2B)/3 spaces moved?
+
+Started writing random crap from 2033EFC for no discernable reason
+Function that does this begins at 1A640; takes r0=x coord, r1=y coord, r2 = 2033EFC as parameters
+30049A0 has 20303DC
+This function doesn't break on vanilla; suggests that the function itself isn't the problem, but rather something before it's called
+202E4DC is involved here as well; dunno what it does, though
+*/
+
+
