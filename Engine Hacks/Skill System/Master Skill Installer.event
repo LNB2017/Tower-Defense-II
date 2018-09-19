@@ -175,6 +175,7 @@ PassCheck:
 #incbin "Teq Skills/Pass.dmp"
 POIN SkillTester
 WORD PassID
+WORD PassableID
 
 // PostCombatSkills: //plus lifetaker
 // #incbin "Post Combat Skills/CantoPlus_Galeforce.dmp"

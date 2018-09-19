@@ -168,3 +168,4 @@
 #define StealPlusID 167 //DONE
 #define CaptureID 168 //DONE
 #define BlackMagicID 169 //DONE
+#define PassableID 170 //DONE

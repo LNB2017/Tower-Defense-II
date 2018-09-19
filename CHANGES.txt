@@ -1,0 +1,4 @@
+Changes to skill system:
+
+Modified Pass to check for Passable (skill given to phantoms/thieves), and allies can move through everyone
+Changed growth getters to get char+class growth
