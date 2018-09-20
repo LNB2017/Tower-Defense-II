@@ -1,2 +1,2 @@
-Canto+: Can move again after[N]
-attacking and other actions.[X]
+Promote a unit without[N]
+using a promotion item.[X]

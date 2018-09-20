@@ -10,9 +10,15 @@
 #ifndef DebuffTable
     #define DebuffTable 0x203F100
 #endif
-
+#ifndef Promotion_Branch_Table
+	#define Promotion_Branch_Table 0x95DFA4
+#endif
+	
 #define LunarBrace MoonBracelet
 #define SolarBrace SunBracelet
+
+#define Promote_Action_Byte 0xD //theoretically, this should work
+#define Capture_Event_ID 0xB //event id is set if Capture is allowed
 
 #include "Engine Hacks/Skill System/skill_definitions.event"
 

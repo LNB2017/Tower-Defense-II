@@ -45,7 +45,7 @@ pActionRoutineTable:
 	ActionRoutine(0x321E1)        // 0x0A Drop
 	NoActionRoutine               // 0x0B Take
 	NoActionRoutine               // 0x0C Give
-	NoActionRoutine               // 0x0D ? (Used by Teq in one of his hacks)
+	ActionRoutine(Autopromote_Func|1, True)               // 0x0D ? (Used by Teq in one of his hacks)
 	ActionRoutine(0x323A9)        // 0x0E Talk
 	ActionRoutine(0x323D5)        // 0x0F Support
 	ActionRoutine(0x32271)        // 0x10 Visit

@@ -71,3 +71,16 @@ ally.[X]
 ## UM_CaptureDesc
 Strike a fatal blow with reduced[N]
 stats to capture an enemy.[X]
+
+## UM_Remove
+ Remove[X]
+
+## UM_RemoveDesc
+Remove a unit from the map.[X]
+
+## UM_Promote
+ Promote[X]
+
+## UM_PromoteDesc
+Promote a unit without[N]
+using a promotion item.[X]

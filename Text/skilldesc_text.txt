@@ -687,3 +687,11 @@ defeating it with reduced stats.[X]
 ## SD_BlackMagic
 Black Magic: Skill% chance to[N]
 inflict a random status.[X]
+
+## SD_Passable
+Passable: Enemies can[N]
+pass through this unit.[X]
+
+## SD_Rooted
+Rooted: Once moved, unit cannot be[N]
+removed unless they use a Relocate.[X]

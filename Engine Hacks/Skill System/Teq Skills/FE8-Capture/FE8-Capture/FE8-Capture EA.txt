@@ -76,8 +76,8 @@
 	ALIGN 4
 	Capture_Usability:
 	#incbin "Capture_Usability_Func.dmp"
-	POIN Fill_Capture_Range_Map SkillTester
-	WORD CaptureID
+	POIN Fill_Capture_Range_Map 
+	WORD Capture_Event_ID
 	
 	ALIGN 4
 	Fill_Capture_Range_Map:

@@ -1,4 +1,3 @@
-//#include "FE8-Auto Promotions/FE8-Auto Promotions EA File.txt"
 #include "Movement Arrow EA.txt"
 /*
 PUSH
@@ -83,26 +82,6 @@ Set_Unit_Inventory:
 ALIGN 4
 UntouchableTile:
 #incbin "Untouchable_Tile.dmp"
-
-ALIGN 4
-RemoveUsability:
-#incbin "RemoveUsability.dmp"
-
-ALIGN 4
-RemoveEffect:
-#incbin "RemoveEffect.dmp"
-POIN Remove_Unit_Events
-Remove_Unit_Events:
-CHECK_COORDS 0xFFFF
-SADD 0xCB					//Move results into slot B
-ASMC MakeFakeCurrentUnit|1
-SET_SOMETHING 0xFFFE
-DISA_IF 0xFFFE
-ENDA
-
-ALIGN 4
-MakeFakeCurrentUnit:
-#incbin "MakeFakeCurrentUnit.dmp"
 
 ALIGN 4
 Seed_Random_Numbers:

@@ -1,8 +1,9 @@
 .thumb
 .org 0x0
 
-.equ SkillTester, Fill_Capture_Range_Map+4
-.equ CaptureID, SkillTester+4
+@.equ SkillTester, Fill_Capture_Range_Map+4
+@.equ CaptureID, SkillTester+4
+.equ Capture_Event_ID, Fill_Capture_Range_Map+4
 
 push	{r4-r6,r14}
 ldr		r0,CurrentCharPtr
@@ -16,10 +17,17 @@ lsl		r2,#0x4				@is in ballista
 tst		r1,r2
 bne		RetFalse
 mov		r5,r0
-ldr		r1,CaptureID
-ldr		r2,SkillTester
-mov		r14,r2
-.short	0xF800				@check whether unit has the capture skill
+
+ldr		r0,Capture_Event_ID
+ldr		r3,=#0x8083DA8
+mov		r14,r3
+.short	0xF800
+
+@ldr		r1,CaptureID
+@ldr		r2,SkillTester
+@mov		r14,r2
+@.short	0xF800				@check whether unit has the capture skill
+
 cmp		r0,#0
 beq		RetFalse
 mov		r6,#0x0

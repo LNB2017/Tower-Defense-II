@@ -1,0 +1,2 @@
+Rooted: Once moved, unit cannot be[N]
+removed unless they use a Relocate.[X]

@@ -36,6 +36,10 @@
 #define UM_SwapDesc 0x56
 #define UM_Capture 0x57
 #define UM_CaptureDesc 0x58
+#define UM_Remove 0x59
+#define UM_RemoveDesc 0x5a
+#define UM_Promote 0x5b
+#define UM_PromoteDesc 0x5c
 #define HouseText 0x903
 #define VillageText 0x904
 #define DV1Desc 0x905
@@ -211,3 +215,5 @@
 #define SD_StealPlus 0x9af
 #define SD_Capture 0x9b0
 #define SD_BlackMagic 0x9b1
+#define SD_Passable 0x9b2
+#define SD_Rooted 0x9b3
