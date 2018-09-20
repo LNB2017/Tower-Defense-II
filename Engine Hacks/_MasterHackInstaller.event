@@ -62,7 +62,7 @@ POP
 //start of Free space
 
   //FETD asm
-  #include "FETD asm/_FETD Engine Hacks.txt"
+  //#include "FETD asm/_FETD Engine Hacks.txt" //#included in Buildfile1
   
   //HP Bars (and effective weapon warning)
   #include "HPbars.txt"

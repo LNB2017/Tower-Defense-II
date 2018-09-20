@@ -1,6 +1,6 @@
 cd %~dp0
 
-copy FE8_clean.gba FETD.gba
+copy FE8_clean.gba FETD_1.gba
 
 cd "%~dp0Tables"
 
@@ -12,7 +12,7 @@ echo: | (textprocess_v2 text_buildfile.txt)
 
 cd "%~dp0Event Assembler"
 
-Core A FE8 "-output:%~dp0FETD.gba" "-input:%~dp0ROM Buildfile.event"
+Core A FE8 "-output:%~dp0FETD_1.gba" "-input:%~dp0ROM Buildfile.event"  -symOutput:FETD_Symbols1.txt
 
 rem cd "%~dp0ups"
 

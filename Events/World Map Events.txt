@@ -1,0 +1,34 @@
+
+////////////////////////////////////////////////////
+//                                                //
+// Disassembled with Nintenlord's Event Assembler //
+// Version: 9.10.4713.28131                       //
+// Game: FE8                                      //
+// File: FE8-BTROD.gba                            //
+// Offset: $A39768                                //
+//                                                //
+////////////////////////////////////////////////////
+
+PUSH
+
+ORG $A39768
+
+EVBIT_MODIFY 0x1
+/*
+WM_FADEOUT 0x0 0x0 0x0
+STARTFADE
+FADECOLORS 0xA06 0x0 0x0 0x0 0x0 //makes map black
+STAL 60
+MUSC 0x3 //52 21 23 also options?
+_0x1A25
+SVAL 0xB 0x54000C
+TEXTSHOW 0x8E5
+TEXTEND
+REMA
+*/
+SKIPWN
+ENDA
+
+//MESSAGE Original ending offset is $A39D00 and the new ending offset is CURRENTOFFSET
+
+POP

@@ -1,0 +1,70 @@
+#include EAStdlib.event
+EventPointerTable(0x7, Ch01_Events_Table)
+
+Ch01_Events_Table:
+POIN Ch01_TurnBasedEvents
+POIN Ch01_CharacterBasedEvents
+POIN Ch01_LocationBasedEvents
+POIN Ch01_MiscBasedEvents
+POIN Ch01_Dunno Ch01_Dunno Ch01_Dunno
+POIN Ch01_Tutorial
+POIN Ch01_TrapData Ch01_HMExtraTrapData
+POIN Ch01_Units Ch01_Units
+POIN $0 $0 $0 //these are for skirmish units (ally 1, ally 2, ally 3)
+POIN $0 $0 $0 //(enemy 1, enemy 2, enemy 3)
+POIN Ch01_BeginningScene Ch01_EndingScene
+
+Ch01_TurnBasedEvents:
+END_MAIN
+
+Ch01_CharacterBasedEvents:
+END_MAIN
+
+Ch01_LocationBasedEvents:
+END_MAIN
+
+Ch01_MiscBasedEvents:
+END_MAIN
+
+Ch01_Dunno:
+END_MAIN
+
+Ch01_Tutorial:
+END_MAIN
+
+Ch01_TrapData:
+ENDTRAP
+ALIGN 4
+
+Ch01_HMExtraTrapData:
+ENDTRAP
+ALIGN 4
+
+Ch01_Wagon:
+UNIT Eirika Tent 0 Level(1,Ally,0) [5,3] 0 0 0 0 [0] NoAI
+UNIT
+
+Ch01_Units:
+UNIT Seth Paladin 0 Level(1,Ally,0) [10,15] 0 0 0 0 [IronLance] NoAI
+UNIT Gilliam Knight 0 Level(1,Ally,0) [10,14] 0 0 0 0 [IronLance] NoAI
+UNIT
+
+Ch01_Wave1:
+UNIT 0x80 Priest 0 Level(1,Enemy,1) [4,15] 0 0 0 0 [Physic] NoAI
+UNIT
+
+Ch01_BeginningScene:
+LOAD1 0x1 Ch01_Wagon
+ENUN
+LOAD1 0x1 Ch01_Units
+ENUN
+LOAD1 0x1 Ch01_Wave1
+ENUN
+FADU 0x10
+SVAL 0x3 Initial_Gold_Amount
+GIVEITEMTOMAIN 0x0
+NoFade
+ENDA
+
+Ch01_EndingScene:
+ENDA
