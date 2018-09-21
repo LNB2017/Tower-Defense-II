@@ -1,39 +1,18 @@
+#include "Extensions/Hack Installation.txt"
+#include "Extensions/6CDefinitions.txt"
+
 #include "Movement Arrow EA.txt"
-/*
+#include "FE8-Buy Units/FE8-Buy Unit EA.txt"
+
 PUSH
 
 //Set guard tile ai after moving and don't set bit 2 of status word if wagon
-//ORG $18750
-//callHack_r3(End_Unit_Action)
+ORG $18750
+callHack_r3(End_Unit_Action)
 
 //When player phase ends and the 'has moved' bits are being unset, write guard tile ai
 ORG $1882C
 callHack_r0(End_Phase_Set_Guard)
-
-//Make items purchased in a shop automatically go into storage
-ORG $B4656
-SHORT 0x46C0
-
-//Determines whether a unit can give items to the convoy (currently only thieves can)
-ORG $9DD08
-jumpToHack(Can_Give_To_Convoy)
-
-//Dropped items go directly into the convoy
-ORG $17948
-jumpToHack(Send_Drops_To_Convoy)
-//However, initalizing a unit's inventory *doesn't* go to the convoy
-ORG $17DD8
-BL(0x17950)
-ORG 0x17950
-jumpToHack(Set_Unit_Inventory)
-
-//Seed the initial random numbers with the frame count when pressing Start
-ORG $C637C
-jumpToHack(Seed_Random_Numbers)
-
-//Make random char ids for units
-ORG $F6A0
-callHack_r3(Random_Char_ID)
 
 //Everyone can access Supply
 ORG $23F64
@@ -47,6 +26,37 @@ callHack_r3(No_Negative_Stats)
 ORG $24CEC
 jumpToHack(No_Eligible_NPCs)
 
+//Make items purchased in a shop automatically go into storage
+//ORG $B4656
+//SHORT 0x46C0
+
+//Disable being able to give to the convoy
+//ORG $9DD08
+//SHORT 0xE060
+//ORG $9D679 //color of 'Give' option
+//BYTE 0xE0
+
+//Determines whether a unit can give items to the convoy (currently only thieves can)
+//ORG $9DD08
+//jumpToHack(Can_Give_To_Convoy)
+
+//Dropped items go directly into the convoy
+//ORG $17948
+//jumpToHack(Send_Drops_To_Convoy)
+//However, initalizing a unit's inventory *doesn't* go to the convoy
+//ORG $17DD8
+//BL(0x17950)
+//ORG 0x17950
+//jumpToHack(Set_Unit_Inventory)
+
+//Seed the initial random numbers with the frame count when pressing Start
+//ORG $C637C
+//jumpToHack(Seed_Random_Numbers)
+
+//Make random char ids for units
+//ORG $F6A0
+//callHack_r3(Random_Char_ID)
+
 POP
 
 ALIGN 4
@@ -57,6 +67,17 @@ ALIGN 4
 End_Phase_Set_Guard:
 #incbin "End_Phase_Set_Guard.dmp"
 
+ALIGN 4
+No_Negative_Stats:
+#incbin "No_Negative_Stats.dmp"
+
+ALIGN 4
+No_Eligible_NPCs:
+#incbin "No_Eligible_NPCs.dmp"
+
+
+
+/*
 ALIGN 4
 Can_Give_To_Convoy:
 #incbin "Can_Give_To_Convoy.dmp"
@@ -84,16 +105,4 @@ Seed_Random_Numbers:
 ALIGN 4
 Random_Char_ID:
 #incbin "Random_Char_ID.dmp"
-
-ALIGN 4
-No_Negative_Stats:
-#incbin "No_Negative_Stats.dmp"
-
-ALIGN 4
-No_Eligible_NPCs:
-#incbin "No_Eligible_NPCs.dmp"
-
-ALIGN 4
-RemoveMoney: //Removes money when purchasing new units
-#incbin "RemoveMoney.dmp"
 */

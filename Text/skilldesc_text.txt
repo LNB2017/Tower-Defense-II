@@ -693,5 +693,6 @@ Passable: Enemies can[N]
 pass through this unit.[X]
 
 ## SD_Rooted
-Rooted: Once moved, unit cannot be[N]
-removed unless they use a Relocate.[X]
+Rooted: The unit cannot be[N]
+deleted once moved, unless[N]
+they have used a Relocate item.[X]

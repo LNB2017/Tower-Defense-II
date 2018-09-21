@@ -18,8 +18,6 @@
     //Events
     //#include "Events/Release_map.event"
     //#include "Events/World Map Events Installer.event"
-    #include "Events/Ch01 Events.txt"
-    #include "Events/World Map Events.event"
 
     //Maps
     //#include "Maps/Master Map Installer.event"

@@ -1,0 +1,21 @@
+#0xBEE Buy_Name
+ Buy[X]
+
+## Buy_NameDesc
+Purchase a unit.[X]
+
+## Cant_Buy_Text_ID
+The maximum number of units[N]
+has already been deployed.[X]
+
+## Pow_Text_ID
+Pow[X]
+
+## Promotions_Text_ID
+Promotes to:[X]
+
+## Uses_Text_ID
+Wields:[X]
+
+## Skills_Text_ID
+Skills:[X]

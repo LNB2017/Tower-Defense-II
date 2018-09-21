@@ -2,4 +2,5 @@ Changes to skill system:
 
 Modified Pass to check for Passable (skill given to phantoms/thieves), and allies can move through everyone
 Changed growth getters to get char+class growth
-Removed Trade, Rescue, and Support, and added Remove and Promote (added Rooted skill) (updated Capture usability check to look for an event ID instead)
+Removed Rescue and Support, and added Remove and Promote (added Rooted skill) (updated Capture usability check to look for an event ID instead)
+Added the Buy Units menu, and modified it to display skills

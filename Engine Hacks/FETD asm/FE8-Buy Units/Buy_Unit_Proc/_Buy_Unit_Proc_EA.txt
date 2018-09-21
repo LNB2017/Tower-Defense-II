@@ -1,0 +1,133 @@
+#define Buy_Unit(unit_name, unit_price, usability) "BYTE unit_name 0; SHORT unit_price; POIN usability"
+
+ALIGN 4
+Buy_Unit_Table_Unpromoted:
+Buy_Unit(Knight, 50, 0)
+Buy_Unit(Mercenary, 200, 0)
+Buy_Unit(Thief, 6000, 0)
+Buy_Unit(Archer, 200, 0)
+Buy_Unit(Myrmidon, 100, 0)
+Buy_Unit(Mage, 400, 0)
+Buy_Unit(Priest, 500, 0)
+Buy_Unit(Shaman, 500, 0)
+Buy_Unit(Cavalier, 1, 0)
+BYTE 0 //Terminator
+
+ALIGN 4
+Buy_Unit_Table_Promoted:
+Buy_Unit(General, 500, 0)
+Buy_Unit(Paladin, 1000, 0)
+Buy_Unit(Sage, 750, Sample|1)
+BYTE 0 //Terminator
+
+ALIGN 4
+Sample:
+SHORT 0x2000 0x4770
+
+ALIGN 4
+Buy_Unit_Proc:
+_6C_CALL_ROUTINE(0x15361)	//Block proc thread 2; seems to be the way to start many things
+_6C_YIELD
+_6C_CALL_ROUTINE(0x8D151)	//Deletes the minimug box, terrain box, and goal box procs (with a couple of others), clears bg0 and bg1
+_6C_CALL_ROUTINE(Set_Up_Menu|1)
+
+_6C_LABEL(0x0)				//Keypress and OAM loop
+_6C_LOOP_ROUTINE(Keypress_Check|1)
+
+_6C_LABEL(0xA)				//A button
+_6C_CALL_ROUTINE(A_Press|1)
+_6C_CALL_ROUTINE(0x1A1F5)
+_6C_CALL_ROUTINE(0x271A1)	//updates standing map sprites
+//Keep going to close the menu, so make sure this stays in the same order
+
+_6C_LABEL(0xB)				//B button
+//_6C_CALL_ROUTINE(0x13F59)
+//_6C_CALL_ROUTINE(0x301B9)	//UnblockGameGraphic
+_6C_CALL_ROUTINE(0x311A9)	//ReloadGameCoreGraphics
+_6C_CALL_ROUTINE(0x15371)	//not sure
+_6C_END
+
+ALIGN 4
+Set_Up_Menu:
+#incbin "Set_Up_Menu.dmp"
+POIN Fill_In_Menu Calc_Max_Entries Put_Image_Together
+POIN Buy_Menu_Graphics Buy_Menu_TSA Buy_Menu_Palette
+POIN StatNameTextIDList Draw_Description_Pane
+SHORT Promotions_Text_ID Uses_Text_ID Skills_Text_ID 0
+
+ALIGN 4
+StatNameTextIDList:
+SHORT 0x4E9 Pow_Text_ID 0x4EC 0x4ED 0x4EE 0x4EF 0x4F0 0x4F7
+
+ALIGN 4
+Fill_In_Menu: //calls stuff to write things
+#incbin "Fill_In_Menu.dmp"
+POIN Write_Entry_To_BG_Buffer Calc_Max_Entries
+
+ALIGN 4
+Write_Entry_To_BG_Buffer: //ok i lied, this does the actual writing
+#incbin "Write_Entry_To_BG_Buffer.dmp"
+POIN Get_Entry_Pointer
+
+ALIGN 4
+Get_Entry_Pointer:
+#incbin "Get_Entry_Pointer.dmp"
+POIN Buy_Unit_Table_Unpromoted
+POIN Buy_Unit_Table_Promoted
+
+ALIGN 4
+Calc_Max_Entries:
+#incbin "Calc_Max_Entries.dmp"
+POIN Buy_Unit_Table_Unpromoted
+POIN Buy_Unit_Table_Promoted
+
+ALIGN 4
+Keypress_Check:
+#incbin "Keypress_Check.dmp"
+POIN Draw_Description_Pane Fill_In_Menu Calc_Max_Entries
+
+ALIGN 4
+A_Press:
+#incbin "A_Press.dmp"
+POIN Get_Entry_Pointer Get_Unit_Level
+
+ALIGN 4
+Get_Unit_Level:
+#incbin "Get_Unit_Level.dmp"
+
+ALIGN 4
+MESSAGE draw desc at CURRENTOFFSET
+Draw_Description_Pane:
+#incbin "Draw_Description_Pane.dmp"
+POIN Get_Entry_Pointer Get_Unit_Level PromotionTable ClassSkillTable LevelUpSkillTable
+
+ALIGN 4
+Buy_Menu_Graphics:
+#incbin "Buy_Menu_Background.img.bin"
+
+ALIGN 4
+Buy_Menu_TSA:
+BYTE 30 20 //size
+#incbin "Buy_Menu_Background.map.bin"
+
+ALIGN 4
+Buy_Menu_Palette:
+#incbin "Buy_Menu_Background.pal.bin"
+
+ALIGN 4
+Put_Image_Together:
+#incbin "Put_Image_Together.dmp"
+
+/*
+set up backgrounds
+set up text
+call loop thingy
+if A, buy unit and close
+if B, close
+if arrow keys, move
+if L or R, switch panes
+
+call 3c94, which sets font to default values
+
+B5164 takes r0 = text struct, r1 = item id/uses, r2 = char data ptr, r3 = bg offset to write to
+*/

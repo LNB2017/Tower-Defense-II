@@ -1,2 +1,2 @@
-Steady Stance: +6 defense[NL]
+Fierce Stance: +6 attack[NL]
 when foe initiates battle.[X]

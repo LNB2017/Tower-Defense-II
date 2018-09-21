@@ -252,6 +252,20 @@
 .macro draw_move_bar_with_getter_at, bar_x, bar_y
 @base in r3, final in sp, cap in sp+4, call getter
   mov r1, r8
+  
+  ldrb	r0,[r1,#0xB]
+  mov	r2,#0xC0
+  tst	r0,r2
+  bne	NormalMov
+  mov	r0,#0x41
+  ldrb	r0,[r1,r0]
+  mov	r2,#0x20
+  tst	r0,r2
+  bne	NormalMov
+  mov	r3,#60
+  b		CheckMovGetter
+  
+  NormalMov:
   ldr     r0,[r1,#0x4] @class
   mov     r3,#0x12     @move
   ldsb    r3,[r0,r3]  
@@ -259,6 +273,7 @@
   @ ldsb    r0,[r1,r0]   
   @ add     r0,r0,r3    
 
+  CheckMovGetter:
   push {r1-r3}
   mov r0, r8
   blh MovGetter

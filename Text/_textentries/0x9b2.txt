@@ -1,2 +1,1 @@
-Passable: Enemies can[N]
-pass through this unit.[X]
+Steal: Unit can steal items.[X]

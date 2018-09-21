@@ -26,14 +26,26 @@ Learned  [X]
 Freeze all enemies[N]
 for one turn[X]
 
-## nameCamus
-#for identity problems
-Camus[X]
+## Buy_Name
+ Buy[X]
 
-## nameSirius
-Sirius[X]
+## Buy_NameDesc
+Purchase a unit.[X]
 
-## nameZeke
-Zeke[X]
+## Cant_Buy_Text_ID
+You already have the[N]
+maximum number of units![X]
+
+## Pow_Text_ID
+Pow[X]
+
+## Promotions_Text_ID
+Promotes to:[X]
+
+## Uses_Text_ID
+Wields:[X]
+
+## Skills_Text_ID
+Skills:[X]
 
 #include "skilldesc_text.txt"
