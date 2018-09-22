@@ -1,16 +1,16 @@
 EphraimLordSkillList:
 // BYTE 1 OddRhythmID
 //BYTE 10 BondID
-BYTE 10 HeroesDeathBlowID
-BYTE 20 AetherID
+//BYTE 10 HeroesDeathBlowID
+//BYTE 20 AetherID
 BYTE 00 00
 ALIGN 4
 
 EirikaLordSkillList:
 //BYTE 255 MoonbowID
 // BYTE 10 EvenRhythmID
-BYTE 10 RightfulKingID
-BYTE 20 BondID
+//BYTE 10 RightfulKingID
+//BYTE 20 BondID
 BYTE 00 00
 ALIGN 4
 
@@ -46,9 +46,9 @@ BYTE 00 00
 ALIGN 4
 
 KnightSkillList:
-BYTE 1 ProvokeID
+//BYTE 1 ProvokeID
 // BYTE 1 SlowBurnID
-BYTE 10 NaturalCoverID
+//BYTE 10 NaturalCoverID
 BYTE 00 00
 ALIGN 4
 
@@ -61,8 +61,9 @@ BYTE 00 00
 ALIGN 4
 
 ThiefSkillList:
-BYTE 15 AcrobatID
-BYTE 1 DespoilID
+BYTE 255 PassableID
+//BYTE 15 AcrobatID
+//BYTE 1 DespoilID
 BYTE 00 00
 ALIGN 4
 

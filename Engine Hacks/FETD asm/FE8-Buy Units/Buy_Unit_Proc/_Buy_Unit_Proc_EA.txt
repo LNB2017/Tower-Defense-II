@@ -24,6 +24,28 @@ ALIGN 4
 Sample:
 SHORT 0x2000 0x4770
 
+//Entries for the following are (item id, percent chance of obtaining item)
+ALIGN 4
+RandomItemsTable:
+BYTE 0 				60
+BYTE Vulnerary		15
+BYTE PureWater		10
+BYTE Elixir			5
+BYTE Antitoxin		4
+BYTE HoplonShield	3
+BYTE MetissTome		2
+BYTE JunaFruit		1
+BYTE 0 0 //terminator
+
+ALIGN 4
+RandomRingsTable:
+BYTE 0				20
+BYTE FillasMight	20
+BYTE NinissGrace	20
+BYTE ThorsIre		20
+BYTE SetsLitany		20
+BYTE 0 0 //terminator
+
 ALIGN 4
 Buy_Unit_Proc:
 _6C_CALL_ROUTINE(0x15361)	//Block proc thread 2; seems to be the way to start many things
@@ -88,15 +110,15 @@ POIN Draw_Description_Pane Fill_In_Menu Calc_Max_Entries
 
 ALIGN 4
 A_Press:
+MESSAGE a press at CURRENTOFFSET
 #incbin "A_Press.dmp"
-POIN Get_Entry_Pointer Get_Unit_Level
+POIN Get_Entry_Pointer Get_Unit_Level RandomItemsTable RandomRingsTable
 
 ALIGN 4
 Get_Unit_Level:
 #incbin "Get_Unit_Level.dmp"
 
 ALIGN 4
-MESSAGE draw desc at CURRENTOFFSET
 Draw_Description_Pane:
 #incbin "Draw_Description_Pane.dmp"
 POIN Get_Entry_Pointer Get_Unit_Level PromotionTable ClassSkillTable LevelUpSkillTable

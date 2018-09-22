@@ -45,6 +45,9 @@
 .set CopyToPaletteBuffer, 0x8000DB8
 .set WriteDecNumber, 0x8004B88
 .set DrawIcon, 0x80036BC
+.set NextRN_N, 0x8000C80
+.set NextRN_100, 0x8000C64
+.set Find_Char_ID, 0x801829C
 
 .set BGLayer0, 0x2022CA8
 .set BGLayer1, 0x20234A8

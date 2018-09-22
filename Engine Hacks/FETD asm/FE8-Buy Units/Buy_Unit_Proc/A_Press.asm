@@ -34,8 +34,14 @@ NoChaChing:
 @making the unit
 mov		r6,r4
 add		r6,#0x48
-mov		r0,#0x15				@char ID
-strb	r0,[r6]
+GetFreeCharacterLoop:
+mov		r0,#100					@number of character entries, hopefully
+_blh	NextRN_N
+mov		r7,r0
+_blh	Find_Char_ID
+cmp		r0,#0
+bne		GetFreeCharacterLoop
+strb	r7,[r6]
 ldrb	r0,[r5]
 strb	r0,[r6,#0x1]			@class id
 mov		r0,r4
@@ -54,8 +60,14 @@ mov		r0,#0
 strb	r0,[r6,#0x2]			@leader
 strh	r0,[r6,#0x6]			@padding + # of redas
 str		r0,[r6,#0x8]			@pointer to REDAs
-str		r0,[r6,#0xC]			@inventory
+str		r0,[r6,#0xC]			@inventory initialization
 str		r0,[r6,#0x10]			@AI
+ldrb	r0,[r6,#1]
+cmp		r0,#9
+beq		InventoryDone			@knights don't get an inventory
+mov		r0,r6
+bl		CreateInventory
+InventoryDone:
 mov		r0,r6
 _blh	#0x8017AC4				@makes unit
 b		GoBack
@@ -82,8 +94,92 @@ bx		r0
 bx_r1:
 bx		r1
 
+
+
+CreateInventory:
+@r0=UNIT entry, so far
+push	{r4-r7,r14}
+mov		r4,r0
+ldrb	r0,[r4,#1]		@class id
+_blh	Get_Class_Data
+mov		r5,r0
+mov		r6,#0xC			@position of items to store
+mov		r7,#0
+mov		r0,#44			@beginning of weapon ranks in class data
+add		r0,r5
+adr		r2,BasicWeaponList	@organized by weapon type
+GetWeaponRankLoop:
+ldrb	r1,[r0,r7]
+cmp		r1,#0
+beq		NextWRank
+ldrb	r1,[r2,r7]		@weapon corresponding to rank
+strb	r1,[r4,r6]		@store that in inventory place
+add		r6,#1
+cmp		r6,#0xF
+beq		GetItems		@only gonna do 3 weapons, max (shouldn't be an issue)
+NextWRank:
+add		r7,#1
+cmp		r7,#8
+blt		GetWeaponRankLoop
+
+GetItems:
+_blh	NextRN_100
+ldr		r1,RandomItemsTable
+bl		ChooseItemFromList
+cmp		r0,#0
+beq		DancerRingCheck
+strb	r0,[r4,r6]
+add		r6,#1
+
+DancerRingCheck:
+cmp		r6,#0x10
+beq		FinishedInventory
+ldr		r0,[r5,#0x28]		@class abilities
+mov		r1,#0x30
+tst		r0,r1
+beq		FinishedInventory
+_blh	NextRN_100
+ldr		r1,RandomRingsTable
+bl		ChooseItemFromList
+cmp		r0,#0
+beq		FinishedInventory
+strb	r0,[r4,r6]
+
+FinishedInventory:
+pop		{r4-r7}
+pop		{r0}
+bx		r0
+
+
+ChooseItemFromList:
+@r0=random number, r1=pointer to list
+mov		r3,#0
+ListLoop:
+ldrb	r2,[r1,#1]		@chance of getting item
+cmp		r2,#0
+beq		ReturnNoItem
+add		r3,r2
+cmp		r0,r3
+bge		NextEntry
+ldrb	r0,[r1]			@item
+b		ReturnItem
+NextEntry:
+add		r1,#2
+b		ListLoop
+ReturnNoItem:
+mov		r0,#0
+ReturnItem:
+bx		r14
+
+
+.align
+BasicWeaponList:
+.byte 0x01, 0x14, 0x1F, 0x2D, 0x4E, 0x38, 0x3F, 0x45		@iron sword, iron lance, iron axe, iron bow, physic, fire, lightning, flux
+
 .ltorg
 .equ Get_Unit_Level, Get_Entry_Pointer+4
+.equ RandomItemsTable, Get_Unit_Level+4
+.equ RandomRingsTable, RandomItemsTable+4
 Get_Entry_Pointer:
 @
 
