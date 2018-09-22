@@ -26,6 +26,10 @@ callHack_r3(No_Negative_Stats)
 ORG $24CEC
 jumpToHack(No_Eligible_NPCs)
 
+//Really friggin' tired of no$ crashing when trying to decompress bad data, so here's a fix
+ORG $12F50
+jumpToHack(Decompress_Fix)
+
 //Make items purchased in a shop automatically go into storage
 //ORG $B4656
 //SHORT 0x46C0
@@ -75,7 +79,9 @@ ALIGN 4
 No_Eligible_NPCs:
 #incbin "No_Eligible_NPCs.dmp"
 
-
+ALIGN 4
+Decompress_Fix:
+#incbin "Decompress_Fix.dmp"
 
 /*
 ALIGN 4
