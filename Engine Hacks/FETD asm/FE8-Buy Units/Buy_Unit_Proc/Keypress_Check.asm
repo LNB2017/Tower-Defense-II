@@ -19,7 +19,35 @@ lsl		r2,#4
 add		r1,r2
 _blh	UpdateHandCursor
 
+@scrolling arrows
+ldrh	r0,[r4,#0x30]			@top slot
+cmp		r0,#0
+beq		DownScrollingArrow
+mov		r2,#0xC9
+lsl		r2,#6				@no idea what this is
+mov		r0,#(8*(InitialEntry_X+5))
+mov		r1,#(8*InitialEntry_Y-4)
+ldr		r3,=#0x80B53F8
+mov		r14,r3
+mov		r3,#1				@arrow orientation?
+.short	0xF800
+DownScrollingArrow:
+ldrh	r0,[r4,#0x30]			@top slot
+add		r0,#MaxNumberOfEntriesAtOnce
+ldrh	r1,[r4,#0x32]			@max number of entries in this tab
+cmp		r0,r1
+bge		Shoulder_Button_Check
+mov		r2,#0xC9
+lsl		r2,#6
+mov		r0,#(8*(InitialEntry_X+5))
+mov		r1,#(8*(InitialEntry_Y+2*MaxNumberOfEntriesAtOnce)-4)
+ldr		r3,=#0x80B53F8
+mov		r14,r3
+mov		r3,#0				@arrow orientation?
+.short	0xF800
+
 @L and R button checks
+Shoulder_Button_Check:
 ldrh	r0,[r5,#0x8]
 mov		r1,#3
 lsl		r1,#8

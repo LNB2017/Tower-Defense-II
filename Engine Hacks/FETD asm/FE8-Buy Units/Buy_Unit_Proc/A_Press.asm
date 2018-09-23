@@ -47,6 +47,13 @@ strb	r0,[r6,#0x1]			@class id
 mov		r0,r4
 ldr		r3,Get_Unit_Level
 _blr	r3
+ldr		r1,[r5,#0x28]
+mov		r2,#1
+lsl		r2,#8
+tst		r1,r2
+beq		StoreLevel
+lsr		r0,#1					@promoted units are level/2
+StoreLevel:
 lsl		r0,#3
 add		r0,#1					@autolevelling flag
 strb	r0,[r6,#0x3]			@Level(level, player, on)

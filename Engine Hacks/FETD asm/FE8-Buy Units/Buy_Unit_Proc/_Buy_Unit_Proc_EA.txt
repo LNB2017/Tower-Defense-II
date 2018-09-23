@@ -25,6 +25,7 @@ Sample:
 SHORT 0x2000 0x4770
 
 //Entries for the following are (item id, percent chance of obtaining item)
+//Should add up to 100% (duh)
 ALIGN 4
 RandomItemsTable:
 BYTE 0 				60
@@ -104,13 +105,13 @@ POIN Buy_Unit_Table_Unpromoted
 POIN Buy_Unit_Table_Promoted
 
 ALIGN 4
+MESSAGE keypresscheck at CURRENTOFFSET
 Keypress_Check:
 #incbin "Keypress_Check.dmp"
 POIN Draw_Description_Pane Fill_In_Menu Calc_Max_Entries
 
 ALIGN 4
 A_Press:
-MESSAGE a press at CURRENTOFFSET
 #incbin "A_Press.dmp"
 POIN Get_Entry_Pointer Get_Unit_Level RandomItemsTable RandomRingsTable
 

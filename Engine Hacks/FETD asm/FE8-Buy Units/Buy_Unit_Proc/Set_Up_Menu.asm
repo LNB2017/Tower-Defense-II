@@ -30,6 +30,12 @@ mov		r1,#0x20			@palette bank
 mov		r2,#0x20
 _blh	CopyToPaletteBuffer
 
+@set up the arrows oam (I hope) (hey, it works!)
+mov		r0,#0x90
+lsl		r0,#2
+mov		r1,#3
+_blh	0x80B53BC
+
 @Font stuff
 _blh Font_InitDefault		@Set font stuff to default
 ldr		r5,=BuyUnitTextStruct

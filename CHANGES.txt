@@ -4,3 +4,5 @@ Modified Pass to check for Passable (skill given to phantoms/thieves), and allie
 Changed growth getters to get char+class growth
 Removed Rescue and Support, and added Remove and Promote (added Rooted skill) (updated Capture usability check to look for an event ID instead)
 Added the Buy Units menu, and modified it to display skills
+Added a check to buy_usability to make sure you can't put units on impassable terrain
+Added fix for no$ faulty decompression crashing the emulator

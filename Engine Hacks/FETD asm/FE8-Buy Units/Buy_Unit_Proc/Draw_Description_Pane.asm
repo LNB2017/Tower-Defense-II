@@ -66,6 +66,13 @@ _blh	Get_Class_Data
 mov		r5,r0					@class data
 ldr		r3,Get_Unit_Level
 _blr	r3
+ldr		r1,[r5,#0x28]
+mov		r2,#1
+lsl		r2,#8
+tst		r1,r2
+beq		StoreLevel
+lsr		r0,#1					@promoted units are level/2
+StoreLevel:
 mov		r6,r0
 sub		r7,r6,#1				@number of autolevels
 ldr		r0,[r5,#0x28]

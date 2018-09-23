@@ -1,0 +1,186 @@
+FETD checklist:
+
+Using skill system as a base
+Skills:
+	DONE Add capture and steal+ 
+AI:
+	Enemies seek to move toward target(s). If they cannot get to it because the way is blocked, then attack whatever's available
+Movement:
+	DONE Wagon doesn't get greyed out
+	DONE Player units have ~60 mov when purchased (include movement arrow fix; may have to move coordinate buffer due to debuff table and god knows what else)
+	DONE Player units get set to guard AI after action is taken (run this check after phase as well in case some units didn't move)
+	Using the relocate item will remove the guard AI bit, allowing the unit to move; have to add something to either allow the unit to canto, or not grey it out, after using this
+	Thieves/rogues can move a little (1 or 2 tiles), or can steal in a wider area? (2 tile radius?)
+	Phantoms have regular move (5)
+	Phantoms have pass, but can also be passed through (and why not, let's make them walk through walls) (modify Pass routine)
+	Enemy units have regular movement (% chance of +1/+2 mov to make infantry behave like cavalry (and have things other than 5/6 move) wasn't terribly well received)
+Generating player units:
+	DONE Player units can be bought via menu (done)
+	DONE After buying, units can be moved on the same turn they're purchased
+	DONEish Character will be chosen from a pool of ~100 characters, each having base modifiers, growth modifiers, and a skill. These will be added to class bases/growths. For instance, Ewan might have all negative stat modifiers, but good growths and a decent skill.
+	DONEish Unit will be autolevelled based on turn (+1 every 5 turns for unpromoted units, +1 every 10 for promoted units)
+	DONE Inventory will be randomly generated based on level
+	Boost phantom cap from 1 to 5 (shared between all summoners)
+Generating enemies:	
+	A wave every 5 turns (on normal)?
+	1 turn event (1-255) that calls an ASMC that loads the relevant UNIT block (so that I don't need a TURN event for each wave, which will be big and messy)
+	Normal mode has specific units each wave, while hard mode is randomly generated?
+Goal window:
+	Show current gold and time until next wave in goal window
+	Protect an NPC, rather than preventing units from getting to a certain square (should be easier to write AI for that)
+Shops:
+	Shops are walled off in a separate part of the map
+	2 ideas for shops: 1 shop for each type, or 1 shop for each tier (ie, irons/fire/light/flux, then steels/thunder/shine/luna, etc)
+	Possibility: Multiple shops on the same tile, with some kind of usability check, to simulate new stock (first shop has all swords, bottom shop has only iron sword, but you can unlock better stuff after a certain turn/paying a fee)
+	Roulette: Anna will be in the shop section, pay her x gold to get a random unit. Possibility of another unit as a roulette for monster units, which wouldn't normally be purchaseable.
+	Buyable skills? Might make units too juggernaut-y.
+
+Character skills:
+Wary Fighter - Oswin
+Savior - Vanessa
+Mercy - Moulder
+Frenzy - Valter
+Discipline - Selena
+Swordbreaker - Renault
+Lancebreaker - Seth
+Axebreaker - Hector
+Bowbreaker - Beran
+Tomebreaker - Lute
+Duelist's Blow - Marisa
+Death Blow - Orson
+Darting Blow - Dart
+Warding Blow - Hayden
+Certain Blow - Hawkeye
+Armored Blow - Wallace
+Desperation - Carlyle
+Wrath - Rath
+Miracle - Ninian
+Crit Up (crit+15) - Ismaire
+Lifetaker - Jaffar
+Galeforce - Legault
+Renewal - Marcus
+Demoiselle - Priscilla
+Gentilhomme - Sain
+Malefic Aura - Riev
+Inspiration - Eliwood
+Charm - Tana
+Voice of Peace - Natasha
+Amaterasu - L'Arachel
+Spur Strength/Magic (is there actually a difference?) - Dozla
+Spur Skill (doesn't exist) - Canas
+Spur Speed - Louise
+Spur Defense - Kyle
+Spur Resistance - Ewan
+Spur Luck (doesn't exist) - Nino
+Nihil - Geitz
+Paragon - Ross
+Rally Strength - Gerik
+Rally Skill - Saleh
+Rally Speed - Murray
+Rally Defense - Fado
+Rally Resistance - Syrene
+Rally Luck - Knoll
+Rally Spectrum - Ephraim
+Life and Death - Vigarde
+Intimidate - Vaida
+Opportunist (doesn't currently work iirc) - Caellach
+Cameraderie - Rebecca
+Savage Blow - Garcia
+Relief - Amelia
+Tantivy - Heath
+Focus - Pent
+Bond - Eirika
+Anathema - Novala
+Lily's Poise - Tethys
+Expertise - Athos
+Fiery Blood - Bartre
+Elbow Room - Bone
+Natural Cover - Matthew
+Seal Strength - Fiora
+Seal Skill - Myrrh
+Seal Speed - Dorcas
+Seal Luck - Zonta
+Seal Defense - Gilliam
+Seal Resistance - Erk
+Gamble - Joshua
+Quick Draw - Forde
+Wind Discipline - Lyn
+Lightweight - Colm
+Killing Machine - Karel
+Critical Force - Karla
+Chivalry - Kent
+Pragmatic - Innes
+Armsthrift - Farina
+Shove - Breguet
+Smite - Artur
+Pivot - Rennac
+Reposition - Aias
+Swap - Guy
+Odd Rhythm - Cormag
+Even Rhythm - Glen
+Breath of Life - Lyon
+Fury - Raven
+Triangle Adept - Duessel
+Dazzle - Serra
+Quiet Strength (allies in 2 squares take 2 less damage) - Lucius 
+
+4 bosses, 2 fe8, 6 fe7 without
+Spur Def(Kyle)/Res(Ewan)/Luk(Nino)
+Rally Str(Gerik)
+Seal Str(Fiora)/Skl(Myrrh)/Def(Gilliam)/Luk(Zonta)
+
+Buyable skills?:
+Sure Shot
+Provoke
+Adept
+Luna
+Sol
+Aether (costs more than Luna+Sol)
+Astra
+Aegis
+Pavise
+Swordfaire
+Lancefaire
+Axefaire
+Bowfaire
+Tomefaire
+Impale
+Colossus
+Bow Range +1
+Staff Savant
+Live to Serve
+Ignis
+Despoil
+Capture - will probably make this one mapwide (once you unlock it, every unit can capture)
+
+Class skills:
+Steal - thief
+Steal+ - rogue
+Crit +15 - halberdier, swordmaster, berserker, sniper (if they exist)
+Dance - Dancer
+Summon - Summoner
+
+Unsure:
+Lethality - broken?
+Vantage - useless-ish?
+Counter - useless
+Countermagic - useless
+Nullify - useless (unless I redo effectiveness somehow, since only knights/generals have weaknesses as is) (well, sword users as well)
+Lunge - might be OP?
+Strong Riposte - kinda useless, unless opponent has vantage, I guess?
+Patience - see above
+Pursuit - see above
+Rightful King/God - might be a bit much, since you can buy proc skills
+Lucky Seven - probably useless unless it was 7 turns after unit was deployed
+Quick Burn - see above
+Slow Burn - see above (although this would actually be broken rather than useless)
+
+Useless:
+Acrobat
+Pass
+Canto
+Canto+
+Rally Move
+Locktouch
+Trample (no mounts)
+Celerity
