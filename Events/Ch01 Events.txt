@@ -1,6 +1,11 @@
 #include EAStdlib.event
 EventPointerTable(0x7, Ch01_Events_Table)
 
+#define Spawn1X 3
+#define Spawn1Y 15
+
+#include "Enemies.txt"
+
 Ch01_Events_Table:
 POIN Ch01_TurnBasedEvents
 POIN Ch01_CharacterBasedEvents
@@ -15,6 +20,7 @@ POIN $0 $0 $0 //(enemy 1, enemy 2, enemy 3)
 POIN Ch01_BeginningScene Ch01_EndingScene
 
 Ch01_TurnBasedEvents:
+TurnEventNPC(0, Ch01_Spawn_Enemies, 1, 100)
 END_MAIN
 
 Ch01_CharacterBasedEvents:
@@ -40,31 +46,42 @@ Ch01_HMExtraTrapData:
 ENDTRAP
 ALIGN 4
 
+Ch01_Units:
+UNIT
+
 Ch01_Wagon:
 UNIT Eirika Tent 0 Level(1,Ally,0) [5,3] 0 0 0 0 [0] NoAI
+UNIT Seth Dancer 0 Level(1,Ally,0) [5,2] 0 0 0 0 [FillasMight] NoAI
+UNIT Gilliam Soldier 0 Level(3,Ally,1) [6,2] 0 0 0 0 [0] NoAI
+UNIT Neimi Knight 0 Level(3,Ally,1) [4,2] 0 0 0 0 [0] NoAI
+UNIT Colm Cleric 0 Level(5,Ally,1) [5,1] 0 0 0 0 [Fortify] NoAI
 UNIT
 
-Ch01_Units:
-UNIT Seth Paladin 0 Level(1,Ally,0) [10,15] 0 0 0 0 [IronLance] NoAI
-UNIT Gilliam Knight 0 Level(1,Ally,0) [10,14] 0 0 0 0 [IronLance] NoAI
-UNIT
-
-Ch01_Wave1:
-UNIT 0x80 Priest 0 Level(1,Enemy,1) [4,15] 0 0 0 0 [Physic] NoAI
+Ch01_Target:
+UNIT SittingDuck General 0 Level(1,NPC,1) [9,15] 0 0 0 0 [IronSword] NeverMoveAI
 UNIT
 
 Ch01_BeginningScene:
 LOAD1 0x1 Ch01_Wagon
 ENUN
-LOAD1 0x1 Ch01_Units
-ENUN
-LOAD1 0x1 Ch01_Wave1
+LOAD1 0x1 Ch01_Target
 ENUN
 FADU 0x10
 SVAL 0x3 Initial_Gold_Amount
 GIVEITEMTOMAIN 0x0
+SVAL 1 Neimi
+SET_HP 1
 NoFade
 ENDA
 
 Ch01_EndingScene:
+ENDA
+
+Ch01_Spawn_Enemies:
+ASMC Get_Enemies|1		//puts a pointer to reinforcements in slot 2
+BEQ 5 2 0				//skip loading if slot 2 = slot 0 (0)
+LOAD_SLOT2 0x1			//no idea what the argument is
+ENUN
+LABEL 5
+NoFade
 ENDA

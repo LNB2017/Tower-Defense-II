@@ -105,7 +105,6 @@ POIN Buy_Unit_Table_Unpromoted
 POIN Buy_Unit_Table_Promoted
 
 ALIGN 4
-MESSAGE keypresscheck at CURRENTOFFSET
 Keypress_Check:
 #incbin "Keypress_Check.dmp"
 POIN Draw_Description_Pane Fill_In_Menu Calc_Max_Entries

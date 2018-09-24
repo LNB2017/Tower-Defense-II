@@ -23,6 +23,9 @@
 #define Initial_Gold_Amount 	5000			//Amount of gold you start with
 #define Gold_Per_Level 			5				//Amount of gold you get per level
 
+#define SittingDuck 0xC8
+#define Mook1 0x80
+
 #include "Engine Hacks/Skill System/skill_definitions.event"
 
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p

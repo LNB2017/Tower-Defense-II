@@ -30,6 +30,28 @@ jumpToHack(No_Eligible_NPCs)
 ORG $12F50
 jumpToHack(Decompress_Fix)
 
+//Make Dance multi-target
+ORG $23238 //without rings
+callHack_r3(Dance1)
+ORG $24AFC //with rings
+callHack_r3(Dance1)
+SHORT 0
+ORG $32358 //action
+jumpToHack(Dance_Action)
+//Dancers can't dance other dancers
+ORG $25B40
+callHack_r3(Dancer_Check)
+SHORT 0x2800
+
+//Make dancer rings refresh
+ORG $2FC20
+callHack_r3(Dancer_Rings)
+
+//ORG $5A8BA4
+//SHORT SittingDuck
+//ORG $D810C
+//POIN New_AI|1
+
 //Make items purchased in a shop automatically go into storage
 //ORG $B4656
 //SHORT 0x46C0
@@ -82,6 +104,32 @@ No_Eligible_NPCs:
 ALIGN 4
 Decompress_Fix:
 #incbin "Decompress_Fix.dmp"
+
+ALIGN 4
+Get_Enemies:
+#incbin "Get_Enemies.dmp"
+POIN Enemy_Pointer_Table
+
+ALIGN 4
+MESSAGE new ai at CURRENTOFFSET
+New_AI:
+#incbin "New_AI.dmp"
+
+ALIGN 4
+Dance1:
+#incbin "Dance1.dmp"
+
+ALIGN 4
+Dance_Action:
+#incbin "Dance_Action.dmp"
+
+ALIGN 4
+Dancer_Rings:
+#incbin "Dancer_Rings.dmp"
+
+ALIGN 4
+Dancer_Check:
+#incbin "Dancer_Check.dmp"
 
 /*
 ALIGN 4
