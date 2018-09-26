@@ -47,10 +47,10 @@ SHORT 0x2800
 ORG $2FC20
 callHack_r3(Dancer_Rings)
 
-//ORG $5A8BA4
-//SHORT SittingDuck
-//ORG $D810C
-//POIN New_AI|1
+ORG $5A8BA4
+SHORT SittingDuck
+ORG $D810C
+POIN New_AI|1
 
 //Make items purchased in a shop automatically go into storage
 //ORG $B4656
@@ -114,6 +114,7 @@ ALIGN 4
 MESSAGE new ai at CURRENTOFFSET
 New_AI:
 #incbin "New_AI.dmp"
+POIN Can_Unit_Steal
 
 ALIGN 4
 Dance1:

@@ -105,6 +105,7 @@ WORD 0
 
 Turn1:
 UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 0 0 [IronLance] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X+1, Spawn1Y] 0 0 0 0 [IronLance] [0xA, 0, 0, 0]
 UNIT
 
 Turn5:

@@ -7,12 +7,12 @@
 @This function sets the Z flag if the moving unit can cross the other unit's tile, either because they're either both allied/npcs or enemies, or because the mover has Pass
 push  {r0-r6,r14}   @actually necessary to push the scratch registers in this case
 
+ldrb  r4,[r3,#0xA]  @allegiance byte of current unit
 mov		r0,#0x80
-and		r0,r7
+and		r0,r4
 cmp		r0,#0
 beq		GoBack		@if player unit, then they can go anywhere, so set Z flag
 
-ldrb  r4,[r3,#0xA]  @allegiance byte of current unit
 eor   r4,r7     @r7 is allegiance byte of unit on tile we are looking at
 mov   r0,#0x80
 tst   r0,r4
