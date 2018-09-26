@@ -47,41 +47,17 @@ SHORT 0x2800
 ORG $2FC20
 callHack_r3(Dancer_Rings)
 
+//AI
 ORG $5A8BA4
 SHORT SittingDuck
 ORG $D810C
 POIN New_AI|1
 
-//Make items purchased in a shop automatically go into storage
-//ORG $B4656
-//SHORT 0x46C0
-
-//Disable being able to give to the convoy
-//ORG $9DD08
-//SHORT 0xE060
-//ORG $9D679 //color of 'Give' option
-//BYTE 0xE0
-
-//Determines whether a unit can give items to the convoy (currently only thieves can)
-//ORG $9DD08
-//jumpToHack(Can_Give_To_Convoy)
-
-//Dropped items go directly into the convoy
-//ORG $17948
-//jumpToHack(Send_Drops_To_Convoy)
-//However, initalizing a unit's inventory *doesn't* go to the convoy
-//ORG $17DD8
-//BL(0x17950)
-//ORG 0x17950
-//jumpToHack(Set_Unit_Inventory)
-
-//Seed the initial random numbers with the frame count when pressing Start
-//ORG $C637C
-//jumpToHack(Seed_Random_Numbers)
-
-//Make random char ids for units
-//ORG $F6A0
-//callHack_r3(Random_Char_ID)
+//Relocate item
+ORG ItemUsabilityTable + 4*(Relocate - 0x4B)
+POIN Relocate_Usability
+ORG ItemEffectTable + 4*(Relocate - 0x4B)
+POIN Relocate_Effect
 
 POP
 
@@ -111,7 +87,6 @@ Get_Enemies:
 POIN Enemy_Pointer_Table
 
 ALIGN 4
-MESSAGE new ai at CURRENTOFFSET
 New_AI:
 #incbin "New_AI.dmp"
 POIN Can_Unit_Steal
@@ -132,32 +107,10 @@ ALIGN 4
 Dancer_Check:
 #incbin "Dancer_Check.dmp"
 
-/*
 ALIGN 4
-Can_Give_To_Convoy:
-#incbin "Can_Give_To_Convoy.dmp"
-POIN CanGiveToConvoyList
-
-CanGiveToConvoyList:
-BYTE Tent 0
+Relocate_Usability:
+#incbin "Relocate_Usability.dmp"
 
 ALIGN 4
-Send_Drops_To_Convoy:
-#incbin "Send_Drops_To_Convoy.dmp"
-
-ALIGN 4
-Set_Unit_Inventory:
-#incbin "Set_Unit_Inventory.dmp"
-
-ALIGN 4
-UntouchableTile:
-#incbin "Untouchable_Tile.dmp"
-
-ALIGN 4
-Seed_Random_Numbers:
-#incbin "Seed_Random_Numbers.dmp"
-
-ALIGN 4
-Random_Char_ID:
-#incbin "Random_Char_ID.dmp"
-*/
+Relocate_Effect:
+#incbin "Relocate_Effect.dmp"

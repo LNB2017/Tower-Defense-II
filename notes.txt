@@ -12,7 +12,7 @@ Movement:
 	Using the relocate item will remove the guard AI bit, allowing the unit to move; have to add something to either allow the unit to canto, or not grey it out, after using this
 	Thieves/rogues can move a little (1 or 2 tiles), or can steal in a wider area? (2 tile radius?)
 	Phantoms have regular move (5)
-	Phantoms have pass, but can also be passed through (and why not, let's make them walk through walls) (modify Pass routine)
+	DONE Phantoms have pass, but can also be passed through (and why not, let's make them walk through walls) (modify Pass routine)
 	Enemy units have regular movement (% chance of +1/+2 mov to make infantry behave like cavalry (and have things other than 5/6 move) wasn't terribly well received)
 Generating player units:
 	DONE Player units can be bought via menu (done)
@@ -27,7 +27,7 @@ Generating enemies:
 	Normal mode has specific units each wave, while hard mode is randomly generated?
 Goal window:
 	Show current gold and time until next wave in goal window
-	Protect an NPC, rather than preventing units from getting to a certain square (should be easier to write AI for that)
+	DONE Protect an NPC, rather than preventing units from getting to a certain square (should be easier to write AI for that)
 Shops:
 	Shops are walled off in a separate part of the map
 	2 ideas for shops: 1 shop for each type, or 1 shop for each tier (ie, irons/fire/light/flux, then steels/thunder/shine/luna, etc)

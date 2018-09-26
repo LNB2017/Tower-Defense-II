@@ -7,6 +7,7 @@ Buy_Unit(Mercenary, 200, 0)
 Buy_Unit(Thief, 6000, 0)
 Buy_Unit(Archer, 200, 0)
 Buy_Unit(Myrmidon, 100, 0)
+Buy_Unit(Dancer, 500, 0)
 Buy_Unit(Mage, 400, 0)
 Buy_Unit(Priest, 500, 0)
 Buy_Unit(Shaman, 500, 0)
@@ -30,10 +31,11 @@ ALIGN 4
 RandomItemsTable:
 BYTE 0 				60
 BYTE Vulnerary		15
-BYTE PureWater		10
+BYTE PureWater		7
 BYTE Elixir			5
 BYTE Antitoxin		4
 BYTE HoplonShield	3
+BYTE Relocate		3
 BYTE MetissTome		2
 BYTE JunaFruit		1
 BYTE 0 0 //terminator

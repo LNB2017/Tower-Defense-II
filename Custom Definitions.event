@@ -13,9 +13,16 @@
 #ifndef Promotion_Branch_Table
 	#define Promotion_Branch_Table 0x95DFA4
 #endif
+#ifndef ItemUsabilityTable
+	#define ItemUsabilityTable 0x288B0
+#endif
+#ifndef ItemEffectTable
+	#define ItemEffectTable 0x2FC90
+#endif
 	
 #define LunarBrace MoonBracelet
 #define SolarBrace SunBracelet
+#define Relocate HeroCrest			//don't need promotion items outside of master seal
 
 #define Promote_Action_Byte 0xD //theoretically, this should work
 #define Capture_Event_ID 0xB //event id is set if Capture is allowed

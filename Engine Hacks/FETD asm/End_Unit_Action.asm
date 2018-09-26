@@ -23,7 +23,7 @@ str		r1,[r0]			@zero out this memory slot
 
 DontSetBit2:
 ldr		r0,[r2,#0xC]
-mov		r1,#0x40
+mov		r1,#0x42
 mvn		r1,r1
 and		r0,r1
 str		r0,[r2,#0xC]	@remove 'is cantoing' bit, just in case

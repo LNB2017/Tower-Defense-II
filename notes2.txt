@@ -133,3 +133,8 @@ if r7 >0, add 0x28 and return (if unit has at least 1 >1 range weapon)
 if r7 = 0 and r8 = 0, add 0x57 and return (no wieldable weapons)
 if only 1-range weapons, add 0x14 and return
 store priority as word at 2020188, store deployment id at 203AA04
+
+3D8D4: r0=char data, r1=mov, r2=items id. Fills in movement/range maps. Perfect aside from only using 1 item.
+1A3CC: r0=char data, r1=mov. Only fills in movement map, but that'd be a start.
+
+

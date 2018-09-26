@@ -55,8 +55,7 @@ UNIT
 
 Ch01_Target:
 UNIT SittingDuck General 0 Level(1,NPC,1) [9,15] 0 0 0 0 [0] NeverMoveAI
-UNIT Mook1 Thief 0 Level(20,Enemy,1) [3,14] 0 0 0 0 [IronSword] [0xA, 0, 0, 0]
-UNIT Neimi Knight 0 Level(1,Ally,1) [8,15] 0 0 0 0 [Elixir] NoAI
+UNIT Neimi Knight 0 Level(1,Ally,1) [8,15] 0 0 0 0 [Relocate] NoAI
 UNIT
 
 Ch01_BeginningScene:
