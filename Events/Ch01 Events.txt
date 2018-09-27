@@ -66,8 +66,6 @@ ENUN
 FADU 0x10
 SVAL 0x3 Initial_Gold_Amount
 GIVEITEMTOMAIN 0x0
-SVAL 1 Neimi
-SET_HP 1
 NoFade
 ENDA
 

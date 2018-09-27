@@ -4,7 +4,7 @@ ALIGN 4
 Buy_Unit_Table_Unpromoted:
 Buy_Unit(Knight, 50, 0)
 Buy_Unit(Mercenary, 200, 0)
-Buy_Unit(Thief, 6000, 0)
+Buy_Unit(Thief, 200, 0)
 Buy_Unit(Archer, 200, 0)
 Buy_Unit(Myrmidon, 100, 0)
 Buy_Unit(Dancer, 500, 0)

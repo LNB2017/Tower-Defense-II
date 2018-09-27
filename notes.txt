@@ -9,8 +9,8 @@ Movement:
 	DONE Wagon doesn't get greyed out
 	DONE Player units have ~60 mov when purchased (include movement arrow fix; may have to move coordinate buffer due to debuff table and god knows what else)
 	DONE Player units get set to guard AI after action is taken (run this check after phase as well in case some units didn't move)
-	Using the relocate item will remove the guard AI bit, allowing the unit to move; have to add something to either allow the unit to canto, or not grey it out, after using this
-	Thieves/rogues can move a little (1 or 2 tiles), or can steal in a wider area? (2 tile radius?)
+	DONE Using the relocate item will remove the guard AI bit, allowing the unit to move; have to add something to either allow the unit to canto, or not grey it out, after using this
+	Thieves/rogues can move a little (1 or 2 tiles), or can steal in a wider area? (2 tile radius?) (opted for being able to move, at the expense of not blocking enemies)
 	Phantoms have regular move (5)
 	DONE Phantoms have pass, but can also be passed through (and why not, let's make them walk through walls) (modify Pass routine)
 	Enemy units have regular movement (% chance of +1/+2 mov to make infantry behave like cavalry (and have things other than 5/6 move) wasn't terribly well received)
@@ -23,7 +23,7 @@ Generating player units:
 	Boost phantom cap from 1 to 5 (shared between all summoners)
 Generating enemies:	
 	A wave every 5 turns (on normal)?
-	1 turn event (1-255) that calls an ASMC that loads the relevant UNIT block (so that I don't need a TURN event for each wave, which will be big and messy)
+	DONE 1 turn event (1-255) that calls an ASMC that loads the relevant UNIT block (so that I don't need a TURN event for each wave, which will be big and messy)
 	Normal mode has specific units each wave, while hard mode is randomly generated?
 Goal window:
 	Show current gold and time until next wave in goal window

@@ -25,10 +25,12 @@ POP
   SHORT $E0B8
 
 //Set Default Options
-  ORG $30d8a  //animations type 2
-  SHORT $3306
+  ORG $30d8a  //animations off
+  SHORT $3302
   ORG $30da6  //Game/text speed Fast, Autocursor off
   SHORT $22d0
+  ORG $30DB0  //music off
+  SHORT $2101
   
 //Allow Visit from any tile
   PUSH

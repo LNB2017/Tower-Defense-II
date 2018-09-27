@@ -58,13 +58,8 @@ cmp		r0,#0
 beq		AttackEverything			@shouldn't happen, since target dying = game over
 str		r0,[sp]
 mov		r0,r7
-bl		GetItemWithGreatestRange
-cmp		r0,#0
-beq		AttackEverything
-mov		r2,r0
-mov		r0,r7
 mov		r1,#0xFF					@movement
-_blh	#0x803D8D4					@fills in movement and range maps
+bl		FillInRangeForMoveableSpaces
 ldr		r0,[sp]
 ldr		r3,=#0x202E4E4
 ldr		r3,[r3]
@@ -117,37 +112,125 @@ bx		r0
 .ltorg
 
 
-
-GetItemWithGreatestRange:
+FillInRangeForMoveableSpaces:
+@Based on 0x803D8D4
+@r0=char data ptr, r1=range
+@fills in movement map, fills in range map based on squares that can be moved to (checks for units) for all weapons
 
 push	{r4-r7,r14}
-mov		r4,r0
-mov		r5,#0x1E	@counter
-mov		r6,#0		@current max range
-mov		r7,#0		@item id with max range
-InventoryLoop:
-ldrh	r1,[r4,r5]
-cmp		r1,#0
-beq		RetItem
-mov		r0,r4
-_blh	#0x8016574	@CanUnitWieldWeapon
+mov		r4,r8
+mov		r5,r9
+mov		r6,r10
+mov		r7,r11
+push	{r4-r7}
+mov		r8,r0
+mov		r9,r1
+mov		r1,#1
+neg		r1,r1
+_blh	#0x80171E8			@GetUnitRangeMask
+mov		r10,r0
 cmp		r0,#0
-beq		NextItem
-ldrh	r0,[r4,r5]
-_blh	#0x8017684
-cmp		r0,r6
-ble		NextItem
-mov		r6,r0
-ldrh	r7,[r4,r5]
-NextItem:
-add		r5,#2
-cmp		r5,#0x26
-ble		InventoryLoop
-RetItem:
-mov		r0,r7
+beq		EndFillRange
+mov		r0,r8
+_blh	#0x8018D4C			@GetUnitMovCostTable
+_blh	#0x801A4CC			@StoreMovCostTable
+ldr		r0,=#0x202E4E0		@movement map
+ldr		r0,[r0]
+_blh	#0x801B998			@SetSubjectMap
+mov		r3,r8
+ldrb	r0,[r3,#0x10]
+ldrb	r1,[r3,#0x11]
+mov		r2,r9
+ldrb	r3,[r3,#0xB]
+_blh	#0x801A4EC, r4		@FillMovementMap
+mov		r0,r8
+mov		r1,#1
+neg		r1,r1
+ldr		r0,=#0x202E4E4		@range map
+ldr		r0,[r0]
+mov		r1,#0
+_blh	#0x80197E4			@ClearMapWith
+ldr		r0,=#0x202E4D4		@map size
+mov		r1,#2
+ldsh	r1,[r0,r1]
+sub		r5,r1,#1			@y
+mov		r1,#0
+ldsh	r1,[r0,r1]
+sub		r4,r1,#1			@max x
+mov		r11,r4
+
+Y_Loop:
+mov		r4,r11				@current x
+X_Loop:
+ldr		r0,=#0x202E4E0
+ldr		r0,[r0]
+lsl		r3,r5,#2
+ldr		r0,[r0,r3]
+ldrb	r0,[r0,r4]
+cmp		r0,#0xFF
+beq		NextTile
+ldr		r0,=#0x202E4D8		@unit map
+ldr		r0,[r0]
+ldr		r0,[r0,r3]
+ldrb	r0,[r0,r4]
+cmp		r0,#0
+beq		FillRange
+mov		r1,#0x80
+tst		r0,r1
+beq		NextTile			@if ally/npc, consider this occupied
+FillRange:
+mov		r7,r10
+lsl		r7,#16				@range bitfield is a short, I think
+mov		r6,#16
+Max_Loop:
+cmp		r7,#0
+blt		FillInRangeMax
+sub		r6,#1
+lsl		r7,#1
+b		Max_Loop
+FillInRangeMax:
+mov		r0,r4
+mov		r1,r5
+mov		r2,r6
+ldr		r3,=#0x801AABC		@MapAddInRange
+mov		r14,r3
+mov		r3,#1
+.short	0xF800
+Min_Loop:
+cmp		r7,#0
+bge		FillInRangeMin
+sub		r6,#1
+lsl		r7,#1
+b		Min_Loop
+FillInRangeMin:
+mov		r0,r4
+mov		r1,r5
+mov		r2,r6
+ldr		r3,=#0x801AABC		@MapAddInRange
+mov		r14,r3
+mov		r3,#1
+neg		r3,r3
+.short	0xF800
+cmp		r7,#0
+bne		Max_Loop
+
+NextTile:
+sub		r4,#1
+cmp		r4,#0
+bge		X_Loop
+sub		r5,#1
+cmp		r5,#0
+bge		Y_Loop
+
+EndFillRange:
 pop		{r4-r7}
-pop		{r1}
-bx		r1
+mov		r8,r4
+mov		r9,r5
+mov		r10,r6
+mov		r11,r7
+pop		{r4-r7}
+pop		{r0}
+bx		r0
 
 .ltorg
 Can_Unit_Steal:

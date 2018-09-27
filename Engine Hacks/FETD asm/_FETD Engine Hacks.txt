@@ -87,6 +87,7 @@ Get_Enemies:
 POIN Enemy_Pointer_Table
 
 ALIGN 4
+MESSAGE new ai at CURRENTOFFSET
 New_AI:
 #incbin "New_AI.dmp"
 POIN Can_Unit_Steal
