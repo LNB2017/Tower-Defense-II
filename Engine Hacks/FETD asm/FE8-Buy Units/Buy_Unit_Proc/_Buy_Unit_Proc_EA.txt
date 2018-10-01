@@ -19,6 +19,7 @@ Buy_Unit_Table_Promoted:
 Buy_Unit(General, 500, 0)
 Buy_Unit(Paladin, 1000, 0)
 Buy_Unit(Sage, 750, Sample|1)
+Buy_Unit(Summoner, 200, 0)
 BYTE 0 //Terminator
 
 ALIGN 4
@@ -114,7 +115,11 @@ POIN Draw_Description_Pane Fill_In_Menu Calc_Max_Entries
 ALIGN 4
 A_Press:
 #incbin "A_Press.dmp"
-POIN Get_Entry_Pointer Get_Unit_Level RandomItemsTable RandomRingsTable
+POIN Get_Entry_Pointer Get_Unit_Level RandomItemsTable RandomRingsTable Choose_Item_From_List
+
+ALIGN 4
+Choose_Item_From_List:
+#incbin "Choose_Item_From_List.dmp"
 
 ALIGN 4
 Get_Unit_Level:

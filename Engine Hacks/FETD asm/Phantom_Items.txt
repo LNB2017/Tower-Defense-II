@@ -1,0 +1,120 @@
+ALIGN 4
+
+PhantomItemPointer:
+POIN SwordPhantom LancePhantom AxePhantom BowPhantom
+
+ALIGN 4
+SwordPhantom:
+POIN SwordPhantom1to5 SwordPhantom6to10 SwordPhantom11to15 SwordPhantom16to20
+
+SwordPhantom1to5:
+BYTE IronSword 		100
+BYTE 0 0
+
+SwordPhantom6to10:
+BYTE IronSword 		80
+BYTE SteelSword 	15
+BYTE KillingEdge	5
+BYTE 0 0
+
+SwordPhantom11to15:
+BYTE IronSword		60
+BYTE SteelSword		20
+BYTE KillingEdge	10
+BYTE Lancereaver	10
+BYTE 0 0
+
+SwordPhantom16to20:
+BYTE IronSword		40
+BYTE SteelSword		20
+BYTE KillingEdge	15
+BYTE Lancereaver	15
+BYTE SilverSword	10
+BYTE 0 0
+
+ALIGN 4
+LancePhantom:
+POIN LancePhantom1to5 LancePhantom6to10 LancePhantom11to15 LancePhantom16to20
+
+LancePhantom1to5:
+BYTE IronLance		100
+BYTE 0 0
+
+LancePhantom6to10:
+BYTE IronLance		80
+BYTE SteelLance		20
+BYTE 0 0
+
+LancePhantom11to15:
+BYTE IronLance		60
+BYTE SteelLance		20
+BYTE KillerLance	10
+BYTE Axereaver		10
+BYTE 0 0
+
+LancePhantom16to20:
+BYTE IronLance		40
+BYTE SteelLance		15
+BYTE KillerLance	15
+BYTE Axereaver		15
+BYTE Spear			10
+BYTE SilverLance	5
+BYTE 0 0
+
+ALIGN 4
+AxePhantom:
+POIN AxePhantom1to5 AxePhantom6to10 AxePhantom11to15 AxePhantom16to20
+
+AxePhantom1to5:
+BYTE IronAxe		100
+BYTE 0 0
+
+AxePhantom6to10:
+BYTE IronAxe		80
+BYTE SteelAxe		20
+BYTE 0 0
+
+AxePhantom11to15:
+BYTE IronAxe		60
+BYTE SteelAxe		20
+BYTE KillerAxe		10
+BYTE Swordreaver	10
+BYTE 0 0
+
+AxePhantom16to20:
+BYTE IronAxe		40
+BYTE SteelAxe		15
+BYTE KillerAxe		15
+BYTE Swordreaver	15
+BYTE Tomahawk		10
+BYTE SilverAxe		5
+BYTE 0 0
+
+ALIGN 4
+BowPhantom:
+POIN BowPhantom1to5 BowPhantom6to10 BowPhantom11to15 BowPhantom16to20
+
+BowPhantom1to5:
+BYTE IronBow		100
+BYTE 0 0
+
+BowPhantom6to10:
+BYTE IronBow		80
+BYTE SteelBow		20
+BYTE 0 0
+
+BowPhantom11to15:
+BYTE IronBow		60
+BYTE SteelBow		20
+BYTE KillerBow		10
+BYTE Longbow		10
+BYTE 0 0
+
+BowPhantom16to20:
+BYTE IronBow		40
+BYTE SteelBow		20
+BYTE KillerBow		15
+BYTE Longbow		15
+BYTE OtataralBow	10
+BYTE SilverBow		5
+BYTE 0 0

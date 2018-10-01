@@ -16,7 +16,7 @@ callHack_r0(End_Phase_Set_Guard)
 
 //Everyone can access Supply
 ORG $23F64
-SHORT 0x2001 0x4770
+#incbin "Supply_Usability.dmp"
 
 //Make sure class+char bases are >=0
 ORG $17E64
@@ -59,6 +59,24 @@ POIN Relocate_Usability
 ORG ItemEffectTable + 4*(Relocate - 0x4B)
 POIN Relocate_Effect
 
+//Clear character data when units die (even players)
+ORG $183FC
+SHORT 0x2100 0x6001 0x4770 //mov r1, 0; str r1,[r0]; bx r14
+
+//Summon rework
+ORG $243D8
+jumpToHack(Summon_Usability)
+//Check for tiles to summon on uses the phantom's move cost, rather than the summoner's
+ORG $25C9C
+POIN PhantomMoveCost
+ORG $25C66
+SHORT 0
+ORG $25C74
+SHORT 0x5640 0x2800 0xDB07 0x46C0 0x46C0 //ldsb r0,[r0,r1]; cmp r0,#0; blt SkipTargetWrite; nop; nop
+//make unit
+ORG $7AD1C
+jumpToHack(Create_Phantom)
+
 POP
 
 ALIGN 4
@@ -87,7 +105,6 @@ Get_Enemies:
 POIN Enemy_Pointer_Table
 
 ALIGN 4
-MESSAGE new ai at CURRENTOFFSET
 New_AI:
 #incbin "New_AI.dmp"
 POIN Can_Unit_Steal
@@ -115,3 +132,22 @@ Relocate_Usability:
 ALIGN 4
 Relocate_Effect:
 #incbin "Relocate_Effect.dmp"
+
+ALIGN 4
+Summon_Usability:
+#incbin "Summon_Usability.dmp"
+POIN SkillTester
+WORD SummonID
+POIN PhantomCharIDList
+
+PhantomCharIDList:
+BYTE PhantomChar1 PhantomChar2 PhantomChar3 PhantomChar4 PhantomChar5
+BYTE 0 //terminator
+
+ALIGN 4
+Create_Phantom:
+#incbin "Create_Phantom.dmp"
+POIN PhantomCharIDList PhantomItemPointer Choose_Item_From_List
+
+//PhantomItemPointer defined in here
+#include "Phantom_Items.txt"

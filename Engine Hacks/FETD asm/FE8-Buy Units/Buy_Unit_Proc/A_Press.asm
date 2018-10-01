@@ -132,7 +132,9 @@ blt		GetWeaponRankLoop
 GetItems:
 _blh	NextRN_100
 ldr		r1,RandomItemsTable
-bl		ChooseItemFromList
+ldr		r3,ChooseItemFromList
+mov		r14,r3
+.short	0xF800
 cmp		r0,#0
 beq		DancerRingCheck
 strb	r0,[r4,r6]
@@ -147,7 +149,9 @@ tst		r0,r1
 beq		FinishedInventory
 _blh	NextRN_100
 ldr		r1,RandomRingsTable
-bl		ChooseItemFromList
+ldr		r3,ChooseItemFromList
+mov		r14,r3
+.short	0xF800
 cmp		r0,#0
 beq		FinishedInventory
 strb	r0,[r4,r6]
@@ -157,28 +161,6 @@ pop		{r4-r7}
 pop		{r0}
 bx		r0
 
-
-ChooseItemFromList:
-@r0=random number, r1=pointer to list
-mov		r3,#0
-ListLoop:
-ldrb	r2,[r1,#1]		@chance of getting item
-cmp		r2,#0
-beq		ReturnNoItem
-add		r3,r2
-cmp		r0,r3
-bge		NextEntry
-ldrb	r0,[r1]			@item
-b		ReturnItem
-NextEntry:
-add		r1,#2
-b		ListLoop
-ReturnNoItem:
-mov		r0,#0
-ReturnItem:
-bx		r14
-
-
 .align
 BasicWeaponList:
 .byte 0x01, 0x14, 0x1F, 0x2D, 0x4E, 0x38, 0x3F, 0x45		@iron sword, iron lance, iron axe, iron bow, physic, fire, lightning, flux
@@ -187,6 +169,7 @@ BasicWeaponList:
 .equ Get_Unit_Level, Get_Entry_Pointer+4
 .equ RandomItemsTable, Get_Unit_Level+4
 .equ RandomRingsTable, RandomItemsTable+4
+.equ ChooseItemFromList, RandomRingsTable+4
 Get_Entry_Pointer:
 @
 

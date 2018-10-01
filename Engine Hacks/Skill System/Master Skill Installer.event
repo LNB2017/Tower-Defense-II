@@ -445,6 +445,11 @@ ALIGN 4
 MakeFakeCurrentUnit:
 #incbin "Teq Skills/Remove and Promote/MakeFakeCurrentUnit.dmp"
 
+//Phantom movement cost
+PhantomMoveCost:
+#incbin "PhantomMoveCost.dmp"
+
+ALIGN 4
 
 //#include "Other Skills/RandomMugs.event"
 #include "Teq Skills/FE8-StealPlus/FE8-StealPlus EA.txt"
