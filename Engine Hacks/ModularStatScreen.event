@@ -90,6 +90,7 @@
   WORD Growth_Options
   POIN Growth_Getter_Table
   POIN Get_Palette_Index
+  POIN Get_Enemy_Worth
   
   ALIGN 4
   MSS_page2:
@@ -213,6 +214,17 @@ NewPageNamePalette:
 	ALIGN 4
 	New_Palettes:
 	#include "MSS/Display Growths Options/New Palette.txt"
+	
+	ALIGN 4
+	Get_Enemy_Worth:
+	#incbin "MSS/Get_Enemy_Worth.dmp"
+	SHORT UnpromotedBaseValue UnpromotedLevelMult
+	SHORT PromotedBaseValue PromotedLevelMult
+	SHORT ThiefBonus RogueBonus
+	SHORT BossBonus AssassinsBonus
+	
+	ALIGN 4
+	
 
 //  TxtData0x0D4B:
 //  String(Donate to Circles)

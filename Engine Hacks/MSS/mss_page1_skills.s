@@ -13,7 +13,8 @@
 .set Display_Growths_options, SS_TalkText+4
 .set Growth_Getters_Table, Display_Growths_options+4
 .set Get_Palette_Index, Growth_Getters_Table+4
-.equ GetCharge, Get_Palette_Index+4
+.equ Get_Enemy_Worth, Get_Palette_Index+4
+.equ GetCharge, Get_Enemy_Worth+4
 
 page_start
 
@@ -130,9 +131,11 @@ draw_aid_icon_at 26, 3
 
 draw_trv_text_at 21, 5
 
-draw_textID_at 21, 7, textID=0x4f1 @affin
-
-draw_affinity_icon_at 24, 7
+@draw_affinity_icon_at 21, 7
+draw_cost_at 21,7
+b SkipLiterals3
+.ltorg
+SkipLiterals3:
 
 draw_status_text_at 21, 9
 

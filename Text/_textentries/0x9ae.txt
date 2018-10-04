@@ -1,3 +1,2 @@
-Sturdy Stance: +4 attack[NL]
-and defense when foe[NL]
-initiates battle.[X]
+Fierce Stance: +6 attack[NL]
+when foe initiates battle.[X]

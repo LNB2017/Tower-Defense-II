@@ -4,14 +4,14 @@ Using skill system as a base
 Skills:
 	DONE Add capture and steal+ 
 AI:
-	Enemies seek to move toward target(s). If they cannot get to it because the way is blocked, then attack whatever's available
+	DONE Enemies seek to move toward target(s). If they cannot get to it because the way is blocked, then attack whatever's available
 Movement:
 	DONE Wagon doesn't get greyed out
 	DONE Player units have ~60 mov when purchased (include movement arrow fix; may have to move coordinate buffer due to debuff table and god knows what else)
 	DONE Player units get set to guard AI after action is taken (run this check after phase as well in case some units didn't move)
 	DONE Using the relocate item will remove the guard AI bit, allowing the unit to move; have to add something to either allow the unit to canto, or not grey it out, after using this
-	Thieves/rogues can move a little (1 or 2 tiles), or can steal in a wider area? (2 tile radius?) (opted for being able to move, at the expense of not blocking enemies)
-	Phantoms have regular move (5)
+	DONE Thieves/rogues can move a little (1 or 2 tiles), or can steal in a wider area? (2 tile radius?) (opted for being able to move, at the expense of not blocking enemies)
+	DONE Phantoms have regular move (5)
 	DONE Phantoms have pass, but can also be passed through (and why not, let's make them walk through walls) (modify Pass routine)
 	Enemy units have regular movement (% chance of +1/+2 mov to make infantry behave like cavalry (and have things other than 5/6 move) wasn't terribly well received)
 Generating player units:
@@ -20,13 +20,13 @@ Generating player units:
 	DONEish Character will be chosen from a pool of ~100 characters, each having base modifiers, growth modifiers, and a skill. These will be added to class bases/growths. For instance, Ewan might have all negative stat modifiers, but good growths and a decent skill.
 	DONEish Unit will be autolevelled based on turn (+1 every 5 turns for unpromoted units, +1 every 10 for promoted units)
 	DONE Inventory will be randomly generated based on level
-	Boost phantom cap from 1 to 5 (shared between all summoners)
+	DONE Boost phantom cap from 1 to 5 (shared between all summoners)
 Generating enemies:	
 	A wave every 5 turns (on normal)?
 	DONE 1 turn event (1-255) that calls an ASMC that loads the relevant UNIT block (so that I don't need a TURN event for each wave, which will be big and messy)
 	Normal mode has specific units each wave, while hard mode is randomly generated?
 Goal window:
-	Show current gold and time until next wave in goal window
+	DONE Show current gold and time until next wave in goal window
 	DONE Protect an NPC, rather than preventing units from getting to a certain square (should be easier to write AI for that)
 Shops:
 	Shops are walled off in a separate part of the map
@@ -236,3 +236,4 @@ Swordmaster
 Sage
 Rogue
 
+easy midori mode (everyone gets angel ring): Write 0C E0 at FE4D92

@@ -48,4 +48,19 @@ Wields:[X]
 ## Skills_Text_ID
 Skills:[X]
 
+## Gold_Text_ID
+G.[X]
+
+## GoalScreenText1
+Gold: [X]
+
+## GoalScreenText2
+Wave in: [X]
+
+## GoalScreenText3
+Now![X]
+
+## GoalScreenText4
+Final![X]
+
 #include "skilldesc_text.txt"

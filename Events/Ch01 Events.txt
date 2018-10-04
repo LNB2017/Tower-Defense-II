@@ -21,6 +21,7 @@ POIN Ch01_BeginningScene Ch01_EndingScene
 
 Ch01_TurnBasedEvents:
 TurnEventNPC(0, Ch01_Spawn_Enemies, 1, 100)
+TurnEventNPC(0, Ch01_Give_Money, 1, 100)
 END_MAIN
 
 Ch01_CharacterBasedEvents:
@@ -78,5 +79,10 @@ BEQ 5 2 0				//skip loading if slot 2 = slot 0 (0)
 LOAD_SLOT2 0x1			//no idea what the argument is
 ENUN
 LABEL 5
+NoFade
+ENDA
+
+Ch01_Give_Money:
+ASMC Give_Money_Every_Wave_ASMC|1
 NoFade
 ENDA

@@ -29,7 +29,16 @@
 #define Capture_Event_ID 0xB //event id is set if Capture is allowed
 
 #define Initial_Gold_Amount 	5000			//Amount of gold you start with
-#define Gold_Per_Level 			5				//Amount of gold you get per level
+#define Gold_Per_Level 			100				//Amount of gold you get per level
+#define UnpromotedBaseValue		50				//Formula: Base + Level*LevelMult + Bonuses
+#define UnpromotedLevelMult		5
+#define PromotedBaseValue		100
+#define PromotedLevelMult		10
+#define ThiefBonus				100
+#define RogueBonus				200
+#define BossBonus				150
+#define AssassinsBonus			400				//indicated by Forblaze lock
+
 
 #define SittingDuck 0xC8
 #define Mook1 0x80

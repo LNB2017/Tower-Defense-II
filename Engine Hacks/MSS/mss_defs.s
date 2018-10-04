@@ -519,6 +519,38 @@
   blh     DrawIcon 
 .endm
 
+.macro draw_cost_at, tile_x, tile_y
+	draw_textID_at \tile_x, \tile_y, 0x90D, width=9 @Gold, formerly affin
+	mov r0,r8
+	ldrb r1,[r0,#0xB]
+	cmp r1,#0x80
+	blt DrawBlankText
+	@if enemy
+	
+	ldr r4, =(tile_origin+(0x20*2*\tile_y)+(2*(\tile_x+4)))
+	.set get_worth_loc, (Get_Enemy_Worth - . - 6)
+	ldr r3,=get_worth_loc
+	add r3,pc
+	ldr r3,[r3]
+	mov r14,r3
+	.short 0xF800
+	mov r1, #Blue
+	mov r2, r0
+	mov r0,r4
+	blh 0x8004b94
+	b EndDrawCost
+	DrawBlankText:
+	ldr r0,=#0x536			@ ---[X]
+	blh BufferText
+	mov r3,r0
+	mov r0,r7
+	sub r0,#8
+	mov r1,#0x18
+	mov r2,#Blue
+	blh AppendText, r4
+	EndDrawCost:
+.endm
+
 .macro draw_icon_at, tile_x, tile_y, number=0
   @assumes icon number in r0 or else in number
   .if \number

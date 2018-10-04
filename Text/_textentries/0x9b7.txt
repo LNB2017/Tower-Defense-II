@@ -1,3 +1,1 @@
-Rooted: The unit cannot be[N]
-deleted once moved, unless[N]
-they have used a Relocate item.[X]
+Steal: Unit can steal items.[X]
