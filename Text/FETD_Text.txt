@@ -1,0 +1,54 @@
+## AnaName
+Ana[X]
+
+## AnaDesc
+Something witty[X]
+
+## NanName
+Nan[X]
+
+## NanDesc
+Not to be confused with[N]
+delicious Indian flatbread.[X]
+
+## AnnName
+Ann[X]
+
+## AnnDesc
+Not so raggedy after all.[X]
+
+## NanaName
+Nana[X]
+
+## NanaDesc
+Something witty[X]
+
+## NotANumberName
+NaN[X]
+
+## NotANumberDesc
+She's not a number, she's a[N]
+free (wo)man. Lives her life[N]
+the way she wants to.[X]
+
+## AnnaName
+Anna[X]
+
+## AnnaDesc
+Firstborn of the Anna clan.[N]
+Scheming and, uh, just[N]
+scheming, really.[X]
+
+## ShopkeeperName
+Shopkeeper[X]
+
+## ShopkeeperDesc
+An individual well-versed in making[N]
+you part with your hard-earned money.[X]
+
+## TentName
+Tent[X]
+
+## TentDesc
+No one's sure how it moves around,[N]
+but it does. Use it to buy stuff.[X]

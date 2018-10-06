@@ -1,8 +1,19 @@
 #include EAStdlib.event
 EventPointerTable(0x7, Ch01_Events_Table)
 
-#define Spawn1X 3
-#define Spawn1Y 15
+#define Spawn1X 2
+#define Spawn1Y 12
+
+#define Shop1X 2
+#define Shop1Y 6
+#define Shop2X 2
+#define Shop2Y 4
+#define Shop3X 2
+#define Shop3Y 2
+#define Shop4X 4
+#define Shop4Y 2
+#define Shop5X 6
+#define Shop5Y 2
 
 #include "Enemies.txt"
 
@@ -21,13 +32,18 @@ POIN Ch01_BeginningScene Ch01_EndingScene
 
 Ch01_TurnBasedEvents:
 TurnEventNPC(0, Ch01_Spawn_Enemies, 1, 100)
-TurnEventNPC(0, Ch01_Give_Money, 1, 100)
+TurnEventNPC(0, Ch01_Give_Money, 1, 255)
 END_MAIN
 
 Ch01_CharacterBasedEvents:
 END_MAIN
 
 Ch01_LocationBasedEvents:
+SHOP 0x0 Ch01_Shop1 [Shop1X, Shop1Y] 0x16
+SHOP 0x0 Ch01_Shop2 [Shop2X, Shop2Y] 0x16
+SHOP 0x0 Ch01_Shop3 [Shop3X, Shop3Y] 0x16
+SHOP 0x0 Ch01_Shop4 [Shop4X, Shop4Y] 0x16
+SHOP 0x0 Ch01_Shop5 [Shop5X, Shop5Y] 0x16
 END_MAIN
 
 Ch01_MiscBasedEvents:
@@ -51,18 +67,28 @@ Ch01_Units:
 UNIT
 
 Ch01_Wagon:
-UNIT Eirika Tent 0 Level(1,Ally,0) [5,3] 0 0 0 0 [0] NoAI
+UNIT Merlinus Tent 0 Level(1,Ally,0) [3,3] 0 0 0 0 [0] NoAI
 UNIT
 
 Ch01_Target:
-UNIT SittingDuck General 0 Level(1,NPC,1) [9,15] 0 0 0 0 [0] NeverMoveAI
-UNIT Neimi Knight 0 Level(1,Ally,1) [8,15] 0 0 0 0 [Relocate] NoAI
+UNIT SittingDuck Pontifex 0 Level(1,NPC,0) [20,20] 0 0 0 0 [0] NeverMoveAI
+UNIT
+
+Ch01_Annas:
+UNIT Shop_Anna1 Civilian_F_3 0 Level(1,NPC,0) [Shop1X-1,Shop1Y] 0 0 0 0 [IronSword, Fire, Physic, Relocate] NeverMoveAI
+UNIT Shop_Anna2 Civilian_F_3 0 Level(1,NPC,0) [Shop2X,Shop2Y] 0 0 0 0 [SteelSword, Elfire, Restore, MasterSeal] NeverMoveAI
+UNIT Shop_Anna3 Civilian_F_3 0 Level(1,NPC,0) [Shop3X,Shop3Y] 0 0 0 0 [Lancereaver, Thunder, Fortify] NeverMoveAI
+UNIT Shop_Anna4 Civilian_F_3 0 Level(1,NPC,0) [Shop4X,Shop4Y] 0 0 0 0 [BraveSword, Bolting] NeverMoveAI
+UNIT Shop_Anna5 Civilian_F_3 0 Level(1,NPC,0) [Shop5X,Shop5Y] 0 0 0 0 [SilverSword, Fimbulvetr, Sleep] NeverMoveAI
+UNIT Capture_Anna Civilian_F_3 0 Level(1,NPC,0) [1,1] 0 0 0 0 [0] NeverMoveAI
 UNIT
 
 Ch01_BeginningScene:
 LOAD1 0x1 Ch01_Wagon
 ENUN
 LOAD1 0x1 Ch01_Target
+ENUN
+LOAD1 0x1 Ch01_Annas
 ENUN
 FADU 0x10
 SVAL 0x3 Initial_Gold_Amount
@@ -76,6 +102,7 @@ ENDA
 Ch01_Spawn_Enemies:
 ASMC Get_Enemies|1		//puts a pointer to reinforcements in slot 2
 BEQ 5 2 0				//skip loading if slot 2 = slot 0 (0)
+EVBIT_T 0x9				//supposedly makes the camera pan to the reinforcements
 LOAD_SLOT2 0x1			//no idea what the argument is
 ENUN
 LABEL 5
@@ -86,3 +113,14 @@ Ch01_Give_Money:
 ASMC Give_Money_Every_Wave_ASMC|1
 NoFade
 ENDA
+
+Ch01_Shop1:
+SHLI IronSword IronLance IronAxe IronBow Fire Lightning Flux Physic Relocate
+Ch01_Shop2:
+SHLI SteelSword SteelLance SteelAxe SteelBow Elfire Shine Worm Restore Barrier MasterSeal
+Ch01_Shop3:
+SHLI Lancereaver Axereaver Swordreaver Longbow Thunder Resire Luna Fortify Silence
+Ch01_Shop4:
+SHLI BraveSword BraveLance BraveAxe BraveBow Bolting Purge Eclipse Slow FillasMight NinissGrace ThorsIre SetsLitany
+Ch01_Shop5:
+SHLI SilverSword SilverLance SilverAxe SilverBow Fimbulvetr Aura Fenrir Sleep

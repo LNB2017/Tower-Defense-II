@@ -23,7 +23,10 @@
 #define LunarBrace MoonBracelet
 #define SolarBrace SunBracelet
 #define Relocate HeroCrest			//don't need promotion items outside of master seal
-#define OtataralBow BraveBow
+#define OtataralBow KnightCrest
+#define Resire Nosferatu
+#define Worm OrionBolt
+#define Slow ElysianWhip
 
 #define Promote_Action_Byte 0xD //theoretically, this should work
 #define Capture_Event_ID 0xB //event id is set if Capture is allowed
@@ -39,14 +42,23 @@
 #define BossBonus				150
 #define AssassinsBonus			400				//indicated by Forblaze lock
 
+#define Merlinus 0x65
+#define PhantomChar1 0x66
+#define PhantomChar2 0x67
+#define PhantomChar3 0x68
+#define PhantomChar4 0x69
+#define PhantomChar5 0x6A
 
-#define SittingDuck 0xC8
 #define Mook1 0x80
-#define PhantomChar1 0x65
-#define PhantomChar2 0x66
-#define PhantomChar3 0x67
-#define PhantomChar4 0x68
-#define PhantomChar5 0x69
+
+#define SittingDuck 0xC0
+#define Shop_Anna1 0xC1
+#define Shop_Anna2 0xC2
+#define Shop_Anna3 0xC3
+#define Shop_Anna4 0xC4
+#define Shop_Anna5 0xC5
+#define Capture_Anna 0xC6
+
 
 #include "Engine Hacks/Skill System/skill_definitions.event"
 

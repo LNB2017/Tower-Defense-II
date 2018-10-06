@@ -15,6 +15,8 @@ Learned  [X]
 
 #include "unitmenu_text.txt"
 
+#include "inline_text.txt"
+
 #0x903 HouseText
 #first text ID in the free block
 [MidRight][LoadFace][CurrentPortrait]Nothing to see here.[A][X]
@@ -64,3 +66,5 @@ Now![X]
 Final![X]
 
 #include "skilldesc_text.txt"
+
+#include "FETD_Text.txt"

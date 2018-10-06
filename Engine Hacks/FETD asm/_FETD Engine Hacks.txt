@@ -82,6 +82,10 @@ ORG $8D288
 #incbin "Goal_Window.dmp"
 POIN Enemy_Pointer_Table
 
+//Make sold items sell for 25%
+ORG $B5274
+SHORT 0x0C40
+
 POP
 
 ALIGN 4

@@ -144,6 +144,7 @@ mov		r3,#0
 
 @This section is for effectiveness/talk/wta/whatever, which only display if a unit is selected. Since checking for this every frame makes it super laggy, we create a cache. First byte will be reserved for status of the operation: 0 if unit isn't selected, 1 if filling the cache, 2 if done
 CheckIfSelected:
+b		GoBack
 ldr		r6,=CurrentCharPtr
 ldr		r6,[r6]
 cmp		r6,#0

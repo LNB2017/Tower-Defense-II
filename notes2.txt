@@ -142,3 +142,28 @@ Money on top row
 Time on second row
 Incoming! Last Wave! - glowy green
 1/3 wave
+
+Tier 1: Iron Sword, Iron Lance, Iron Axe, Iron Bow, Fire, Lightning, Flux, Physic, Relocate (item)
+Tier 2: Steel Sword, Steel Lance, Steel Axe, Steel Bow, Elfire, Shine, Worm, Restore, Barrier, Master Seal
+Tier 3: Lancereaver, Axereaver, Swordreaver, Longbow, Resire, Thunder, Luna, Fortify, Silence
+Tier 4: Brave Sword, Brave Lance, Brave Axe, Brave Bow, Bolting, Purge, Eclipse, Slow (staff), Dancer rings?
+Tier 5: Silver Sword, Silver Lance, Silver Axe, Silver Bow, Fimbulvetr, Aura, Fenrir, Sleep
+
+Changes:
+Luna can't crit
+Eclipse does 1/4th damage to enemies with boss icon
+Thunder is 2-3 range
+Resire is Nosferatu, but light magic
+Worm poisons
+
+Not sold (only obtained via drops/capture)
+1-2 range physical (javelin, hand axe, magic swords, etc)
+poison weapons
+killer weapons
+S-rank stuff
+Effective weapons (not that there's much of those, since armors/swords are the only weaknesses remaining from the original, so I should either make new ones or scrap them entirely)
+Stat boosters and other useful items (Hoplon Guard, etc)
+
+
+Target name is Syting, class is Duke
+mooks are called Bad Guy, boss is Boss, assassins are Assassin (duh)

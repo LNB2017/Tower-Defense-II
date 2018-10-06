@@ -8,23 +8,20 @@ Map:
 #incbin "FETD_Map_data.dmp"
 
 MapChanges:
-TileMap(0,2,3,1,2,NW_Door_1)
-TileMap(1,12,4,3,4,Spawn_2)
-TileMap(2,16,6,1,2,NE_Door1)
-TileMap(3,21,6,1,2,NE_Door2)
-TileMap(4,2,8,1,2,NW_Door_2)
-TileMap(5,7,10,1,2,NW_Bishop_Door)
-TileMap(6,4,18,2,1,SW_Door1)
-TileMap(7,17,18,1,1,SW_Bishop_Door)
-TileMap(8,4,23,2,1,SW_Door2)
+TileMap(1,10,0,5,5,Spawn_2)
+TileMap(2,15,3,1,2,NE_Door1)
+TileMap(3,20,3,1,2,NE_Door2)
+TileMap(4,6,7,1,2,NW_Bishop_Door)
+TileMap(5,15,12,7,2,East_cracked_wall2)
+TileMap(6,18,12,1,1,East_cracked_wall1)
+TileMap(7,3,15,2,1,SW_Door1)
+TileMap(8,12,15,2,7,South_cracked_wall2)
+TileMap(9,12,18,1,1,South_cracked_wall1)
+TileMap(10,3,20,2,1,SW_Door2)
 TileMapEnd
 
-NW_Door_1:
-SHORT 0xc44 0xc44 
-ALIGN 4
-
 Spawn_2:
-SHORT 0xc4c 0xc48 0xc48 0xc40 0xc44 0xc44 0xc40 0xc44 0xc44 0xb44 0xb44 0xb44 
+SHORT 0xab4 0x6ac 0x6ac 0x6ac 0xab4 0x73c 0xc4c 0xc48 0xc48 0x73c 0x73c 0xc40 0xc44 0xc44 0x73c 0x8a4 0xc40 0xc44 0xc44 0x6b0 0xb4c 0xb44 0xb44 0xb44 0xb48 
 ALIGN 4
 
 NE_Door1:
@@ -35,20 +32,28 @@ NE_Door2:
 SHORT 0xb40 0xb44 
 ALIGN 4
 
-NW_Door_2:
-SHORT 0xc40 0xc40 
-ALIGN 4
-
 NW_Bishop_Door:
 SHORT 0xb40 0xb44 
+ALIGN 4
+
+East_cracked_wall2:
+SHORT 0x7a8 0xb44 0xb44 0xb44 0xb44 0xb44 0x930 0xb48 0xb44 0xb44 0xb44 0xb44 0xb44 0xb48 
+ALIGN 4
+
+East_cracked_wall1:
+SHORT 0x7c4 
 ALIGN 4
 
 SW_Door1:
 SHORT 0xb44 0xb44 
 ALIGN 4
 
-SW_Bishop_Door:
-SHORT 0xb40 
+South_cracked_wall2:
+SHORT 0x6b4 0xb44 0xb44 0xb44 0xb44 0xb44 0xb44 0xb44 0xb44 0xb44 0xb44 0xb44 0x82c 0xb44 
+ALIGN 4
+
+South_cracked_wall1:
+SHORT 0x7c0 
 ALIGN 4
 
 SW_Door2:

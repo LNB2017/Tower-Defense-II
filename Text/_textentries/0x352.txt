@@ -1,0 +1,2 @@
+Owner of a castle that[N]
+is currently under siege.[X]

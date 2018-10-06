@@ -1,0 +1,13 @@
+#0x306
+Duke[X]
+
+#0x352
+Owner of a castle that[N]
+is currently under siege.[X]
+
+#0x25D
+Syting[X]
+
+#0x2B6
+Duke Syting of Aliquet.[N]
+Voiced by Sean Connery.[X]
