@@ -33,7 +33,10 @@ beq NoClass
 NoClass:
 
 @learned skills, up to 4
-cmp r6, #0x46
+@use deployment id instead of char id
+@cmp r6, #0x46
+ldrb r6,[r4,#0xB]
+cmp r6,#0x3F
 bhi GenericUnit
 ldr r0, =BWLTable
 lsl r1, r6, #4 @r1 = char*0x10
@@ -50,7 +53,7 @@ strb r1, [r5]
 add r5, #1
 NextLoop:
 cmp r2, #3
-bge TerminateList
+bge CheckHeldSkills
 add r2, #1
 b LoopStart
 
@@ -64,11 +67,11 @@ lsl r1, #2
 add r1, r2
 ldr r6, [r1] @pointer to list of skills
 cmp r6, #0
-beq TerminateList
+beq CheckHeldSkills
 CheckLoop:
   ldrb r0, [r6]
   cmp r0, #0
-  beq TerminateList
+  beq CheckHeldSkills
   cmp r0, r7
   ble FoundSkill @if the skill is lower/equal level
   cmp r0, #0xFF
@@ -81,6 +84,30 @@ CheckLoop:
   add r5, #1
   add r6, #2
   b CheckLoop
+
+CheckHeldSkills:
+@r4=char data ptr, r5=skills buffer to write to, r6/r7 free
+mov r6,#0 @inventory loop counter
+mov r7,r4
+add r7,#0x1E
+InventoryLoop:
+ldrb r0,[r7]
+cmp r0,#0
+beq TerminateList
+ldr r3,=#0x80177B0 @get_item_data
+mov r14,r3
+.short 0xF800
+add r0,#0x23 @skill granted, if any
+ldrb r0,[r0]
+cmp r0,#0
+beq NextItem
+strb r0,[r5]
+add r5,#1
+NextItem:
+add r7,#2
+add r6,#1
+cmp r6,#4
+ble InventoryLoop
 
 TerminateList:
 mov r0, #0

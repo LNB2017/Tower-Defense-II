@@ -214,6 +214,7 @@ Warrior
 Berserker
 Summoner?
 
+Waves:
 Soldier
 Fighter
 Monk

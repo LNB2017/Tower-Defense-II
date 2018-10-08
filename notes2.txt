@@ -167,3 +167,49 @@ Stat boosters and other useful items (Hoplon Guard, etc)
 
 Target name is Syting, class is Duke
 mooks are called Bad Guy, boss is Boss, assassins are Assassin (duh)
+
+TODO LIST (updated):
+ASM:
+add Zane's MMB
+add Tera's range fix (Restore needs to be mag/2)
+make Slow Staff (mov/2) and status
+weapons can inflict statuses (otataral bow, maybe blizzard)
+DONE - increase exp granted from battle (come up with a formula) (~5 chips/2 KOs for a levelup)
+arms scroll?
+add indicator for assassin units
+DONE - edit dancer ring effects (+10 atk is OP, +10 avoid is basically worthless) (either buff effects and they last one turn, or nerf them a bit and have them last longer/decrease each turn)
+DONE - Staff accuracy: switch mag and skl getter calls around
+DONE - edit skill getter and setter to use deployment ID for the learnable skills rather than character ID
+sell items that grant skills when held? Maybe a secret shop? would sell proc skills that aren't anyone's personal (adept, astra, pavise, etc) - make them have charges, uses 1/battle regardless whether skill happened or not
+DONE - Staff exp isn't based on worth
+
+Graphics:
+Import FE7 mugs for the FE7 characters (do this last)
+Import Halberdier animation
+Duke animation
+
+Text:
+Names/descriptions for buyable units
+"Story"
+Names and descriptions for dancer rings
+Guide (make this after playtesting)
+Unlocking the various shops/Capture
+
+Tables:
+Set personal growth and bases modifiers (UGHHHHH)
+set personal skills
+set promotions
+buff class bases and growths (because holy crap they're bad)
+Set buyable units and their prices
+buff weapon exp across the board, make irons and basic tomes/physic infinite use, edit item prices
+
+Events:
+Set up map changes on specific turns
+Set up waves
+
+Playtesting:
+I don't want to talk about it.
+
+
+Chip: 21 + Enemy_level - Attacker_Level (promoted adds +20)
+Kill: Chip + 20 + boss bonus (+40) + thief bonus (+20)

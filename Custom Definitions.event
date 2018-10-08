@@ -30,6 +30,10 @@
 
 #define Promote_Action_Byte 0xD //theoretically, this should work
 #define Capture_Event_ID 0xB //event id is set if Capture is allowed
+#define RingAttackBoost 3
+#define RingDefenseBoost 5
+#define RingCritBoost 20
+#define RingAvoidBoost 20
 
 #define Initial_Gold_Amount 	5000			//Amount of gold you start with
 #define Gold_Per_Level 			100				//Amount of gold you get per level

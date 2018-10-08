@@ -7,9 +7,11 @@ push {r4-r5,lr}
 
 mov r5, r1
 
-ldr r4, [r0]
-ldrb r4, [r4, #4] @char num in r4
-cmp r4, #0x46
+@ldr r4, [r0]
+@ldrb r4, [r4, #4] @char num in r4
+@cmp r4, #0x46
+ldrb r4,[r0,#0xB] @deployment id
+cmp r4,#0x3F
 bhi False
 
 ldr r0, =BWLTable

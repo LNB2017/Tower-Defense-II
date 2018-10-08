@@ -20,9 +20,11 @@ push {r4-r7, lr}
 mov r5, r0
 
 @let's uh clear out the existing skills first... just in case
-ldr r4, [r5]
-ldrb r4, [r4, #4] @char num in r4
-cmp r4, #0x46
+@ldr r4, [r5]
+@ldrb r4, [r4, #4] @char num in r4
+@cmp r4, #0x46
+ldrb r4,[r5,#0xB]
+cmp r4,#0x3F
 bhi NoSkills
 ldr r0, =BWLTable
 lsl r1, r4, #4 @r1 = char*0x10

@@ -47,6 +47,11 @@ SHORT 0x2800
 ORG $2FC20
 callHack_r3(Dancer_Rings)
 
+//Modify dancer rings effects
+ORG $2AD90
+#incbin "Dancer_Ring_Effect.dmp"
+BYTE RingAttackBoost RingDefenseBoost RingCritBoost RingAvoidBoost
+
 //AI
 ORG $5A8BA4
 SHORT SittingDuck
@@ -85,6 +90,17 @@ POIN Enemy_Pointer_Table
 //Make sold items sell for 25%
 ORG $B5274
 SHORT 0x0C40
+
+//Staff accuracy edit ( 5*(mag-res)+skl -> 5*(skl-res)+mag )
+ORG $2CCE2
+BL(0x191D0)
+ORG $2CCF6
+BL(0x191B0)
+
+//Staff exp depends on item might
+ORG $2C66A
+BL(0x175DC)
+SHORT 0x1C02 0xE002
 
 POP
 
