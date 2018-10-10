@@ -52,3 +52,21 @@ Tent[X]
 ## TentDesc
 No one's sure how it moves around,[N]
 but it does. Use it to buy stuff.[X]
+
+## ArmsScrollUseText
+All eligible weapon ranks increased![X]
+
+## FreezeHelpText
+Can't move, due to cement shoes.[X]
+
+## FillasMightName
+Filla's Might[X]
+
+## NinissGraceName
+Ninis's Grace[X]
+
+## ThorsIreName
+Thor's Ire[X]
+
+## SetsLitanyName
+Set's Litany[X]

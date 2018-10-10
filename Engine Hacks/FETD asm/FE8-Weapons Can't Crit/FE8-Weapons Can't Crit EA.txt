@@ -1,0 +1,35 @@
+//FE8-Weapons Can't Crit
+//By Tequila
+//Weapons with crit = 0xFF cannot crit
+
+#ifndef _FE8_
+	ERROR "You're not assembling FE8 events!"
+#endif
+
+#include EAstdlib.event
+#include "Extensions/Hack Installation.txt"
+
+#ifndef FreeSpace
+	#define FreeSpace 0xB2B000
+	ORG FreeSpace
+#endif
+
+PUSH
+
+//calculation 
+ORG $2ACB0
+callHack_r3(Crit_Calculation)
+
+//stat screen
+ORG $2AC44
+jumpToHack(Crit_Display)
+
+POP
+
+ALIGN 4
+Crit_Calculation:
+#incbin "Crit_Calculation.dmp
+
+ALIGN 4
+Crit_Display:
+#incbin "Crit_Display.dmp"

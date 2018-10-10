@@ -4,6 +4,7 @@
 @jumped to from 22DAC
 @this displays the red squares for the current weapon. It is being modified to only show 1 range if capturing, even if the weapon has longer range (ie, 1-2 -> 1-1)
 
+.equ Get_Range_Bitfield, Is_Capture_Set+4
 push	{r14}
 ldr		r1,Is_Capture_Set
 mov		r14,r1
@@ -23,7 +24,7 @@ pop		{r2}
 bx		r2
 
 .align
-Get_Range_Bitfield:
-.long 0x080171E8
 Is_Capture_Set:
 @
+@Get_Range_Bitfield:
+@.long 0x080171E8

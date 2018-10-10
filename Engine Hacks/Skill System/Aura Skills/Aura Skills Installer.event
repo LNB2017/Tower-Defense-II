@@ -42,20 +42,20 @@ SpurMag: //checked in fe8_calc_loop
 POIN AuraSkillCheck
 WORD SpurMagID
 
-// SpurSkl: //checked in fe8_calc_loop
-// #incbin "SpurSkl.dmp"
-// POIN AuraSkillCheck
-// WORD SpurSklID
+SpurSkl: //checked in fe8_calc_loop
+#incbin "SpurSkl.dmp"
+POIN AuraSkillCheck
+WORD SpurSklID
 
 SpurSpd: //checked in fe8_calc_loop
 #incbin "SpurSpd.dmp"
 POIN AuraSkillCheck
 WORD SpurSpdID
 
-// SpurLuk: //checked in fe8_calc_loop
-// #incbin "SpurLuk.dmp"
-// POIN AuraSkillCheck
-// WORD SpurLukID
+SpurLuk: //checked in fe8_calc_loop
+#incbin "SpurLuk.dmp"
+POIN AuraSkillCheck
+WORD SpurLukID
 
 SpurDef: //checked in fe8_calc_loop
 #incbin "SpurDef.dmp"
@@ -138,3 +138,8 @@ Solidarity:
 #incbin "Solidarity.dmp"
 POIN AuraSkillCheck
 WORD SolidarityID
+
+QuietStrength:
+#incbin "QuietStrength.dmp"
+POIN AuraSkillCheck
+WORD QuietStrengthID

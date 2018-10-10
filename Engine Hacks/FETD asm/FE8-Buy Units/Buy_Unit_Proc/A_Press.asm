@@ -37,6 +37,7 @@ add		r6,#0x48
 GetFreeCharacterLoop:
 mov		r0,#100					@number of character entries, hopefully
 _blh	NextRN_N
+add		r0,#1
 mov		r7,r0
 _blh	Find_Char_ID
 cmp		r0,#0

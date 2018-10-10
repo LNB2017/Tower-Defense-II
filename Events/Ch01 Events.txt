@@ -33,6 +33,7 @@ POIN Ch01_BeginningScene Ch01_EndingScene
 Ch01_TurnBasedEvents:
 TurnEventNPC(0, Ch01_Spawn_Enemies, 1, 100)
 TurnEventNPC(0, Ch01_Give_Money, 1, 255)
+TurnEventNPC(0, LightningTest, 1, 1)
 END_MAIN
 
 Ch01_CharacterBasedEvents:
@@ -115,12 +116,24 @@ NoFade
 ENDA
 
 Ch01_Shop1:
-SHLI IronSword IronLance IronAxe IronBow Fire Lightning Flux Physic Relocate
+SHLI IronSword IronLance IronAxe IronBow Fire Lightning Flux Heal Relocate Vulnerary
 Ch01_Shop2:
-SHLI SteelSword SteelLance SteelAxe SteelBow Elfire Shine Worm Restore Barrier MasterSeal
+SHLI SteelSword SteelLance SteelAxe SteelBow Elfire Shine Worm Mend Restore MasterSeal
 Ch01_Shop3:
-SHLI Lancereaver Axereaver Swordreaver Longbow Thunder Resire Luna Fortify Silence
+SHLI Lancereaver Axereaver Swordreaver Longbow Thunder Resire Luna Physic Barrier 
 Ch01_Shop4:
-SHLI BraveSword BraveLance BraveAxe BraveBow Bolting Purge Eclipse Slow FillasMight NinissGrace ThorsIre SetsLitany
+SHLI BraveSword BraveLance BraveAxe BraveBow Bolting Purge Eclipse Fortify Silence FillasMight NinissGrace ThorsIre SetsLitany
 Ch01_Shop5:
 SHLI SilverSword SilverLance SilverAxe SilverBow Fimbulvetr Aura Fenrir Sleep
+
+ALIGN 4
+LightningTest:
+doThunder(18,12)
+//SETVAL 1 6
+//TILECHANGE 0
+//STAL 40
+//doThunder(12,18)
+//SETVAL 1 9
+//TILECHANGE 0
+//NoFade
+ENDA

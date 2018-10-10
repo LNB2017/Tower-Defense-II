@@ -1,0 +1,104 @@
+#ifndef installlightning
+
+#include "_6CDefinitions.event"
+
+ALIGN 4
+lightningAnim:
+#incbin "startProc.dmp"
+POIN lightningProc
+
+ALIGN 4
+lightningProc:
+_6C_CALL_ROUTINE(Anim_Setup|1)
+_6C_WHILE_EXISTS(0x59A548)
+_6C_LOOP_ROUTINE(Anim_LoadFrames|1)
+_6C_CALL_ROUTINE(0x21668|1)
+_6C_END
+
+#define installlightning
+
+#define doThunder(XX,YY) "STARTFADE; FADECOLORS 0x2000 0x8 0x80 0x80 0x80; STAL 30; SETVAL 1 XX; SETVAL 2 YY; ASMC (lightningAnim|1); FADECOLORS 0x2000 0x4 0x100 0x100 0x100"
+
+#ifndef waitFrame
+	#define waitFrame "WORD 0 0 0"
+#endif
+#ifndef terminatorFrame
+	#define terminatorFrame "WORD 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF"
+#endif
+
+ALIGN 4
+Anim_LoadFrames:
+#incbin "looproutine.dmp"
+
+ALIGN 4
+MESSAGE anim setup at CURRENTOFFSET
+Anim_Setup:
+#incbin "setup.dmp"
+POIN Animation
+
+ALIGN 4
+//WIDTH * HEIGHT must not be bigger than 372
+//edit the SHORT value to add sound effects
+Animation:
+BYTE 9 19; SHORT 0x00; POIN lightning00image  lightningpalette
+BYTE 9 19; SHORT 0x00; POIN lightning01image  lightningpalette
+waitFrame
+BYTE 9 19; SHORT 0x00; POIN lightning02image  lightningpalette
+waitFrame
+BYTE 9 19; SHORT 0x00; POIN lightning03image  lightningpalette
+waitFrame
+BYTE 9 19; SHORT 0x00; POIN lightning04image  lightningpalette
+waitFrame
+BYTE 9 19; SHORT 0x00; POIN lightning05image  lightningpalette
+waitFrame
+BYTE 9 19; SHORT 0x00; POIN lightning06image  lightningpalette
+waitFrame
+waitFrame
+BYTE 9 19; SHORT 0x00; POIN lightning07image  lightningpalette
+BYTE 9 19; SHORT 0x00; POIN lightning08image  lightningpalette
+waitFrame
+BYTE 9 19; SHORT 0x00; POIN lightning09image  lightningpalette
+waitFrame
+BYTE 9 19; SHORT 0x00; POIN lightning10image  lightningpalette
+waitFrame
+waitFrame
+terminatorFrame
+
+ALIGN 4
+ lightningpalette:
+#incext png2dmp "08.png" --palette-only
+
+ALIGN 4
+lightning00image:
+#incext png2dmp "00.png"
+ALIGN 4
+lightning01image:
+#incext png2dmp "01.png"
+ALIGN 4
+lightning02image:
+#incext png2dmp "02.png"
+ALIGN 4
+lightning03image:
+#incext png2dmp "03.png"
+ALIGN 4
+lightning04image:
+#incext png2dmp "04.png"
+ALIGN 4
+lightning05image:
+#incext png2dmp "05.png"
+ALIGN 4
+lightning06image:
+#incext png2dmp "06.png"
+ALIGN 4
+lightning07image:
+#incext png2dmp "07.png"
+ALIGN 4
+lightning08image:
+#incext png2dmp "08.png"
+ALIGN 4
+lightning09image:
+#incext png2dmp "09.png"
+ALIGN 4
+lightning10image:
+#incext png2dmp "10.png"
+#endif

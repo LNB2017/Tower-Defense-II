@@ -170,18 +170,19 @@ mooks are called Bad Guy, boss is Boss, assassins are Assassin (duh)
 
 TODO LIST (updated):
 ASM:
-add Zane's MMB
-add Tera's range fix (Restore needs to be mag/2)
-make Slow Staff (mov/2) and status
-weapons can inflict statuses (otataral bow, maybe blizzard)
+DONE - add Zane's MMB
+DONE - add Tera's range fix (Restore needs to be mag/2)
+DONE - add Freeze status and freeze as sleep hack
+DONE - weapons can inflict statuses (otataral bow, maybe blizzard)
 DONE - increase exp granted from battle (come up with a formula) (~5 chips/2 KOs for a levelup)
-arms scroll?
-add indicator for assassin units
+DONE - arms scroll?
+DONE - add indicator for assassin units
 DONE - edit dancer ring effects (+10 atk is OP, +10 avoid is basically worthless) (either buff effects and they last one turn, or nerf them a bit and have them last longer/decrease each turn)
 DONE - Staff accuracy: switch mag and skl getter calls around
 DONE - edit skill getter and setter to use deployment ID for the learnable skills rather than character ID
-sell items that grant skills when held? Maybe a secret shop? would sell proc skills that aren't anyone's personal (adept, astra, pavise, etc) - make them have charges, uses 1/battle regardless whether skill happened or not
+DONE - sell items that grant skills when held? Maybe a secret shop? would sell proc skills that aren't anyone's personal (adept, astra, pavise, etc) - make them have charges, uses 1/battle regardless whether skill happened or not
 DONE - Staff exp isn't based on worth
+DONE - weapons with 255 crit can't crit (Luna)
 
 Graphics:
 Import FE7 mugs for the FE7 characters (do this last)
@@ -212,4 +213,4 @@ I don't want to talk about it.
 
 
 Chip: 21 + Enemy_level - Attacker_Level (promoted adds +20)
-Kill: Chip + 20 + boss bonus (+40) + thief bonus (+20)
+Kill: Chip + 20 + boss/assassin bonus (+40) + thief bonus (+20)

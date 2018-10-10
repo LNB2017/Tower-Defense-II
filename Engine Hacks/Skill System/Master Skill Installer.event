@@ -449,7 +449,28 @@ MakeFakeCurrentUnit:
 PhantomMoveCost:
 #incbin "PhantomMoveCost.dmp"
 
+//Status weapons
+PUSH
+ORG $2C214
+callHack_r3(Set_Status_After_Combat)
+POP
 ALIGN 4
+Set_Status_After_Combat:
+#incbin "Teq Skills/Set_Status_After_Combat.dmp"
+
+ALIGN 4
+MESSAGE status weapons at CURRENTOFFSET
+Status_Weapons:
+#incbin "Teq Skills/Status Weapons.dmp"
+POIN StatusWeaponTable
+
+StatusWeaponTable:
+#define StatusWeaponTableEntry(Weap_ID, Status_Type, Duration_Of_Status) "BYTE Weap_ID (Status_Type|(Duration_Of_Status<<4))"
+StatusWeaponTableEntry(OtataralBow, 3, 3) //Silence
+BYTE 0 0 //terminator
+ALIGN 4
+
+
 
 //#include "Other Skills/RandomMugs.event"
 #include "Teq Skills/FE8-StealPlus/FE8-StealPlus EA.txt"
@@ -464,3 +485,6 @@ ALIGN 4
 #include "Post Combat Skills/Post Combat Skills Installer.event"
 
 #include "Skill Removal Menu/RemoveSkillMenu.event"
+
+#include "Other Skills/FE8-Item Range Fix/FE8-Item Range EA.event"
+#include "Other Skills/Range Skills/RangeSkills.event"

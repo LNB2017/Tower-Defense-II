@@ -3,6 +3,9 @@
 
 #include "Movement Arrow EA.txt"
 #include "FE8-Buy Units/FE8-Buy Unit EA.txt"
+#include "ModularMinimugBox/MMB Installer RedFE.event"
+#include "FE8-Weapons Can't Crit/FE8-Weapons Can't Crit EA.txt"
+#include "lightningAnimation/anim.event"
 
 PUSH
 
@@ -64,6 +67,17 @@ POIN Relocate_Usability
 ORG ItemEffectTable + 4*(Relocate - 0x4B)
 POIN Relocate_Effect
 
+//Arms Scroll item
+ORG ItemUsabilityTable + 4*(ArmsScroll - 0x4B)
+POIN ArmsScroll_Usability
+ORG ItemEffectTable + 4*(ArmsScroll - 0x4B)
+POIN ArmsScroll_Effect
+//Don't lower weapon rank if unit has multiple S ranks
+ORG $2C148
+jumpToHack(Multiple_S_Ranks)
+ORG $2C174
+SHORT 0xDDEC
+
 //Clear character data when units die (even players)
 ORG $183FC
 jumpToHack(Clear_Units_Upon_Death)
@@ -97,10 +111,27 @@ BL(0x191D0)
 ORG $2CCF6
 BL(0x191B0)
 
-//Staff exp depends on item might
+//Staff exp = item might
 ORG $2C66A
 BL(0x175DC)
 SHORT 0x1C02 0xE002
+
+//Assassin sign
+ORG $2794A
+SHORT 0x4008
+jumpToHack(Assassin_Icon)
+
+//Exp gained after battle
+ORG $2C578
+jumpToHack(Battle_Experience)
+
+//Status names (for Freeze as Sleep and dancer rings)
+ORG $A16DEC
+#incext Png2Dmp "status names.png"
+ORG $88A78
+POIN ReturnFreezeHelpText
+ORG $2F0C0 //status inflicted by sleep staff
+BYTE 0x9
 
 POP
 
@@ -186,3 +217,28 @@ ALIGN 4
 Give_Money_Every_Wave_ASMC:
 #incbin "Give_Money_Every_Wave_ASMC.dmp"
 WORD Gold_Per_Level
+
+ALIGN 4
+Assassin_Icon:
+#incbin "Assassin_Icon.dmp"
+
+ALIGN 4
+ArmsScroll_Usability:
+#incbin "ArmsScroll_Usability.dmp"
+
+ALIGN 4
+ArmsScroll_Effect:
+#incbin "ArmsScroll_Effect.dmp"
+WORD ArmsScrollUseText
+
+ALIGN 4
+Multiple_S_Ranks:
+#incbin "Multiple_S_Ranks.dmp"
+
+ALIGN 4
+Battle_Experience:
+#incbin "Battle_Experience.dmp"
+
+ALIGN 4
+ReturnFreezeHelpText:
+SHORT 0x324C 0x4802 0x8010 0xBC01 0x4700 0 FreezeHelpText //add r2, #0x4C; ldr r0,FreezeHelpText; strh r0,[2]; pop {r0}; bx r0

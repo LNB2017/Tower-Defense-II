@@ -19,6 +19,7 @@
 #endif
 
 //These things are in the text buildfile, so I can hardcode the ids
+/*
 #define Buy_Name 0x906 //Summon
 #define Buy_NameDesc 0x907 //Summon desc
 #define Cant_Buy_Text_ID 0x908 //ballista is out of ammo
@@ -26,6 +27,7 @@
 #define Promotions_Text_ID 0x90A //HP, change this to say `Promotions:`
 #define Uses_Text_ID 0x90B //Change this to say 'Uses:'
 #define Skills_Text_ID 0x90C //Change this to say 'Skills:'
+*/
 
 PUSH
 

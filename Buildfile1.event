@@ -2,8 +2,9 @@
     #include "EAstdlib.event"
     #include "Custom Definitions.event"
 	#include "Event Assembler/FETD_Symbols1.txt"
+	#include "Text/Text Definitions.event"
 
-    ORG 0xb65000
+    ORG 0xb66000
 	
     //Text first for Text ID definitions
 //    #include "Text/Install Text Data.event"

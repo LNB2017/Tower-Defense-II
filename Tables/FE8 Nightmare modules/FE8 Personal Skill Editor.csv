@@ -1,114 +1,114 @@
 INLINE PersonalSkillTable,Skill
 None,0x0
-Eirika,CharismaID
-Seth,SaviorID
-Gilliam,RallyDefID
-Franz,SealStrID
-Moulder,RallyResID
-Vanessa,SpurSpdID
+Eirika,BondID
+Seth,LancebreakerID
+Gilliam,SealDefID
+Franz,0x0
+Moulder,MercyID
+Vanessa,SaviorID
 Ross,ParagonID
-Neimi,RallyLukID
-Colm,RallySpdID
-Garcia,ColossusID
-Innes,BowRangeUpID
-Lute,ParagonID
-Natasha,SealLukID
-Cormag,RallyStrID
-Ephraim,InspirationID
-Forde,SpurSpdID
-Kyle,SpurStrID
-Amelia,ParagonID
-Artur,FocusID
-Gerik,BondID
-Tethys,DemoiselleID
-Marisa,FocusID
-Saleh,SpurMagID
-Ewan,CelerityID
-L'Arachel,IntimidateID
-Dozla,PivotID
--,0x0
-Rennac,SpurSpdID
-Duessel,RepositionID
-Myrrh,DragonsBloodID
-Knoll,VoiceOfPeaceID
+Neimi,0x0
+Colm,LightWeightID
+Garcia,SavageBlowID
+Innes,PragmaticID
+Lute,TomebreakerID
+Natasha,VoiceOfPeaceID
+Cormag,OddRhythmID
+Ephraim,RallySpectrumID
+Forde,QuickDrawID
+Kyle,SpurDefID
+Amelia,ReliefID
+Artur,SmiteID
+Gerik,RallyStrID
+Tethys,LilysPoiseID
+Marisa,DuelistsBlowID
+Saleh,RallySklID
+Ewan,SpurResID
+L'Arachel,AmaterasuID
+Dozla,SpurStrID
+Eliwood,InspirationID
+Rennac,PivotID
+Duessel,TriAdeptID
+Myrrh,SealSklID
+Knoll,RallyLukID
 Joshua,GambleID
-Syrene,TantivyID
-Tana,LilysPoiseID
-Lyon,LunaID
-Orson,0x0
-Glen,0x0
-Selena,0x0
-Valter,CharmID
-Riev,0x0
-Caellach,0x0
-Fado,0x0
-Ismaire,0x0
-Hayden,0x0
+Syrene,RallyResID
+Tana,CharmID
+Lyon,BreathOfLifeID
+Orson,DeathBlowID
+Glen,EvenRhythmID
+Selena,DisciplineID
+Valter,FrenzyID
+Riev,MaleficAuraID
+Caellach,OpportunistID
+Fado,RallyDefID
+Ismaire,CritUpID
+Hayden,WardingBlowID
+Hector,AxebreakerID
+Lyn,WindDiscipleID
+Raven,FuryID
+Geitz,NihilID
+Guy,SwapID
+Karel,KillingMachineID
+Dorcas,SealSpdID
+Bartre,FieryBloodID
+Oswin,WaryFighterID
+Wil,0x0
+Rebecca,CamaraderieID
+Louise,SpurSpdID
+Lucius,QuietStrengthID
+Serra,DazzleID
+Renault,SwordbreakerID
+Erk,SealResID
+Nino,SpurLukID
+Pent,FocusID
+Canas,SpurSklID
+Sain,GentilhommeID
+Kent,ChivalryID
+Lowen,0x0
+Marcus,RenewalID
+Priscilla,DemoiselleID
+Rath,WrathID
+Breguet,ShoveID
+Bone,ElbowRoomID
+Bazba,0x0
+Florina,SealStrID
+Saar,0x0
+Novala,AnathemaID
+Murray,RallySpdID
+Fiora,0x0
+Binks,0x0
+Pablo,0x0
+Farina,ArmsthriftID
+Aias,RepositionID
+Carlyle,DesperationID
+Heath,TantivyID
+Vaida,IntimidateID
+Hawkeye,CertainBlowID
+Matthew,NaturalCoverID
+Jaffar,LifetakerID
+Ninian,MiracleID
+Nils,0x0
+Athos,ExpertiseID
+Beran,BowbreakerID
+Wallace,ArmoredBlowID
+Dart,DartingBlowID
+Isadora,0x0
+Legault,GaleforceID
+Karla,CriticalForceID
+Harken,0x0
+Zonta,SealLukID
+O’Neill,0x0
+Vigarde,LifeAndDeathID
+Melinus,0x0
+Phantom1,0x0
+Phantom2,0x0
+Phantom3,0x0
+Phantom4,0x0
+Phantom5,0x0
 -,0x0
 -,0x0
 -,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
--,0x0
-Lyon's Summon,0x0
--,0x0
--,0x0
-Knoll's Summon,0x0
-Ewan's Summon,0x0
-Lyon (Ch 17),0x0
-Morva (Ch 20),FrenzyID
-Orson (Ch 5x),0x0
-Valter (Ch 15),0x0
-Selena (Ch 10B & 13B),0x0
-Valter (Prologue),0x0
-Breguet (Ch 1),CounterMagicID
-Bone (Ch 2),AxefaireID
-Bazba (Ch 3),SwordbreakerID
-Entombed (Ch 4),0x0
-Saar (Ch 5),AxebreakerID
-Novala (Ch 6),IgnisID
-Murray (Ch 7),LifeAndDeathID
-Tirado (Ch 8),SealDefID
-Binks (Ch 9A),BowfaireID
-Pablo (Ch 10A),DartingBlowID
-Maelduin (Ch 12A),0x0
-Aias (Ch 13A),SavageBlowID
-Carlyle (Ch 14A),SealSpdID
-Caellach (Ch 15),0x0
-Pablo (Ch 13A),0x0
--,0x0
-Gorgon (Ch 18),0x0
-Riev (Ch 19 & 20),0x0
--,0x0
--,0x0
-Gheb (Ch 9B),VantageID
-Beran (Ch 10B),ImpaleID
-Cyclops (Ch 12B),ColossusID
-Wight (Ch 11A),0x0
-Deathgoyle (Ch 11B),0x0
-Entombed (Monster Boss),0x0
--,0x0
--,0x0
--,0x0
--,0x0
-Hunter (Ch 16),0x0
--,0x0
-Brigand,0x0
--,0x0
-O'Neill (Prologue),CounterID
-Glen (Cutscene),0x0
-Zonta (Ch 5x),0x0
-Vigarde (Ch 14B),RenewalID
-Lyon (Ch Final),0x0
-Orson (Ch 16),0x0
 -,0x0
 -,0x0
 -,0x0
@@ -192,13 +192,13 @@ Monster,0x0
 Monster,0x0
 Demon King,0x0
 -,0x0
-Frelian,0x0
-Frelian,0x0
--,0x0
--,0x0
--,0x0
-Fado (Renais),0x0
--,0x0
+SittingDuck,0x0
+Shop_Anna1,0x0
+Shop_Anna2,0x0
+Shop_Anna3,0x0
+Shop_Anna4,0x0
+Shop_Anna5,0x0
+Anna,0x0
 Hayden (Frelia),0x0
 Mansel (Rausten),0x0
 Klimt (Carcino),0x0

@@ -26,7 +26,7 @@
 #define OtataralBow KnightCrest
 #define Resire Nosferatu
 #define Worm OrionBolt
-#define Slow ElysianWhip
+#define ArmsScroll ElysianWhip
 
 #define Promote_Action_Byte 0xD //theoretically, this should work
 #define Capture_Event_ID 0xB //event id is set if Capture is allowed

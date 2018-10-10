@@ -170,3 +170,6 @@
 #define BlackMagicID 169 //DONE
 #define PassableID 170 //DONE
 #define RootedID 171 //DONE
+#define QuietStrengthID 172
+#define SpurSklID 173
+#define SpurLukID 174
