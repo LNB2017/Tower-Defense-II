@@ -11,6 +11,7 @@ ALIGN 4
 lightningProc:
 _6C_CALL_ROUTINE(Anim_Setup|1)
 _6C_WHILE_EXISTS(0x59A548)
+_6C_CALL_ROUTINE(Anim_CenterCamera|1)
 _6C_LOOP_ROUTINE(Anim_LoadFrames|1)
 _6C_CALL_ROUTINE(0x21668|1)
 _6C_END
@@ -31,35 +32,39 @@ Anim_LoadFrames:
 #incbin "looproutine.dmp"
 
 ALIGN 4
-MESSAGE anim setup at CURRENTOFFSET
 Anim_Setup:
 #incbin "setup.dmp"
 POIN Animation
 
 ALIGN 4
+Anim_CenterCamera:
+#incbin "centercamera.dmp"
+
+
+ALIGN 4
 //WIDTH * HEIGHT must not be bigger than 372
 //edit the SHORT value to add sound effects
 Animation:
-BYTE 9 19; SHORT 0x00; POIN lightning00image  lightningpalette
-BYTE 9 19; SHORT 0x00; POIN lightning01image  lightningpalette
+BYTE 9 25; SHORT 0x00; POIN lightning00image  lightningpalette
+BYTE 9 25; SHORT 0xF5; POIN lightning01image  lightningpalette
 waitFrame
-BYTE 9 19; SHORT 0x00; POIN lightning02image  lightningpalette
+BYTE 9 25; SHORT 0x00; POIN lightning02image  lightningpalette
 waitFrame
-BYTE 9 19; SHORT 0x00; POIN lightning03image  lightningpalette
+BYTE 9 25; SHORT 0x00; POIN lightning03image  lightningpalette
 waitFrame
-BYTE 9 19; SHORT 0x00; POIN lightning04image  lightningpalette
+BYTE 9 25; SHORT 0x00; POIN lightning04image  lightningpalette
 waitFrame
-BYTE 9 19; SHORT 0x00; POIN lightning05image  lightningpalette
+BYTE 9 25; SHORT 0x00; POIN lightning05image  lightningpalette
 waitFrame
-BYTE 9 19; SHORT 0x00; POIN lightning06image  lightningpalette
+BYTE 9 25; SHORT 0x00; POIN lightning06image  lightningpalette
 waitFrame
 waitFrame
-BYTE 9 19; SHORT 0x00; POIN lightning07image  lightningpalette
-BYTE 9 19; SHORT 0x00; POIN lightning08image  lightningpalette
+BYTE 9 25; SHORT 0x00; POIN lightning07image  lightningpalette
+BYTE 9 25; SHORT 0x00; POIN lightning08image  lightningpalette
 waitFrame
-BYTE 9 19; SHORT 0x00; POIN lightning09image  lightningpalette
+BYTE 9 25; SHORT 0x00; POIN lightning09image  lightningpalette
 waitFrame
-BYTE 9 19; SHORT 0x00; POIN lightning10image  lightningpalette
+BYTE 9 25; SHORT 0x00; POIN lightning10image  lightningpalette
 waitFrame
 waitFrame
 terminatorFrame

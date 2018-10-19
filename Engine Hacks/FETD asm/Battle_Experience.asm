@@ -7,7 +7,7 @@
 @jumped to from 2C578
 @r4=attacker, r5=defender
 
-.equ Chip_Base, 21
+.equ Chip_Base, 31
 .equ Kill_Base, 20
 .equ Boss_Bonus, 40		@also assassin bonus
 .equ Thief_Bonus, 20	@thief/rogue

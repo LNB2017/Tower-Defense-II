@@ -30,8 +30,20 @@ ldr		r3,SkillTester
 mov		r14,r3
 .short	0xF800
 cmp		r0,#0
-bne		GoBack			@don't negate mov for units with Passable
+bne		CheckThief			@don't negate mov for units with Passable
 mov		r4,#0
+b		GoBack
+CheckThief:
+ldr		r1,[r5,#4]
+ldrb	r1,[r1,#4]
+cmp		r1,#0xD				@thief
+bne		CheckRogue
+mov		r4,#2
+b		GoBack
+CheckRogue:
+cmp		r1,#0x33			@rogue
+bne		GoBack
+mov		r4,#3
 GoBack:
 mov		r0,r4
 mov		r1,r5

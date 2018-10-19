@@ -9,9 +9,9 @@ INLINE LevelUpSkillTable,Skill Pointer
 0x07 Paladin,PaladinSkillList|IsPointer
 0x08 Paladin (F),PaladinSkillList|IsPointer
 0x09 Armour Knight,KnightSkillList|IsPointer
-0x0A Armour Knight (F),KnightSkillList|IsPointer
+0x0A Landsknecht,LandsknechtSkillList|IsPointer
 0x0B General,GeneralSkillList|IsPointer
-0x0C General (F),GeneralSkillList|IsPointer
+0x0C Halberdier,HalberdierSkillList|IsPointer
 0x0D Thief,ThiefSkillList|IsPointer
 0x0E Manakete,0x0
 0x0F Mercenary,MercenarySkillList|IsPointer
@@ -39,7 +39,7 @@ INLINE LevelUpSkillTable,Skill Pointer
 0x25 Mage,MageSkillList|IsPointer
 0x26 Mage (F),MageSkillList|IsPointer
 0x27 Sage,SageSkillList|IsPointer
-0x28 Sage (F),SageSkillList|IsPointer
+0x28 Wizard,WizardSkillList|IsPointer
 0x29 Mage Knight,MageKnightSkillList|IsPointer
 0x2A Mage Knight (F),MageKnightSkillList|IsPointer
 0x2B Bishop,BishopSkillList|IsPointer

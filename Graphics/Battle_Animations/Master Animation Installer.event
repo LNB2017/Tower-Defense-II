@@ -1,0 +1,34 @@
+#ifndef ClassAnimTable
+  #ifdef _FE8_
+    #define ClassAnimTable (0xc00008-0x20)
+  #endif
+  #ifdef _FE7_
+    #define ClassAnimTable (0xe00008-0x20)
+  #endif
+#endif
+
+#define AnimTableEntry(index) "ORG ClassAnimTable + (index * 0x20)"
+
+//////////////Installed animations go here:
+
+{
+#include "Wizard Magic Installer.event"
+}
+{
+#include "Halberdier Lance Installer.event"
+}
+{
+#include "Halberdier Disarmed Installer.event"
+}
+{
+#include "Landy_Lance Installer.event"
+}
+{
+#include "Landy_Sword Installer.event"
+}
+{
+#include "Landy_Unarmed Installer.event"
+}
+{
+#include "Duke_Unarmed Installer.event"
+}

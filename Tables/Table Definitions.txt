@@ -57,6 +57,7 @@
 
 //Weapon Ability 4 definitions
 #define CannotDoubleEffect 0xC
+#define StaffSkill 0x10
 
 //Character/Class Ability 1 definitions:
 #define MountedAid 0x1

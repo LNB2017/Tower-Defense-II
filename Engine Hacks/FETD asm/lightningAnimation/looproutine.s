@@ -35,11 +35,24 @@ ldrb	r1,[r6,#1]	@height
 cmp	r1,#0
 beq	nodraw
 
+push	{r4,r5,r7}
+mov	r7,#0
+ldr	r4,=0x300309C
+ldrh	r5,[r4,#2]	@y offset
+lsr	r5,#3
+lsl	r5,#6
+ldrh	r4,[r4]		@x offset
 @now draw our map
 ldr	r2,=#0x2000
 ldr	r3,=#0x2022CA8
+add	r4,r3
+add	r5,r3
 maploop:
+strh	r7,[r3]
+cmp	r3,r5
+blo	dontdrawthis1
 strh	r2,[r3]
+dontdrawthis1:
 add	r3,#2
 add	r2,#1
 sub	r0,#1
@@ -59,6 +72,7 @@ b	maploop
 
 @load the graphics
 donedraw:
+pop	{r4,r5,r7}
 ldr	r0,[r6,#4]
 cmp	r0,#0
 beq	nodraw

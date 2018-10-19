@@ -309,7 +309,7 @@ Rally Spectrum: +2 all stats[N]
 to allies within 2 tiles.[X]
 
 ## SD_BowRangeUp
-Bow Range +1: Maximum range[N]
+Longshot: Maximum range[N]
 of equipped bows is increased.[X]
 
 ## SD_StaffSavant

@@ -1,0 +1,2 @@
+A dance that refreshes an ally[N]
+and grants them Avoid+20.[X]

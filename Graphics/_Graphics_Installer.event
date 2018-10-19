@@ -1,0 +1,228 @@
+//Item Icons
+#ifndef ItemIconTable
+	#define ItemIconTable 0x5926F4
+#endif
+
+#define setCardEntry(cardEntry,cardLocation,cardPaletteLocation) "PUSH; ORG PortraitTable+cardEntry*0x1C; POIN 0 0 cardPaletteLocation 0 cardLocation; POP"
+
+// ########## Item Icons ###########
+PUSH
+ORG ItemIconTable + 0x80*0x39
+#incext Png2Dmp "Item_Icons/Blizzard.png"
+ORG ItemIconTable + 0x80*0x3F
+#incext Png2Dmp "Item_Icons/Machin_Shin.png"
+ORG ItemIconTable + 0x80*0x45
+#incext Png2Dmp "Item_Icons/Resire.png"
+ORG ItemIconTable + 0x80*0x62
+#incext Png2Dmp "Item_Icons/Relocate.png"
+ORG ItemIconTable + 0x80*0x63
+#incext Png2Dmp "Item_Icons/Otataral_Bow.png"
+ORG ItemIconTable + 0x80*0x64
+#incext Png2Dmp "Item_Icons/Arms_Scroll.png"
+ORG ItemIconTable + 0x80*0x4
+#incext Png2Dmp "Item_Icons/StaffSavant.png"
+ORG ItemIconTable + 0x80*0x5
+#incext Png2Dmp "Item_Icons/LiveToServe.png"
+ORG ItemIconTable + 0x80*0x6
+#incext Png2Dmp "Item_Icons/BowRangeUp.png"
+POP
+
+// ########### Map Sprites ###########
+PUSH
+ORG $8AF98A
+SHORT 1; POIN Standing_Wizard
+ORG $8AF954
+POIN Standing_Halberdier
+ORG $8AF962
+SHORT 2; POIN Standing_Landsknecht
+ORG $8AFA7C
+POIN Standing_Soldier
+ORG $9A3068
+POIN Moving_Soldier
+ORG $9A2E48
+POIN Moving_Landsknecht
+ORG $9A2E58
+POIN Moving_Halberdier 0x1EDBC4 //soldier's "another pointer"
+ORG $9A2F38
+POIN Moving_Wizard
+POP
+ALIGN 4
+Standing_Wizard:
+#incext Png2Dmp "Map_Sprites/Standing_Wizard.png" --lz77
+ALIGN 4
+Standing_Halberdier:
+#incext Png2Dmp "Map_Sprites/Standing_Halberdier.png" --lz77
+ALIGN 4
+Standing_Landsknecht:
+#incext Png2Dmp "Map_Sprites/Standing_Landsknecht.png" --lz77
+ALIGN 4
+Moving_Landsknecht:
+#incext Png2Dmp "Map_Sprites/Moving_Landsknecht.png" --lz77
+ALIGN 4
+Moving_Halberdier:
+#incext Png2Dmp "Map_Sprites/Moving_Halberdier.png" --lz77
+ALIGN 4
+Moving_Wizard:
+#incext Png2Dmp "Map_Sprites/Moving_Wizard.png" --lz77
+ALIGN 4
+Standing_Soldier:
+#incext Png2Dmp "Map_Sprites/Standing_Soldier.png" --lz77
+ALIGN 4
+Moving_Soldier:
+#incext Png2Dmp "Map_Sprites/Moving_Soldier.png" --lz77
+// ############### Battle Animations ########
+#include "Battle_Animations/Master Animation Installer.event"
+
+// ############### Mugs and class cards ########
+EliwoodMug:
+#incext PortraitFormatter "Portraits/Eliwood.png"
+setMugEntry(0xAD, EliwoodMug, 2, 5, 3, 3)
+HectorMug:
+#incext PortraitFormatter "Portraits/Hector.png"
+setMugEntry(0xAE, HectorMug, 2, 4, 3, 2)
+LynMug:
+#incext PortraitFormatter "Portraits/Lyn.png"
+setMugEntry(0xAF, LynMug, 2, 6, 3, 4)
+RavenMug:
+#incext PortraitFormatter "Portraits/Raven.png"
+setMugEntry(0xB0, RavenMug, 2, 5, 3, 3)
+GeitzMug:
+#incext PortraitFormatter "Portraits/Geitz.png"
+setMugEntry(0xB1, GeitzMug, 2, 5, 3, 3)
+GuyMug:
+#incext PortraitFormatter "Portraits/Guy.png"
+setMugEntry(0xB2, GuyMug, 2, 6, 3, 3)
+KarelMug:
+#incext PortraitFormatter "Portraits/Karel.png"
+setMugEntry(0xB3, KarelMug, 2, 5, 3, 3)
+DorcasMug:
+#incext PortraitFormatter "Portraits/Dorcas.png"
+setMugEntry(0xB4, DorcasMug, 2, 4, 3, 2)
+BartreMug:
+#incext PortraitFormatter "Portraits/Bartre.png"
+setMugEntry(0xB5, BartreMug, 2, 5, 2, 3)
+OswinMug:
+#incext PortraitFormatter "Portraits/Oswin.png"
+setMugEntry(0xB6, OswinMug, 2, 4, 3, 2)
+WilMug:
+#incext PortraitFormatter "Portraits/Wil.png"
+setMugEntry(0xB7, WilMug, 2, 5, 3, 3)
+RebeccaMug:
+#incext PortraitFormatter "Portraits/Rebecca.png"
+setMugEntry(0xB8, RebeccaMug, 2, 6, 3, 4)
+LouiseMug:
+#incext PortraitFormatter "Portraits/Louise.png"
+setMugEntry(0xB9, LouiseMug, 2, 6, 3, 4)
+LuciusMug:
+#incext PortraitFormatter "Portraits/Lucius.png"
+setMugEntry(0xBA, LuciusMug, 2, 5, 3, 3)
+SerraMug:
+#incext PortraitFormatter "Portraits/Serra.png"
+setMugEntry(0xBB, SerraMug, 2, 6, 3, 4)
+RenaultMug:
+#incext PortraitFormatter "Portraits/Renault.png"
+setMugEntry(0xBC, RenaultMug, 2, 5, 3, 3)
+ErkMug:
+#incext PortraitFormatter "Portraits/Erk.png"
+setMugEntry(0xBD, ErkMug, 2, 6, 3, 4)
+NinoMug:
+#incext PortraitFormatter "Portraits/Nino.png"
+setMugEntry(0xBE, NinoMug, 2, 6, 3, 4)
+PentMug:
+#incext PortraitFormatter "Portraits/Pent.png"
+setMugEntry(0xBF, PentMug, 3, 5, 4, 3)
+CanasMug:
+#incext PortraitFormatter "Portraits/Canas.png"
+setMugEntry(0xC0, CanasMug, 2, 5, 3, 3)
+SainMug:
+#incext PortraitFormatter "Portraits/Sain.png"
+setMugEntry(0xC1, SainMug, 2, 5, 3, 3)
+KentMug:
+#incext PortraitFormatter "Portraits/Kent.png"
+setMugEntry(0xC2, KentMug, 2, 5, 3, 3)
+LowenMug:
+#incext PortraitFormatter "Portraits/Lowen.png"
+setMugEntry(0xC3, LowenMug, 2, 5, 3, 3)
+MarcusMug:
+#incext PortraitFormatter "Portraits/Marcus.png"
+setMugEntry(0xC4, MarcusMug, 2, 5, 3, 3)
+PriscillaMug:
+#incext PortraitFormatter "Portraits/Priscilla.png"
+setMugEntry(0xC5, PriscillaMug, 2, 6, 3, 4)
+RathMug:
+#incext PortraitFormatter "Portraits/Rath.png"
+setMugEntry(0xC6, RathMug, 2, 5, 3, 3)
+FlorinaMug:
+#incext PortraitFormatter "Portraits/Florina.png"
+setMugEntry(0xC7, FlorinaMug, 2, 7, 3, 5)
+FioraMug:
+#incext PortraitFormatter "Portraits/Fiora.png"
+setMugEntry(0xC8, FioraMug, 2, 5, 3, 3)
+FarinaMug:
+#incext PortraitFormatter "Portraits/Farina.png"
+setMugEntry(0xC9, FarinaMug, 2, 5, 3, 3)
+HeathMug:
+#incext PortraitFormatter "Portraits/Heath.png"
+setMugEntry(0xCA, HeathMug, 3, 5, 3, 3)
+VaidaMug:
+#incext PortraitFormatter "Portraits/Vaida.png"
+setMugEntry(0xCB, VaidaMug, 2, 5, 3, 3)
+HawkeyeMug:
+#incext PortraitFormatter "Portraits/Hawkeye.png"
+setMugEntry(0xCC, HawkeyeMug, 2, 4, 3, 3)
+MatthewMug:
+#incext PortraitFormatter "Portraits/Matthew.png"
+setMugEntry(0xCD, MatthewMug, 2, 5, 3, 3)
+JaffarMug:
+#incext PortraitFormatter "Portraits/Jaffar.png"
+setMugEntry(0xCE, JaffarMug, 2, 5, 3, 3)
+NinianMug:
+#incext PortraitFormatter "Portraits/Ninian.png"
+setMugEntry(0xCF, NinianMug, 3, 6, 4, 4)
+NilsMug:
+#incext PortraitFormatter "Portraits/Nils.png"
+setMugEntry(0xD0, NilsMug, 2, 7, 3, 5)
+AthosMug:
+#incext PortraitFormatter "Portraits/Athos.png"
+setMugEntry(0xD1, AthosMug, 2, 4, 3, 2)
+WallaceMug:
+#incext PortraitFormatter "Portraits/Wallace.png"
+setMugEntry(0xD2, WallaceMug, 2, 4, 2, 2)
+DartMug:
+#incext PortraitFormatter "Portraits/Dart.png"
+setMugEntry(0xD3, DartMug, 3, 5, 3, 3)
+IsadoraMug:
+#incext PortraitFormatter "Portraits/Isadora.png"
+setMugEntry(0xD4, IsadoraMug, 2, 6, 3, 4)
+LegaultMug:
+#incext PortraitFormatter "Portraits/Legault.png"
+setMugEntry(0xD5, LegaultMug, 2, 4, 3, 2)
+KarlaMug:
+#incext PortraitFormatter "Portraits/Karla.png"
+setMugEntry(0xD6, KarlaMug, 2, 5, 3, 3)
+HarkenMug:
+#incext PortraitFormatter "Portraits/Harken.png"
+setMugEntry(0xD7, HarkenMug, 2, 5, 3, 3)
+MerlinusMug:
+#incext PortraitFormatter "Portraits/Merlinus.png"
+setMugEntry(0xD8, MerlinusMug, 2, 5, 3, 3)
+
+setCardEntry(0xD9, CC_Halberdier, CC_Halberdier_palette)
+ALIGN 4
+CC_Halberdier:
+#incext Png2Dmp "Portraits/ClassCard_Halberdier.png" --lz77
+ALIGN 4
+CC_Halberdier_palette:
+#incext Png2Dmp "Portraits/ClassCard_Halberdier.png" --palette-only
+
+setCardEntry(0xDA, CC_Landy, CC_Landy_palette)
+ALIGN 4
+CC_Landy:
+#incext Png2Dmp "Portraits/ClassCard_Landsknecht.png" --lz77
+ALIGN 4
+CC_Landy_palette:
+#incext Png2Dmp "Portraits/ClassCard_Landsknecht.png" --palette-only
+
+SytingMug:
+#incext PortraitFormatter "Portraits/Syting.png"
+setMugEntry(0xDB, SytingMug, 3, 4, 3, 2)

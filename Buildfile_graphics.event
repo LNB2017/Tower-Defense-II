@@ -1,0 +1,21 @@
+#ifdef _FE8_
+    #include "EAstdlib.event"
+    #include "Custom Definitions.event"
+	#define PortraitTable 0xFF0000
+	#include "Tools/Tool Helpers.txt"
+
+
+	ORG $5524
+	POIN PortraitTable
+	
+    ORG	PortraitTable
+	#incbin "Graphics/PortraitTable.dmp"
+	
+	ORG PortraitTable + 28*0xE0
+	//Graphics
+	#include "Graphics/_Graphics_Installer.event"
+
+    MESSAGE Used free space for buildfile graphics ends at currentOffset
+#else
+    ERROR You are not assembling FE8 events!
+#endif

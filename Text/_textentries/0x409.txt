@@ -1,0 +1,2 @@
+Heals self when healing allies.[N]
+-1 use when using a staff.[X]

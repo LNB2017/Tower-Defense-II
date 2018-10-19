@@ -20,31 +20,48 @@
 	#define ItemEffectTable 0x2FC90
 #endif
 	
-#define LunarBrace MoonBracelet
-#define SolarBrace SunBracelet
+#define Resire Nosferatu
+#define MachinShin Divine
+#define Blizzard Bolting
+#define Freeze Sleep
 #define Relocate HeroCrest			//don't need promotion items outside of master seal
 #define OtataralBow KnightCrest
-#define Resire Nosferatu
-#define Worm OrionBolt
-#define ArmsScroll ElysianWhip
+#define ArmsScroll OrionBolt
+#define StaffSavantItem IronBlade
+#define LiveToServeItem SteelBlade
+#define LongshotItem SilverBlade
+
+#define Capture_Event_ID 0xB //event id is set if Capture is allowed
+#define Unlock_Shop2_ID 0xC
+#define Unlock_Shop3_ID 0xD
+#define Unlock_Shop4_ID 0xE
+#define Unlock_Shop5_ID 0xF
 
 #define Promote_Action_Byte 0xD //theoretically, this should work
-#define Capture_Event_ID 0xB //event id is set if Capture is allowed
 #define RingAttackBoost 3
 #define RingDefenseBoost 5
 #define RingCritBoost 20
 #define RingAvoidBoost 20
+#define WTA_Hit 25
+#define WTA_Dmg 3
+#define WTD_Hit 0x100-WTA_Hit
+#define WTD_Dmg 0x100-WTA_Dmg
 
 #define Initial_Gold_Amount 	5000			//Amount of gold you start with
 #define Gold_Per_Level 			100				//Amount of gold you get per level
-#define UnpromotedBaseValue		50				//Formula: Base + Level*LevelMult + Bonuses
-#define UnpromotedLevelMult		5
-#define PromotedBaseValue		100
-#define PromotedLevelMult		10
+#define UnpromotedBaseValue		100				//Formula: Base + Level*LevelMult + Bonuses
+#define UnpromotedLevelMult		10
+#define PromotedBaseValue		200
+#define PromotedLevelMult		20
 #define ThiefBonus				100
 #define RogueBonus				200
 #define BossBonus				150
 #define AssassinsBonus			400				//indicated by Forblaze lock
+#define Unlock_Shop2_Price		300
+#define Unlock_Shop3_Price		1000
+#define Unlock_Shop4_Price		3000
+#define Unlock_Shop5_Price		6000
+#define Unlock_Capture_Price	5000
 
 #define Merlinus 0x65
 #define PhantomChar1 0x66
@@ -54,6 +71,8 @@
 #define PhantomChar5 0x6A
 
 #define Mook1 0x80
+#define Boss1 0x81
+#define Assassin1 0x82
 
 #define SittingDuck 0xC0
 #define Shop_Anna1 0xC1
@@ -63,6 +82,9 @@
 #define Shop_Anna5 0xC5
 #define Capture_Anna 0xC6
 
+#define Halberdier General_F
+#define Landsknecht Knight_F
+#define Wizard Sage_F
 
 #include "Engine Hacks/Skill System/skill_definitions.event"
 

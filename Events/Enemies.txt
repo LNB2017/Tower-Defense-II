@@ -2,52 +2,52 @@ ALIGN 4
 Enemy_Pointer_Table:
 //each pointer = 1 turn
 WORD 0
-POIN Turn1
 WORD 0
-WORD 0
+POIN Turn2
+POIN Turn3
 WORD 0
 POIN Turn5
 WORD 0
 WORD 0
+POIN Turn8
+POIN Turn9
+POIN Turn10
+WORD 0
+POIN Turn12
+WORD 0
+WORD 0
+POIN Turn15
+WORD 0
+WORD 0
+WORD 0
+POIN Turn19
+POIN Turn20
+WORD 0
+WORD 0
+POIN Turn23
+WORD 0
+POIN Turn25
+POIN Turn26
+WORD 0
+POIN Turn28
+POIN Turn29
+POIN Turn30
+WORD 0
+POIN Turn32
+WORD 0
+WORD 0
+POIN Turn35
+WORD 0
+POIN Turn37
+POIN Turn38
+WORD 0
+POIN Turn40
 WORD 0
 WORD 0
 WORD 0
 WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
-WORD 0
+POIN Turn45
+POIN Turn46
 WORD 0
 WORD 0
 WORD 0
@@ -103,11 +103,260 @@ WORD 0
 WORD 0
 WORD 0
 
-Turn1:
-UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 0 0 [IronLance] [0xA, 0, 0, 0]
-UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X+1, Spawn1Y] 0 0 0 0 [IronLance] [0xA, 0, 0, 0]
+Turn2:
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [IronLance] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [IronLance] [0xA, 0, 0, 0]
+UNIT
+
+Turn3:
+UNIT Mook1 Soldier 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA1 [SteelLance] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA7 [IronLance] [0xA, 0, 0, 0]
 UNIT
 
 Turn5:
-UNIT Mook1 Myrmidon 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 0 0 [IronLance] NoAI
+UNIT Mook1 Fighter 0 Level(3,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [IronAxe] [0xA, 0, 0, 0]
+UNIT Mook1 Fighter 0 Level(3,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA4 [HandAxe] [0xA, 0, 0, 0]
+UNIT Mook1 Fighter 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [SteelAxe] [0xA, 0, 0, 0]
+UNIT Mook1 Fighter 0 Level(3,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [IronAxe] [0xA, 0, 0, 0]
 UNIT
+
+Turn8:
+UNIT Mook1 Fighter 0 Level(3,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA1 [IronAxe] [0xA, 0, 0, 0]
+UNIT Mook1 Fighter 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [PoisonAxe] [0xA, 0, 0, 0]
+UNIT
+
+Turn9:
+UNIT Mook1 Fighter 0 Level(3,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [HandAxe] [0xA, 0, 0, 0]
+UNIT
+
+Turn10:
+UNIT Mook1 Mage 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA7 [Fire] [0xA, 0, 0, 0]
+UNIT Mook1 Mage 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [Elfire] [0xA, 0, 0, 0]
+UNIT Mook1 Mage 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [Fire, PureWater] [0xA, 0, 0, 0]
+UNIT
+
+Turn12:
+UNIT Boss1 Mage 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA6 [Elfire] [0xA, 0, 0, 0]
+UNIT
+
+Turn15:
+UNIT Mook1 Archer 0 Level(6,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA1 [IronBow, GoddessIcon] [0xA, 0, 0, 0]
+UNIT Mook1 Archer 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [SteelBow] [0xA, 0, 0, 0]
+UNIT Mook1 Archer 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [PoisonBow] [0xA, 0, 0, 0]
+UNIT Mook1 Archer 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [KillerBow] [0xA, 0, 0, 0]
+UNIT Mook1 Archer 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA7 [IronBow] [0xA, 0, 0, 0]
+UNIT Mook1 Archer 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA8 [SteelBow] [0xA, 0, 0, 0]
+UNIT Mook1 Archer 0 Level(6,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [IronBow] [0xA, 0, 0, 0]
+UNIT
+
+Turn19:
+UNIT Assassin1 Archer 0 Level(7,Enemy,True) [StairE2X, StairE2Y] 0 0 1 StairE2REDA5 [IronBow] [0, 0, 0, 0]
+UNIT
+
+Turn20:
+UNIT Mook1 Monk 0 Level(6,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA1 [Shine] [0xA, 0, 0, 0]
+UNIT Mook1 Monk 0 Level(7,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [Lightning] [0xA, 0, 0, 0]
+UNIT Mook1 Monk 0 Level(6,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA7 [Shine] [0xA, 0, 0, 0]
+UNIT Mook1 Monk 0 Level(7,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [Lightning] [0xA, 0, 0, 0]
+UNIT
+
+Turn23:
+UNIT Mook1 Monk 0 Level(7,Enemy,True) [StairE1X, StairE1Y] 0x2 0 1 StairE1REDA5 [Shine, Mend] [0xA, 0, 0, 0]
+UNIT Mook1 Monk 0 Level(7,Enemy,True) [StairE2X, StairE2Y] 0 0 1 StairE2REDA5 [Shine] [0xA, 0, 0, 0]
+UNIT Boss1 Monk 0 Level(7,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Resire, Shine] [0xA, 0, 0, 0]
+UNIT
+
+Turn25:
+UNIT Mook1 Knight 0 Level(8,Enemy,True) [StairE2X, StairE2Y] 0x2 0 1 StairE2REDA5 [SteelLance, Vulnerary] [0xA, 0, 0, 0]
+UNIT Mook1 Knight 0 Level(8,Enemy,True) [StairE2X, StairE2Y] 0 0 1 StairE2REDA2 [SteelSword] [0xA, 0, 0, 0]
+UNIT
+
+Turn26:
+UNIT Boss1 Knight 0 Level(9,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA3 [LightBrand] [0xA, 0, 0, 0]
+UNIT Mook1 Knight 0 Level(8,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA7 [KillerAxe, HoplonGuard] [0xA, 0, 0, 0]
+UNIT
+
+Turn28:
+UNIT Mook1 Knight 0 Level(8,Enemy,True) [StairE1X, StairE1Y] 0 0 1 StairE1REDA5 [Axereaver] [0xA, 0, 0, 0]
+UNIT
+
+Turn29:
+UNIT Mook1 Knight 0 Level(9,Enemy,True) [Spawn2X, Spawn2Y] 0x2 0 1 Spawn2REDA5 [ShortSpear] [0xA, 0, 0, 0]
+UNIT
+
+Turn30:
+UNIT Mook1 Mercenary 0 Level(9,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Lancereaver] [0xA, 0, 0, 0]
+UNIT Mook1 Mercenary 0 Level(8,Enemy,True) [Spawn2X, Spawn2Y] 0 0 1 Spawn2REDA8 [SteelSword] [0xA, 0, 0, 0]
+UNIT Boss1 Mercenary 0 Level(9,Enemy,True) [StairE1X, StairE1Y] 0x2 0 1 StairE1REDA5 [KillingEdge] [0xA, 0, 0, 0]
+UNIT Mook1 Mercenary 0 Level(8,Enemy,True) [StairE2X, StairE2Y] 0 0 1 StairE2REDA2 [LightBrand] [0xA, 0, 0, 0]
+UNIT
+
+Turn32:
+UNIT Assassin1 Mercenary 0 Level(10,Enemy,True) [Spawn2X, Spawn2Y] 0 0 1 Spawn2REDA8 [PoisonSword] [0, 0, 0, 0]
+UNIT
+
+Turn35:
+UNIT Mook1 Shaman 0 Level(11,Enemy,True) [Spawn2X, Spawn2Y] 0 0 1 Spawn2REDA2 [Flux] [0xA, 0, 0, 0]
+UNIT Mook1 Shaman 0 Level(9,Enemy,True) [StairE1X, StairE1Y] 0 0 1 StairE1REDA5 [MachinShin, Antitoxin] [0xA, 0, 0, 0]
+UNIT Mook1 Shaman 0 Level(10,Enemy,True) [StairE1X, StairE1Y] 0 0 1 StairE1REDA6 [Luna] [0xA, 0, 0, 0]
+UNIT
+
+Turn37:
+UNIT Boss1 Shaman 0 Level(12,Enemy,True) [StairNEX, StairNEY] 0x2 0 1 StairNEREDA5 [Luna] [0xA, 0, 0, 0]
+UNIT
+
+Turn38:
+UNIT Mook1 Shaman 0 Level(10,Enemy,True) [Spawn2X, Spawn2Y] 0 0 1 Spawn2REDA1 [MachinShin] [0xA, 0, 0, 0]
+UNIT Boss1 Shaman 0 Level(12,Enemy,True) [Spawn2X, Spawn2Y] 0 0 1 Spawn2REDA5 [Luna] [0xA, 0, 0, 0]
+UNIT Mook1 Shaman 0 Level(10,Enemy,True) [Spawn2X, Spawn2Y] 0 0 1 Spawn2REDA9 [MachinShin] [0xA, 0, 0, 0]
+UNIT
+
+Turn40:
+UNIT Mook1 Thief 0 Level(13,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA1 [SteelSword] [0xA, 0, 0, 0]
+UNIT Mook1 Thief 0 Level(11,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA3 [PoisonSword] [0xA, 0, 0, 0]
+UNIT Boss1 Thief 0 Level(14,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Lancereaver] [0xA, 0, 0, 0]
+UNIT Mook1 Thief 0 Level(13,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA7 [BraveSword] [0xA, 0, 0, 0]
+UNIT Mook1 Thief 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [KillingEdge] [0xA, 0, 0, 0]
+UNIT Mook1 Thief 0 Level(12,Enemy,True) [StairNEX, StairNEY] 0 0 1 StairNEREDA5 [SteelSword] [0xA, 0, 0, 0]
+UNIT Mook1 Thief 0 Level(12,Enemy,True) [StairS1X, StairS1Y] 0 0 1 StairS1REDA5 [LightBrand] [0xA, 0, 0, 0]
+UNIT
+
+Turn45:
+UNIT Mook1 Fighter 0 Level(14,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Swordreaver] [0xA, 0, 0, 0]
+UNIT Mook1 Mage 0 Level(14,Enemy,True) [Spawn2X, Spawn2Y] 0x2 0 1 Spawn1REDA5 [Thunder] [0xA, 0, 0, 0]
+UNIT Boss1 Soldier 0 Level(15,Enemy,True) [StairE2X, StairE2Y] 0x2 0 1 StairE2REDA5 [KillerLance] [0xA, 0, 0, 0]
+UNIT Boss1 Archer 0 Level(15,Enemy,True) [StairS2X, StairS2Y] 0x2 0 1 StairS2REDA5 [KillerBow, Longbow] [0xA, 0, 0, 0]
+UNIT
+
+Turn46:
+UNIT Assassin1 Monk 0 Level(13,Enemy,True) [StairNEX, StairNEY] 0x2 0 1 StairNEREDA5 [Shine, Resire] [0, 0, 0, 0]
+UNIT Assassin1 Knight 0 Level(14,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA1 [Axereaver, KillerLance] [0, 0, 0, 0]
+UNIT Assassin1 Shaman 0 Level(14,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA9 [MachinShin, Luna] [0, 0, 0, 0]
+UNIT
+
+Spawn1REDA1:
+REDA [Spawn1X-1,Spawn1Y-1] 0 0 0 0 0
+Spawn1REDA2:
+REDA [Spawn1X,Spawn1Y-1] 0 0 0 0 0
+Spawn1REDA3:
+REDA [Spawn1X+1,Spawn1Y-1] 0 0 0 0 0
+Spawn1REDA4:
+REDA [Spawn1X-1,Spawn1Y] 0 0 0 0 0
+Spawn1REDA5:
+REDA [Spawn1X,Spawn1Y] 0 0 0 0 0
+Spawn1REDA6:
+REDA [Spawn1X+1,Spawn1Y] 0 0 0 0 0
+Spawn1REDA7:
+REDA [Spawn1X-1,Spawn1Y+1] 0 0 0 0 0
+Spawn1REDA8:
+REDA [Spawn1X,Spawn1Y+1] 0 0 0 0 0
+Spawn1REDA9:
+REDA [Spawn1X+1,Spawn1Y+1] 0 0 0 0 0
+
+Spawn2REDA1:
+REDA [Spawn2X-1,Spawn2Y-1] 0 0 0 0 0
+Spawn2REDA2:
+REDA [Spawn2X,Spawn2Y-1] 0 0 0 0 0
+Spawn2REDA3:
+REDA [Spawn2X+1,Spawn2Y-1] 0 0 0 0 0
+Spawn2REDA4:
+REDA [Spawn2X-1,Spawn2Y] 0 0 0 0 0
+Spawn2REDA5:
+REDA [Spawn2X,Spawn2Y] 0 0 0 0 0
+Spawn2REDA6:
+REDA [Spawn2X+1,Spawn2Y] 0 0 0 0 0
+Spawn2REDA7:
+REDA [Spawn2X-1,Spawn2Y+1] 0 0 0 0 0
+Spawn2REDA8:
+REDA [Spawn2X,Spawn2Y+1] 0 0 0 0 0
+Spawn2REDA9:
+REDA [Spawn2X+1,Spawn2Y+1] 0 0 0 0 0
+
+StairE1REDA2:
+REDA [StairE1X-1, StairE1Y] 0 0 0 0 0
+StairE1REDA3:
+REDA [StairE1X+1, StairE1Y-1] 0 0 0 0 0
+StairE1REDA5:
+REDA [StairE1X, StairE1Y] 0 0 0 0 0
+StairE1REDA6:
+REDA [StairE1X+1, StairE1Y] 0 0 0 0 0
+StairE1REDA8:
+REDA [StairE1X, StairE1Y+1] 0 0 0 0 0
+StairE1REDA9:
+REDA [StairE1X+1, StairE1Y+1] 0 0 0 0 0
+
+StairE2REDA1:
+REDA [StairE2X-1, StairE2Y-1] 0 0 0 0 0
+StairE2REDA2:
+REDA [StairE2X, StairE2Y-1] 0 0 0 0 0
+StairE2REDA4:
+REDA [StairE2X-1, StairE2Y] 0 0 0 0 0
+StairE2REDA5:
+REDA [StairE2X, StairE2Y] 0 0 0 0 0
+StairE2REDA7:
+REDA [StairE2X-1, StairE2Y+1] 0 0 0 0 0
+StairE2REDA8:
+REDA [StairE2X, StairE2Y+1] 0 0 0 0 0
+
+StairS1REDA4:
+REDA [StairS1X-1,StairS1Y] 0 0 0 0 0
+StairS1REDA5:
+REDA [StairS1X,StairS1Y] 0 0 0 0 0
+StairS1REDA6:
+REDA [StairS1X+1,StairS1Y] 0 0 0 0 0
+StairS1REDA7:
+REDA [StairS1X-1,StairS1Y+1] 0 0 0 0 0
+StairS1REDA8:
+REDA [StairS1X,StairS1Y+1] 0 0 0 0 0
+StairS1REDA9:
+REDA [StairS1X+1,StairS1Y+1] 0 0 0 0 0
+
+StairS2REDA1:
+REDA [StairS2X-1,StairS2Y-1] 0 0 0 0 0
+StairS2REDA2:
+REDA [StairS2X,StairS2Y-1] 0 0 0 0 0
+StairS2REDA3:
+REDA [StairS2X+1,StairS2Y-1] 0 0 0 0 0
+StairS2REDA4:
+REDA [StairS2X-1,StairS2Y] 0 0 0 0 0
+StairS2REDA5:
+REDA [StairS2X,StairS2Y] 0 0 0 0 0
+StairS2REDA6:
+REDA [StairS2X+1,StairS2Y] 0 0 0 0 0
+
+StairNEREDA4:
+REDA [StairNEX-1, StairNEY] 0 0 0 0 0
+StairNEREDA5:
+REDA [StairNEX, StairNEY] 0 0 0 0 0
+StairNEREDA7:
+REDA [StairNEX-1, StairNEY+1] 0 0 0 0 0
+StairNEREDA8:
+REDA [StairNEX, StairNEY+1] 0 0 0 0 0
+
+StairSWREDA2:
+REDA [StairSWX, StairSWY-1] 0 0 0 0 0
+StairSWREDA3:
+REDA [StairSWX+1, StairSWY-1] 0 0 0 0 0
+StairSWREDA5:
+REDA [StairSWX, StairSWY] 0 0 0 0 0
+StairSWREDA6:
+REDA [StairSWX+1, StairSWY] 0 0 0 0 0
+
+StairNWREDA5:
+REDA [StairNWX, StairNWY] 0 0 0 0 0
+StairNWREDA6:
+REDA [StairNWX, StairNWY] 0 0 0 0 0
+StairNWREDA8:
+REDA [StairNWX, StairNWY] 0 0 0 0 0
+StairNWREDA9:
+REDA [StairNWX, StairNWY] 0 0 0 0 0
+
+StairSEREDA1:
+REDA [StairSEX-1, StairSEY-1] 0 0 0 0 0
+StairSEREDA2:
+REDA [StairSEX, StairSEY-1] 0 0 0 0 0
+StairSEREDA4:
+REDA [StairSEX-1, StairSEY] 0 0 0 0 0
+StairSEREDA5:
+REDA [StairSEX, StairSEY] 0 0 0 0 0

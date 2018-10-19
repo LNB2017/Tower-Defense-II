@@ -38,7 +38,119 @@ Relocate[X]
 Otataral Bow[X]
 
 #0x3DF
-Worm[X]
-
-#0x3E0
 Arms Scroll[X]
+
+#0x3B8
+Resire[X]
+
+#0x48C
+Use to allow a unit to move[N]
+around the map once more.[X]
+
+#0x48D
+Inflicts Silence for 3 turns.[X]
+
+#0x48E
+Increases all available weapon ranks[N]
+by 1. Allows for multiple S ranks.[X]
+
+#0x4CC
+Increases all valid[N]
+weapon ranks by 1.[N]
+Can have multiple S's.[X]
+
+#0x3C9
+Freeze[X]
+
+#0x478
+Freezes enemies to the ground[N]
+for several turns.[X]
+
+#0x4B6
+Freezes enemies.[X]
+
+#0x3B2
+Machin Shin[X]
+
+#0x461
+The black wind that poisons.[X]
+
+#0x3AD
+Blizzard[X]
+
+#0x45C
+Inflicts Freeze for 3 turns.[X]
+
+#0x468
+Halves hp (halved vs. bosses/assassins).[X]
+
+#0x471
+Restores Mag+10 HP to[N]
+nearby allies.[X]
+
+#0x472
+Restores Mag+20 HP to[N]
+nearby allies.[X]
+
+#0x473
+Restores all HP to[N]
+nearby allies.[X]
+
+#0x474
+Restores Mag+10 HP to[N]
+allies at a distance.[X]
+
+#0x475
+Restores Mag+10 Hp to[N]
+all nearby allies.[X]
+
+#0x476
+Returns allies to normal[N]
+condition. (Cures freeze, etc.)[X]
+
+#0x47D
+Restores a nearby ally's[N]
+weapons to new condition.[X]
+
+#0x47F
+Increases magic resistance[N]
+of nearby allies briefly.[X]
+
+#0x358
+Staff Savant[X]
+
+#0x408
+Staff range +1.[N]
+-1 use when using a staff.[X]
+
+#0x359
+Live to Serve[X]
+
+#0x409
+Heals self when healing allies.[N]
+-1 use when using a staff.[X]
+
+#0x35A
+Longshot[X]
+
+#0x40A
+Bow range +1.[N]
+-1 use when in combat.[X]
+
+#0x149
+Identical to[N]
+normal mode.[X]
+
+#0x14A
+This is the[N]
+option you[N]
+should pick.[X]
+
+#0x14B
+Not tested.[N]
+Play at your[N]
+own peril.[X]
+
+#0x1A2
+Don't let the Duke[N]
+lose his throne![X]

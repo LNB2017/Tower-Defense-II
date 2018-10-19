@@ -116,6 +116,12 @@ mov		r7,#0
 mov		r0,#44			@beginning of weapon ranks in class data
 add		r0,r5
 adr		r2,BasicWeaponList	@organized by weapon type
+ldr		r1,[r5,#0x28]	@class abilities
+mov		r3,#1
+lsl		r3,#8
+tst		r1,r3
+beq		GetWeaponRankLoop
+add		r2,#8			@promoted weapon list
 GetWeaponRankLoop:
 ldrb	r1,[r0,r7]
 cmp		r1,#0
@@ -164,7 +170,8 @@ bx		r0
 
 .align
 BasicWeaponList:
-.byte 0x01, 0x14, 0x1F, 0x2D, 0x4E, 0x38, 0x3F, 0x45		@iron sword, iron lance, iron axe, iron bow, physic, fire, lightning, flux
+.byte 0x01, 0x14, 0x1F, 0x2D, 0x4B, 0x38, 0x3F, 0x45		@iron sword, iron lance, iron axe, iron bow, heal, fire, lightning, flux
+.byte 0x03, 0x16, 0x20, 0x2E, 0x4C, 0x3A, 0x40, 0x41		@steel sword, steel lance, steel axe, steel bow, mend, elfire, shine, machin shin
 
 .ltorg
 .equ Get_Unit_Level, Get_Entry_Pointer+4

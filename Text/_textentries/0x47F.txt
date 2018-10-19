@@ -1,0 +1,2 @@
+Increases magic resistance[N]
+of nearby allies briefly.[X]

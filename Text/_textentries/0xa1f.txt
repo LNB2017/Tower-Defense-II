@@ -1,0 +1,6 @@
+[oml][Anna]
+Thieves are sneaky little buggers,[.4][N]
+and they can steal stuff in addition[AN]
+to not being entirely locked in place.[AN]
+If promoted to Rogue,[.4] they can steal[N]
+even more stuff, like unequipped weapons.[A][X]

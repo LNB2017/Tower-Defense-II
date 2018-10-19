@@ -25,6 +25,18 @@ ldrb	r1,[r5,#0x12]
 lsl		r1,#1
 add		r1,#0x1E
 ldrh	r5,[r6,r1]				@item
+ldr		r0,[r6]
+ldr		r0,[r0,#0x28]
+ldr		r1,[r6,#4]
+ldr		r1,[r1,#0x28]
+orr		r0,r1
+mov		r7,#251
+mov		r1,#1
+lsl		r1,#8
+tst		r0,r1
+bne		Label1
+mov		r7,#181					@unpromoted units can't go above A rank
+Label1:
 mov		r2,r6
 add		r2,#0x28
 mov		r3,#0
@@ -32,7 +44,7 @@ WeaponRankLoop:
 ldrb	r0,[r2,r3]
 cmp		r0,#0
 beq		NextRank
-cmp		r0,#251
+cmp		r0,r7
 bge		NextRank
 mov		r1,#31					@D
 cmp		r0,r1

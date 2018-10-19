@@ -5,15 +5,18 @@
 @called at from 17E64
 
 mov		r3,#0				@used this to branch here
-ldrb	r0,[r2,#0x10]
-ldrb	r5,[r1,#0x11]
+mov		r0,#0x10
+ldsb	r0,[r2,r0]
+mov		r5,#0x11
+ldsb	r5,[r1,r5]
 add		r0,r5
 cmp		r0,#0
 bge		Label1
 mov		r0,#0
 Label1:
 strb	r0,[r4,#0x18]
-ldrb	r0,[r1,#0x12]
+mov		r0,#0x12
+ldsb	r0,[r1,r0]
 cmp		r0,#0
 bge		Label2
 mov		r0,#0

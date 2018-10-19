@@ -16,7 +16,7 @@ mov		r1,#9
 lsl		r1,#2
 add		r0,r1
 ldr		r1,[r0]
-cmp		r1,#0x79		@memory slot 9 contains this number if the unit has used the Relocate item this turn
+cmp		r1,#0x79		@memory slot 9 contains this number if the unit has used the Relocate item this turn (or is being removed)
 bne		NormalEndUnitTurn
 mov		r1,#0
 str		r1,[r0]			@zero out this memory slot

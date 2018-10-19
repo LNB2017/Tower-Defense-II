@@ -112,9 +112,14 @@ ORG $2CCF6
 BL(0x191B0)
 
 //Staff exp = item might
-ORG $2C66A
-BL(0x175DC)
-SHORT 0x1C02 0xE002
+ORG $2C668
+callHack_r3(Exp_From_Staves)
+SHORT 0x1C02 0 //mov r2,r0; nop
+
+//Steal/summon/dance exp works with Paragon
+ORG $2C6C8
+callHack_r3(Exp_From_Other)
+SHORT 0
 
 //Assassin sign
 ORG $2794A
@@ -132,6 +137,53 @@ ORG $88A78
 POIN ReturnFreezeHelpText
 ORG $2F0C0 //status inflicted by sleep staff
 BYTE 0x9
+
+//Eclipse deals hp/4 damage to bosses/assassins
+ORG $2AE24
+callHack_r3(Eclipse_Effect)
+
+//remove wall hp display from cracked walls?
+ORG $8CA44
+SHORT 0
+
+//Can't heal Duke Syting
+ORG $25E3A
+BL(0x8024DA4) //IsUnitSameAllegiance rather than AreUnitsAllied
+
+//Resire's new palette
+ORG $5F524
+POIN Resire_Palette
+ORG $5F5C0
+POIN Resire_Palette
+
+//Weapon triangle stuff
+ORG $59BA90
+BYTE 00 01 WTD_Hit WTD_Dmg
+BYTE 00 02 WTA_Hit WTA_Dmg
+BYTE 01 02 WTD_Hit WTD_Dmg
+BYTE 01 00 WTA_Hit WTA_Dmg
+BYTE 02 00 WTD_Hit WTD_Dmg
+BYTE 02 01 WTA_Hit WTA_Dmg
+BYTE 05 07 WTD_Hit WTD_Dmg
+BYTE 05 06 WTA_Hit WTA_Dmg
+BYTE 06 05 WTD_Hit WTD_Dmg
+BYTE 06 07 WTA_Hit WTA_Dmg
+BYTE 07 06 WTD_Hit WTD_Dmg
+BYTE 07 05 WTA_Hit WTA_Dmg
+
+//Put Anna's portrait in the shops
+ORG $B4158
+SHORT 0x2002
+
+//zero out boss quote table
+ORG $9EC6BC
+SHORT 0xFFFF
+
+//death quote table
+#define setDeath(index, char, chapter, eventID, textID) "ORG $9ECD4C+(0xC*index); SHORT char; BYTE 0xFF chapter; SHORT eventID textID 0 0"
+setDeath(0, SittingDuck, 0, 0x65, SytingDeathQuote)
+setDeath(1, 0xBE, 0, 2, DemonKingDeathQuote)
+setDeath(2, 0xFFFF, 0, 0, 0)
 
 POP
 
@@ -242,3 +294,27 @@ Battle_Experience:
 ALIGN 4
 ReturnFreezeHelpText:
 SHORT 0x324C 0x4802 0x8010 0xBC01 0x4700 0 FreezeHelpText //add r2, #0x4C; ldr r0,FreezeHelpText; strh r0,[2]; pop {r0}; bx r0
+
+ALIGN 4
+Eclipse_Effect:
+#incbin "Eclipse_Effect.dmp"
+
+ALIGN 4
+Exp_From_Staves:
+#incbin "Exp_From_Staves.dmp"
+POIN SkillTester
+WORD ParagonID
+
+ALIGN 4
+Exp_From_Other:
+#incbin "Exp_From_Other.dmp"
+POIN SkillTester
+WORD ParagonID
+
+ALIGN 4
+Resire_Palette:
+#incext Png2Dmp "Resire.png" --palette-only
+
+ALIGN 4
+Subtract_Money_ASMC:
+#incbin "Subtract_Money_ASMC.dmp"

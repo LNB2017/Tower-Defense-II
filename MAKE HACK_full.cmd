@@ -1,6 +1,6 @@
 cd %~dp0
 
-copy FE8_clean.gba FETD_1.gba
+copy FETD0.gba FETD_1.gba
 
 cd "%~dp0Tables"
 

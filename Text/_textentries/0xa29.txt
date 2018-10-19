@@ -1,0 +1,3 @@
+[oml][Anna]
+Pssst![.4] I'm going to open this shop![.4][N]
+Come on in and spend lots of money![A][X]

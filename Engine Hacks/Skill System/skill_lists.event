@@ -52,11 +52,19 @@ KnightSkillList:
 BYTE 00 00
 ALIGN 4
 
+LandsknechtSkillList:
+BYTE 00 00
+ALIGN 4
+
 GeneralSkillList:
-BYTE 255 ProvokeID
-BYTE 255 NaturalCoverID
-BYTE 5 WaryFighterID
-BYTE 15 PaviseID
+//BYTE 255 ProvokeID
+//BYTE 255 NaturalCoverID
+//BYTE 5 WaryFighterID
+//BYTE 15 PaviseID
+BYTE 00 00
+ALIGN 4
+
+HalberdierSkillList:
 BYTE 00 00
 ALIGN 4
 
@@ -68,16 +76,16 @@ BYTE 00 00
 ALIGN 4
 
 MercenarySkillList:
-BYTE 1 RallyStrID
-BYTE 10 SealSpdID
+//BYTE 1 RallyStrID
+//BYTE 10 SealSpdID
 BYTE 00 00
 ALIGN 4
 
 HeroSkillList:
-BYTE 255 RallyStrID
-BYTE 255 SealSpdID
-BYTE 5 SolID
-BYTE 15 AxebreakerID
+//BYTE 255 RallyStrID
+//BYTE 255 SealSpdID
+//BYTE 5 SolID
+//BYTE 15 AxebreakerID
 BYTE 00 00
 ALIGN 4
 
@@ -88,10 +96,10 @@ BYTE 00 00
 ALIGN 4
 
 SwordmasterSkillList:
-BYTE 255 DuelistsBlowID
-BYTE 255 VantageID
-BYTE 5 AstraID
-BYTE 15 SwordfaireID
+//BYTE 255 DuelistsBlowID
+//BYTE 255 VantageID
+//BYTE 5 AstraID
+//BYTE 15 SwordfaireID
 BYTE 00 00
 ALIGN 4
 
@@ -104,16 +112,16 @@ BYTE 00 00
 ALIGN 4
 
 ArcherSkillList:
-BYTE 1 CertainBlowID
-BYTE 10 SureShotID
+//BYTE 1 CertainBlowID
+//BYTE 10 SureShotID
 BYTE 00 00
 ALIGN 4
 
 SniperSkillList:
-BYTE 255 CertainBlowID
-BYTE 255 SureShotID
-BYTE 5 BowfaireID
-BYTE 15 GaleforceID
+//BYTE 255 CertainBlowID
+//BYTE 255 SureShotID
+//BYTE 5 BowfaireID
+//BYTE 15 GaleforceID
 BYTE 00 00
 ALIGN 4
 
@@ -145,17 +153,21 @@ BYTE 00 00
 ALIGN 4
 
 MageSkillList:
-BYTE 1 FocusID
-BYTE 10 AdeptID
+//BYTE 1 FocusID
+//BYTE 10 AdeptID
 BYTE 00 00
 ALIGN 4
 
 SageSkillList:
-BYTE 255 AdeptID
-BYTE 255 FocusID
-BYTE 5 TomefaireID
-BYTE 15 IgnisID
+//BYTE 255 AdeptID
+//BYTE 255 FocusID
+//BYTE 5 TomefaireID
+//BYTE 15 IgnisID
 BYTE 00 00
+ALIGN 4
+
+WizardSkillList:
+BYTE 0 0
 ALIGN 4
 
 MageKnightSkillList:
@@ -167,39 +179,39 @@ BYTE 00 00
 ALIGN 4
 
 BishopSkillList:
-BYTE 255 MiracleID
-BYTE 255 LiveToServeID
-BYTE 15 CounterMagicID
+//BYTE 255 MiracleID
+//BYTE 255 LiveToServeID
+//BYTE 15 CounterMagicID
 BYTE 00 00
 ALIGN 4
 
 ShamanSkillList:
-BYTE 1 MaleficAuraID
-BYTE 10 SpurDefID
+//BYTE 1 MaleficAuraID
+//BYTE 10 SpurDefID
 BYTE 00 00
 ALIGN 4
 
 DruidSkillList:
-BYTE 255 MaleficAuraID
-BYTE 255 SpurDefID
-BYTE 5 FrenzyID
-BYTE 15 TomebreakerID
+//BYTE 255 MaleficAuraID
+//BYTE 255 SpurDefID
+//BYTE 5 FrenzyID
+//BYTE 15 TomebreakerID
 BYTE 00 00
 ALIGN 4
 
 SummonerSkillList:
-BYTE 255 MaleficAuraID
-BYTE 255 SpurDefID
-BYTE 5 AnathemaID
-BYTE 15 RenewalID
+//BYTE 255 MaleficAuraID
+//BYTE 255 SpurDefID
+//BYTE 5 AnathemaID
+//BYTE 15 RenewalID
 BYTE 00 00
 ALIGN 4
 
 RogueSkillList:
-BYTE 255 DespoilID
-BYTE 255 AcrobatID
-BYTE 5 LungeID
-BYTE 15 CelerityID
+//BYTE 255 DespoilID
+//BYTE 255 AcrobatID
+//BYTE 5 LungeID
+//BYTE 15 CelerityID
 BYTE 00 00
 ALIGN 4
 
@@ -219,16 +231,16 @@ BYTE 00 00
 ALIGN 4
 
 FighterSkillList:
-BYTE 10 FieryBloodID
-BYTE 20 DesperationID
+//BYTE 10 FieryBloodID
+//BYTE 20 DesperationID
 BYTE 00 00
 ALIGN 4
 
 WarriorSkillList:
-BYTE 255 FieryBloodID
-BYTE 255 DesperationID
-BYTE 5 DeathBlowID
-BYTE 15 CounterID
+//BYTE 255 FieryBloodID
+//BYTE 255 DesperationID
+//BYTE 5 DeathBlowID
+//BYTE 15 CounterID
 BYTE 00 00
 ALIGN 4
 
@@ -244,22 +256,22 @@ BYTE 00 00
 ALIGN 4
 
 BerserkerSkillList:
-BYTE 255 CamaraderieID
-BYTE 255 SealSklID
-BYTE 5 WrathID
-BYTE 15 AxefaireID
+//BYTE 255 CamaraderieID
+//BYTE 255 SealSklID
+//BYTE 5 WrathID
+//BYTE 15 AxefaireID
 BYTE 00 00
 ALIGN 4
 
 MonkSkillList:
-BYTE 10 SpurSpdID
-BYTE 20 SealResID
+//BYTE 10 SpurSpdID
+//BYTE 20 SealResID
 BYTE 00 00
 ALIGN 4
 
 PriestSkillList:
-BYTE 1 MiracleID
-BYTE 10 LiveToServeID
+//BYTE 1 MiracleID
+//BYTE 10 LiveToServeID
 BYTE 00 00
 ALIGN 4
 
@@ -298,16 +310,16 @@ BYTE 00 00
 ALIGN 4
 
 DancerSkillList:
-BYTE 255 WaryFighterID
-BYTE 10 AmaterasuID
-BYTE 20 CelerityID
+//BYTE 255 WaryFighterID
+//BYTE 10 AmaterasuID
+//BYTE 20 CelerityID
 BYTE 00 00
 ALIGN 4
 
 SoldierSkillList:
-BYTE 255 RepositionID
-BYTE 10 CamaraderieID
-BYTE 20 RallyStrID
+//BYTE 255 RepositionID
+//BYTE 10 CamaraderieID
+//BYTE 20 RallyStrID
 BYTE 00 00
 ALIGN 4
 

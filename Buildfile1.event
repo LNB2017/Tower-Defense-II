@@ -1,10 +1,12 @@
 #ifdef _FE8_
     #include "EAstdlib.event"
     #include "Custom Definitions.event"
+	//#include "Event Assembler/FETD_GraphicsSymbols1.txt" //seems this gets included in FETD_Symbols1
 	#include "Event Assembler/FETD_Symbols1.txt"
 	#include "Text/Text Definitions.event"
+	#include "Tools/Tool Helpers.txt"
 
-    ORG 0xb66000
+    ORG 0xb70000
 	
     //Text first for Text ID definitions
 //    #include "Text/Install Text Data.event"
@@ -23,12 +25,14 @@
 //    #include "Engine Hacks/_MasterHackInstaller.event"
 //    MESSAGE Used hax space ends at currentOffset
 
+	//Graphics
+//	#include "Graphics/_Graphics_Installer.event"
+	
     //Events
     #include "Events/Ch01 Events.txt"
     #include "Events/World Map Events.txt"
 
-    
-    MESSAGE Used free space for buildfile_1 ends at currentOffset
+    //MESSAGE Used free space for buildfile_1 ends at currentOffset
 #else
     ERROR You are not assembling FE8 events!
 #endif

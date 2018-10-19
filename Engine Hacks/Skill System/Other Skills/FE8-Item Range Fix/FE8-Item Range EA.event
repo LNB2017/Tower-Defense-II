@@ -258,7 +258,7 @@
 	Can_Attack_Target:
 	#incbin "Can Attack Target.dmp"
 	POIN GetItemRangeM|1
-	MESSAGE CURRENTOFFSET
+	//MESSAGE CURRENTOFFSET
 	//************** CAN BE WRITTEN TO WHEREVER IF YOU WANT THIS SPACE FOR OTHER ASSEMBLY STUFF *********************
 POP
 	ALIGN 4
@@ -283,7 +283,7 @@ POP
 	Return_Range_Bitfield:
 	#incbin "Return Range Bitfield.dmp"
 	POIN Get_Item_Range|1
-	MESSAGE "item range" CURRENTOFFSET
+	//MESSAGE "item range" CURRENTOFFSET
 	ALIGN 4
 	Get_Item_Range:
 	#incbin "Get Item Range.dmp"

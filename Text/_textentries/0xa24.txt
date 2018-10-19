@@ -1,0 +1,7 @@
+[oml][Anna]
+Ahh,[.4] it's not much fun,[.4] always[N]
+being cooped up in the shop.[AN]
+It's nice to have some fresh air.[AN]
+Oh?[.4] You want me to go back in before[N]
+[Red]turn 15[Red]?[.4] Fine,[.4] but you have to pay[AN]
+[Red]300 gold[Red] for me to go back to work.[A][X]

@@ -186,31 +186,69 @@ DONE - weapons with 255 crit can't crit (Luna)
 
 Graphics:
 Import FE7 mugs for the FE7 characters (do this last)
-Import Halberdier animation
+Import Halberdier animation/standing sprite
+Import Archsage animation/standing sprite
+Import Landsknecht animation/standing sprite
 Duke animation
 
 Text:
-Names/descriptions for buyable units
+DONE - Names for buyable units
 "Story"
-Names and descriptions for dancer rings
+DONE - Names and descriptions for dancer rings
 Guide (make this after playtesting)
-Unlocking the various shops/Capture
+DONE - Unlocking the various shops/Capture
 
 Tables:
-Set personal growth and bases modifiers (UGHHHHH)
-set personal skills
-set promotions
-buff class bases and growths (because holy crap they're bad)
-Set buyable units and their prices
-buff weapon exp across the board, make irons and basic tomes/physic infinite use, edit item prices
+DONE - Set personal growth and bases modifiers (UGHHHHH)
+DONE - set personal skills
+DONE - set promotions
+DONE - buff class bases and growths (because holy crap they're bad)
+DONE - Set buyable units and their prices
+DONE - buff weapon exp across the board, make irons and basic tomes/physic infinite use, edit item prices
 
 Events:
-Set up map changes on specific turns
+DONE - Set up map changes on specific turns
 Set up waves
 
 Playtesting:
 I don't want to talk about it.
 
-
 Chip: 21 + Enemy_level - Attacker_Level (promoted adds +20)
 Kill: Chip + 20 + boss/assassin bonus (+40) + thief bonus (+20)
+
+Ana - automatically unlocked (E rank)
+Nan - Turn 15 OR 300 gold (D rank)
+Ann - Turn 30 OR 1000 gold (C rank)
+Nana - Turn 50 OR 3000 gold (B rank)
+NaN - Turn 70 or 6000 gold (A rank)
+
+Nan:
+Ahh, it's not much fun, always
+being cooped up in the shop.
+It's nice to have some fresh air.
+Oh? You want me to go back in before
+turn 15? Fine, but you have to pay
+300 gold for me to go back to work.
+
+Ann:
+Look, I'm trying to contact the
+spirit of my departed grandmother.
+Your presence isn't helping.
+What? You want me to open up
+the shop before turn 30?
+I'll have to ask for 1000 gold.
+
+Nana:
+Oooh...ow. Ow ow ow. Please go away
+and leave me to die, I beg of you.
+What? If you want me to open the
+shop before turn 50, I'll need 3000
+gold. Money is a great hangover cure.
+
+NaN:
+Not a prisoner, I'm a free woman
+Live my life the way I want tooooo--
+Oh, sorry, did you want something?
+You want me to stop listening to
+sweet tunes and open before turn 70?
+Ok, but it's gonna cost you 6000 gold.

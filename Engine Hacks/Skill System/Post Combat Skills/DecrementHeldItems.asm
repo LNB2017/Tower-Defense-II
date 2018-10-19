@@ -5,7 +5,9 @@
 push	{r14}
 ldrb	r0,[r6,#0x11]
 cmp		r0,#2
-bne		GoBack
+blt		GoBack
+cmp		r0,#3
+bgt		GoBack		@only combat/staff
 mov		r0,r4
 bl		DecrementUses
 mov		r0,r5
@@ -26,11 +28,7 @@ InventoryLoop:
 ldrb	r0,[r5]
 cmp		r0,#0
 beq		EndDecrementing
-ldr		r3,=#0x80177B0	@get item data
-mov		r14,r3
-.short	0xF800
-add		r0,#0x23
-ldrb	r0,[r0]
+bl		CheckCombatType
 cmp		r0,#0
 beq		NextItem
 ldrh	r0,[r5]
@@ -58,5 +56,40 @@ End:
 pop		{r4-r7}
 pop		{r0}
 bx		r0
+
+CheckCombatType:
+push	{r14}
+ldr		r3,=#0x80177B0	@get item data
+mov		r14,r3
+.short	0xF800
+mov		r1,r0
+add		r0,#0x23
+ldrb	r0,[r0]
+cmp		r0,#0
+beq		NotDecrementing
+ldr		r0,[r1,#8]		@abilities
+mov		r2,#0x10
+lsl		r2,#0x18		@indicates staff item
+and		r0,r2
+ldr		r2,=#0x203A958
+ldrb	r2,[r2,#0x11]
+cmp		r2,#2
+beq		Case1
+@if staff
+cmp		r0,#0
+beq		NotDecrementing
+b		AreDecrementing
+@if combat
+Case1:
+cmp		r0,#0
+bne		NotDecrementing
+AreDecrementing:
+mov		r0,#1
+b		ReturnLabel
+NotDecrementing:
+mov		r0,#0
+ReturnLabel:
+pop		{r1}
+bx		r1
 
 .ltorg

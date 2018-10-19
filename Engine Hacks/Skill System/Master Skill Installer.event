@@ -435,11 +435,15 @@ RemoveEffect:
 #incbin "Teq Skills/Remove and Promote/RemoveEffect.dmp"
 POIN Remove_Unit_Events
 Remove_Unit_Events:
+TutorialText(Really_Remove)
+SETVAL 1 1
+BNE 24 0xC 1
 CHECK_COORDS 0xFFFF
 SADD 0xCB					//Move results into slot B
 ASMC MakeFakeCurrentUnit|1
 SET_SOMETHING 0xFFFE
 DISA_IF 0xFFFE
+LABEL 24
 ENDA
 ALIGN 4
 MakeFakeCurrentUnit:
@@ -448,6 +452,16 @@ MakeFakeCurrentUnit:
 //Phantom movement cost
 PhantomMoveCost:
 #incbin "PhantomMoveCost.dmp"
+
+//Battle animations
+ALIGN 4
+DukeBattleAnimPtr:
+BYTE 9 1 $73 0 0 0 0 0 //mageknight_f
+LandsknechtBattleAnimPtr:
+BYTE 0 1 $5F 0 1 1 $60 0 9 1 $61 0 0 0 0 0 //wyvernlord_f
+HalberdierBattleAnimPtr:
+BYTE 1 1 $5A 0 9 1 $5B 0 0 0 0 0 //wyvernknight_f
+//wizard is $6F, female sage
 
 //Status weapons
 PUSH
@@ -459,7 +473,6 @@ Set_Status_After_Combat:
 #incbin "Teq Skills/Set_Status_After_Combat.dmp"
 
 ALIGN 4
-MESSAGE status weapons at CURRENTOFFSET
 Status_Weapons:
 #incbin "Teq Skills/Status Weapons.dmp"
 POIN StatusWeaponTable
@@ -467,6 +480,7 @@ POIN StatusWeaponTable
 StatusWeaponTable:
 #define StatusWeaponTableEntry(Weap_ID, Status_Type, Duration_Of_Status) "BYTE Weap_ID (Status_Type|(Duration_Of_Status<<4))"
 StatusWeaponTableEntry(OtataralBow, 3, 3) //Silence
+StatusWeaponTableEntry(Blizzard, 2, 3) //Freeze
 BYTE 0 0 //terminator
 ALIGN 4
 
@@ -476,6 +490,7 @@ ALIGN 4
 #include "Teq Skills/FE8-StealPlus/FE8-StealPlus EA.txt"
 #include "Teq Skills/FE8-Capture/FE8-Capture Master EA File.txt"
 #include "Teq Skills/FE8-Nullify/Nullify EA.txt"
+//#include "Teq Skills/Remove and Promote/FE8-Set Condition/FE8-Set Condition.txt"
 
 #include "Aura Skills/Aura Skills Installer.event"
 #include "Proc Skills/Proc Skills Installer.event"

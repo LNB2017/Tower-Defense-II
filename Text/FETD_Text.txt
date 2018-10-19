@@ -21,7 +21,7 @@ Not so raggedy after all.[X]
 Nana[X]
 
 ## NanaDesc
-Something witty[X]
+Sorry, I ran out of funny.[X]
 
 ## NotANumberName
 NaN[X]
@@ -70,3 +70,580 @@ Thor's Ire[X]
 
 ## SetsLitanyName
 Set's Litany[X]
+
+## FillasMightDesc
+A dance that refreshes an[N]
+ally and grants them Atk+3.[X]
+
+## NinissGraceDesc
+A dance that refreshes an ally[N]
+and grants them Def/Res+5.[X]
+
+## ThorsIreDesc
+A dance that refreshes an ally[N]
+and grants them Crit+20.[X]
+
+## SetsLitanyDesc
+A dance that refreshes an ally[N]
+and grants them Avoid+20.[X]
+
+## LandsknechtName
+Landsknecht[X]
+
+## LandsknechtDesc
+Surprisingly mobile bulky[N]
+infantry. Wields swords and lances.[X]
+
+## HalberdierName
+Halberdier[X]
+
+## HalberdierDesc
+Professional soldiers who have[N]
+mastered the lance. Wields lances.[X]
+
+## WizardName
+Wizard[X]
+
+## WizardDesc
+Experts in the arcane arts, except[N]
+those involving magical sticks.[X]
+
+## EliwoodName
+Eliwood[X]
+
+## HectorName
+Hector[X]
+
+## LynName
+Lyn[X]
+
+## RavenName
+Raven[X]
+
+## GeitzName
+Geitz[X]
+
+## GuyName
+Guy[X]
+
+## KarelName
+Karel[X]
+
+## DorcasName
+Dorcas[X]
+
+## BartreName
+Bartre[X]
+
+## OswinName
+Oswin[X]
+
+## WilName
+Wil[X]
+
+## RebeccaName
+Rebecca[X]
+
+## LouiseName
+Louise[X]
+
+## LuciusName
+Lucius[X]
+
+## SerraName
+Serra[X]
+
+## RenaultName
+Renault[X]
+
+## ErkName
+Erk[X]
+
+## NinoName
+Nino[X]
+
+## PentName
+Pent[X]
+
+## CanasName
+Canas[X]
+
+## SainName
+Sain[X]
+
+## KentName
+Kent[X]
+
+## LowenName
+Lowen[X]
+
+## MarcusName
+Marcus[X]
+
+## PriscillaName
+Priscilla[X]
+
+## RathName
+Rath[X]
+
+## FlorinaName
+Florina[X]
+
+## FioraName
+Fiora[X]
+
+## FarinaName
+Farina[X]
+
+## HeathName
+Heath[X]
+
+## VaidaName
+Vaida[X]
+
+##HawkeyeName
+Hawkeye[X]
+
+## MatthewName
+Matthew[X]
+
+## JaffarName
+Jaffar[X]
+
+## NinianName
+Ninian[X]
+
+## NilsName
+Nils[X]
+
+## AthosName
+Athos[X]
+
+## WallaceName
+Wallace[X]
+
+## DartName
+Dart[X]
+
+## IsadoraName
+Isadora[X]
+
+## LegaultName
+Legault[X]
+
+## KarlaName
+Karla[X]
+
+## HarkenName
+Harken[X]
+
+## MerlinusName
+Merlinus[X]
+
+## IntroText
+Greetings, fleshlings![AN]
+In early 2016, Ghaststation hosted the[N]
+first iteration of Make a Fun Chapter.[AN]
+It was a contest whose goal was to piss[N]
+off the player as much as humanly possi--[N]
+oops,[.4] hang on,[.4] I'm thinking of Ragefest.[AN]
+Actually,[.4] I think you can probably figure[N]
+out the actual goal.[.4] Anyway, one of the[AN]
+submissions,[.4] FE Tower Defense,[.4] made by[N]
+PwnageKirby,[.4] was a rather innovative hack.[AN]
+Unfortunately for us,[.4] it was made in FEXNA[N]
+and wasn't going to be publically released.[AN]
+After seeing the submission being played,[N]
+I was inspired to recreate the game as a[N]
+FE8 hack and thus allow others to play it.[AN]
+This has turned out to take far longer[N]
+than expected (business as usual, right?),[N]
+and the original is actually playable now[AN]
+(search for "Tower Defense" in the Fan[N]
+Projects section of SerenesForest forums).[AN]
+This version isn't finished,[.4] but I[N]
+thought it had enough to be played.[AN]
+It's been an adventure to make this hack;[AN]
+some good,[.4] some bad[.4], an awful lot of[N]
+tedium...[.4] but I think the end result is[N]
+worth it.[.4] I hope you enjoy playing it.[AN]
+Yours sincerely,[N]
+The Management (aka Tequila)[A][X]
+
+## AnnaSpeaks1
+[oml][Anna]
+Hi there![.4] Welcome to FETD MK II.[.4] I'm[N]
+Anna,[.4] and I'll be helping you out.[A][X]
+
+## AnnaSpeaks3
+[oml][Anna]
+Is this your first time playing?[N]
+[Yes][X]
+
+## FirstTimeYes
+[oml][Anna]
+Alright,[.4] I've enabled the tutorial.[.4] I'll[N]
+be explaining things to you as we go along.[AN]
+In the future,[.4] you'll be able to consult[N]
+the guide for a refresher,[.4] but for now[AN]
+you'll just have to remember everything.[A][X]
+
+## FirstTimeNo
+[oml][Anna]
+Ok![.4] Tutorial mode has been disabled.[AN]
+In the future, you'll be able to refer[N]
+to the guide to refresh your memory,[AN]
+but it's not currently implemented.[A][X]
+
+## AnnaSpeaks2
+[oml][Anna]
+The story so far is that this chap in[N]
+the corner,[.4] Duke Syting of Aliquet,[AN]
+has contracted me to save him from[N]
+the horde that will be appearing soon.[AN]
+I don't remember why, but it doesn't[N]
+really matter.[.4] All that matters is[AN]
+that I'm getting paid, and you are[N]
+going to help me achieve that goal.[AN]
+Well,[.4] there's no time to lose.[.4] Let's go![A][X]
+
+## Tutorial1
+[oml][Anna]
+The horde is surprisingly well-mannered[N]
+and will not attack all at once.[AN]
+Instead, they will come in waves,[.4][N]
+spawning at various points on the map.[AN]
+Blocking the spawn points will not work.[AN]
+Once a wave has appeared,[.4] they will make[N]
+their way to the Duke and attempt to[AN]
+politely cave his skull in.[.4] Your job is[N]
+to prevent this from happening by[AN]
+spawning your own units.[.4] This,[.4] of course,[N]
+costs money,[.4] which[Silent...]we don't have.[.4] Hmm.[AN]
+I think some negotiations are in order.[A][X]
+
+## Tutorial2
+[oml][Anna]
+The Duke has kindly given us an advance,[.4] so[N]
+we'll be able to hire some units of our own.[AN]
+To do so,[.4] simply place the cursor on an[N]
+empty tile (no units or walls) and press A.[AN]
+Select 'Buy' to open the purchasing menu.[AN]
+When a unit is purchased,[.4] you can move it to[N]
+where it needs to be.[A] Once an action is taken[N]
+(or the turn is ended),[.4] most units will be[AN]
+locked in place and unable to move again, so[N]
+be careful when placing a unit![A][X]
+
+## Tutorial3
+[omr][Anna]
+Look![.4] A wave has spawned.[.4] Nothing too[N]
+threatening yet,[.4] but that will change.[AN]
+Enemies will move towards the Duke,[.4][N]
+provided there is an open path.[AN]
+If there isn't,[.4] however,[.4] they will[N]
+try to attack anything in range![AN]
+The goal box shows when the next wave[N]
+will spawn,[.4] but not where,[.4] so watch out![A][X]
+
+## Tutorial4
+[oml][Anna]
+In FETD,[.4] cash is king,[.4] queen,[.4] prince[N]
+regent,[.4] and archbishop of the Church[AN]
+of the Flying Spaghetti Monster.[AN]
+Your current gold can be found in the[N]
+goal window.[.4] It will gradually increase[AN]
+each day as you get a small stipend[N]
+from the Duke's coffers,[.4] but that alone[AN]
+won't be enough to fund your army.[AN]
+The bulk of your money will come from[N]
+defeating enemies.[.4] To find out a unit's[AN]
+"worth", check the stat screen where[N]
+Affinity used to be.[AN]
+Note: the weapon triangle bonuses have[N]
+been increased to +/- 25 hit/3 damage.[AN]
+Bear this in mind when figuring out[N]
+what unit classes to purchase.[A][X]
+
+## Tutorial5
+[oml][Anna]
+When you buy a unit,[.4] a random[N]
+character is then picked as well.[AN]
+There are 100 different characters,[.4][N]
+and each comes with a unique[AN]
+combination of personal skill,[.4][N]
+base modifiers,[.4] and growth modifiers.[AN]
+The latter two are added to class[N]
+bases and class growths,[.4] respectively.[AN]
+This means that two units of the[N]
+same class won't necessarily level[AN]
+up in the same way,[.4] but I think[N]
+that's part of the fun![AN]
+You can check growths by pressing[N]
+Select on the stat screen.[A][X]
+
+## Tutorial6
+[oml][Anna]
+There may come a time when a unit[N]
+you placed simply isn't working out.[AN]
+You can remove them by selecting[N]
+'Remove' from the unit action menu.[A][X]
+
+## Tutorial7
+[omr][Anna]
+Units aren't the only thing that you[N]
+can buy. In the northwest corner,[AN]
+my sisters have decided to set up shop.[AN]
+Use your merchant to visit the shops[N]
+(don't worry,[.4] he doesn't get greyed out),[AN]
+where you can buy weapons,[.4] staffs,[.4][N]
+items,[.4] and more![.4] Some of the shops[AN]
+aren't accessible right now because[N]
+their proprietor has stepped out for[AN]
+any number of reasons and will return[N]
+eventually,[.4] but perhaps they can be[AN]
+bribed to open up a little quicker[Silent...][A][X]
+
+## Tutorial8
+[oml][Anna]
+Some items have had their[N]
+characteristics changed[AN]
+from their vanilla FE8[N]
+versions.[.4] Use that R button![A][X]
+
+## Tutorial9
+[oml][Anna]
+It may be worth talking to me,[.4] if you[N]
+haven't already.[.4] Bring your wallet.[A][X]
+
+## Tutorial10
+[oml][Anna]
+Selling items that you obtain may[N]
+be tempting,[.4] but my sisters and I[AN]
+are super stingy and will only[N]
+give you 25% of an item's worth.[AN]
+It might be better to hang onto[N]
+and use those items yourself.[A][X]
+
+## Tutorial11
+[oml][Anna]
+Did you notice that almost all units[N]
+can access the Supply command?[AN]
+That means you can freely trade weapons[N]
+and items between units across the map.[AN]
+How does it work?[.4] I haven't the[N]
+faintest idea;[.4] I heard something about[AN]
+pocket dimensions and kinda tuned out[Silent...][A][X]
+
+## Tutorial12
+[oml][Anna]
+Remember how I told you that units can't[N]
+move after taking their first action?[AN]
+Well,[.4] that's mostly true.[.4] My sister Ana[N]
+sells an item called Relocate,[.4] which can[AN]
+be used to move a unit somewhere else.[AN]
+Also,[.4] classes with the Passable skill,[N]
+such as thieves,[.4] are always allowed to[AN]
+move a short distance,[.4] but at the[N]
+expense of not being able to block enemies.[A][X]
+
+## Tutorial13
+[oml][Anna]
+Have you bought a dancer yet?[.4] They're[N]
+expensive,[.4] but the Dance ability has[AN]
+been upgraded;[.4] it will now refresh all[N]
+adjacent units at once.[.4] Neat, huh?[AN]
+They also come with a random ring,[.4][N]
+which buffs a single target and[AN]
+refreshes them at the same time.[A][X]
+
+## Tutorial14
+[oml][Anna]
+Thieves are sneaky little buggers,[.4][N]
+and they can steal stuff in addition[AN]
+to not being entirely locked in place.[AN]
+If promoted to Rogue,[.4] they can steal[N]
+even more stuff, like unequipped weapons.[A][X]
+
+## Tutorial15
+[oml][Anna]
+Do you want to promote your units?[AN]
+My sister Nan sells Master Seals,[.4][N]
+but you can also promote a level 20[AN]
+unit for free by selecting 'Promote'[N]
+from the unit action menu.[AN]
+The promotion options are the same[N]
+either way,[.4] and some of the choices[AN]
+aren't offered in the purchasing menu.[A][X]
+
+## Tutorial16
+[oml][Anna]
+Summoners are a versatile unit that can[N]
+either heal or attack,[.4] depending on what[AN]
+class they promoted from,[.4] but both[N]
+versions can summon phantoms to the field.[AN]
+A phantom comes with a random weapon[N]
+and cannot trade or use Supply,[.4] but[AN]
+they're great options for chipping away[N]
+at tough opponents.[.4] There can be up to[AN]
+5 phantoms active at one time between[N]
+all summoners on the field.[A][X]
+
+## Tutorial17
+[omr][Anna]
+Oh![.4] A boss just spawned.[.4] These are[N]
+stronger than their normal counterparts,[AN]
+but they offer more exp, more gold,[N]
+and a nice droppable item to compensate.[A][X]
+
+## Tutorial18
+[omr][Anna]
+Uh oh.[.4] The unit that just spawned[N]
+has a skull insignia;[.4] which[AN]
+indicates they're an assassin.[AN]
+Assassins will attack your troops[N]
+with no provocation,[.4] seeking to[AN]
+break holes in your lines for[N]
+the rest of the horde to slip[AN]
+through.[.4] You'd best take them[N]
+out with extreme prejudice.[A][X]
+
+## NanTalk
+[oml][Anna]
+Ahh,[.4] it's not much fun,[.4] always[N]
+being cooped up in the shop.[AN]
+It's nice to have some fresh air.[AN]
+Oh?[.4] You want me to go back in before[N]
+[Red]turn 15[Red]?[.4] Fine,[.4] but you have to pay[AN]
+[Red]300 gold[Red] for me to go back to work.[A][X]
+
+## AnnTalk
+[oml][Anna]
+Look,[.4] I'm trying to contact the[N]
+spirit of my departed grandmother.[AN]
+Your presence isn't helping.[AN]
+What?[.4] You want me to open up[N]
+the shop before [Red]turn 30[Red]?[AN]
+I'll have to ask for [Red]1000 gold[Red].[A][X]
+
+## NanaTalk
+[oml][Anna]
+Oooh[Silent...]ow.[.5] Ow[.4] ow[.4] ow.[.4] Please go away[N]
+and leave me to die,[.4] I beg of you.[AN]
+What?[.4] If you want me to open the[N]
+shop before [Red]turn 50[Red],[.4] I'll need [Red]3000[AN]
+gold[Red].[.4] Money is a great hangover cure.[A][X]
+
+## NotANumberTalk
+[oml][Anna]
+Not a prisoner,[.4] I'm a free woman[.5][N]
+Live my life the way I want tooooo--[AN]
+Oh,[.4] sorry,[.4] did you want something?[.4][N]
+You want me to stop listening to[AN]
+sweet tunes and open before [Red]turn 70[Red]?[N]
+Ok,[.4] but it's gonna cost you [Red]6000 gold[Red].[A][X]
+
+## Unlock_Shop_Choice
+Pay to open the shop early?[N]
+[No][X]
+
+## Unlock_Shop_Via_Turn
+[oml][Anna]
+Pssst![.4] I'm going to open this shop![.4][N]
+Come on in and spend lots of money![A][X]
+## Unlock_Shop_No_Money
+[oml][Anna]
+Who are you trying to fool?[.4] That's[N]
+not the amount of money I asked for![AN]
+Come back when you can actually pay![A][X]
+
+## Unlock_Shop_Yes
+[oml][Anna]
+Oh,[.4] uh,[.4] I didn't actually expect you[N]
+to pay up.[.4] Well,[.4] come on in,[.4] and get[AN]
+ready for the fleecing of your life[Beat][N]
+Oops,[.4] did I say that out loud?[A][X]
+
+## Unlock_Capture1
+[oml][Anna]
+You know,[.4] these shops aren't the only[N]
+place where you pick up cool weapons.[AN]
+If you were to hold back your attacks[N]
+a bit,[.4] you could capture your enemies[AN]
+alive and nick their stuff instead.[AN]
+You interested in learning how to do[N]
+that?[.4] It'll cost you [Red]5000 gold[Red],[.4] though.[A][X]
+
+## Unlock_Capture2
+Take crash course in pillaging?[N]
+[No][X]
+
+## Unlock_Capture3
+[oml][Anna]
+Oh, believe you me.[.4] You won't regret[N]
+this.[.4] It's not easy,[.4] though,[.4] so pay[AN]
+very close attention to me[Silent...][A][X]
+
+## Unlock_Capture4
+You can now capture enemies by[N]
+selecting the option from the[N]
+action menu, if they fulfill[N]
+the following criteria:[AN]
+- Enemy must be adjacent.[N]
+- Unit's aid > enemy's con.[N]
+- Must deal killing blow[N]
+with most stats halved.[AN]
+Once an enemy has been captured,[N]
+they will be rescued and can be[N]
+traded with to remove their items.[AN]
+You'll also need a free space to[N]
+drop them later, unless another[N]
+unit can take the burden for you.[N]
+Standard rescuing penalties apply.[A][X]
+
+## Unlock_Capture5
+[oml][Anna]
+Here,[.4] now![.4] I'm not running a[N]
+charity![.4] If you don't have[AN]
+enough gold now,[.4] come back[N]
+later when you can pay.[A][X]
+
+## LightningStrikeText
+[oml][Anna]
+My word![.4] What just happened?![AN]
+[Beat]What?[.4] Indoor lightning?[.4][N]
+Surely that can't be natural.[AN]
+You'd best be wary;[.4] it[N]
+might happen again.[A][X]
+
+## GruntName
+Grunt[X]
+
+## BossName
+Boss[X]
+
+## AssassinName
+Assassin[X]
+
+## GruntDesc
+A soldier in the enemy army.[N]
+Aggressive and tenacious.[X]
+
+## BossDesc
+A grunt who has distinguished themself[N]
+in combat. Loud and uh, well, bossy.[X]
+
+## AssassinDesc
+A veteran soldier with orders to kill[N]
+anyone they see. Lethal and annoying.[X]
+
+## SytingDeathQuote
+[omr][Syting]
+[ToggleInvert]KVACK.[A][X]
+
+## DemonKingDeathQuote
+[oml][ToggleInvert]OW.[A][X]
+
+## Really_Remove
+Remove this unit?[N]
+[No][X]

@@ -369,6 +369,7 @@
 #define Mine 0x7A
 #define LightRune 0x7B
 #define HoplonShield 0x7C
+#define HoplonGuard 0x7C
 #define FillasMight 0x7D
 #define NinissGrace 0x7E
 #define ThorsIre 0x7F

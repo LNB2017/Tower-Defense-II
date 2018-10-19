@@ -1,0 +1,5 @@
+[oml][Anna]
+Ok![.4] Tutorial mode has been disabled.[AN]
+In the future, you'll be able to refer[N]
+to the guide to refresh your memory,[AN]
+but it's not currently implemented.[A][X]

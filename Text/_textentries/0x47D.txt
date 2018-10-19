@@ -1,0 +1,2 @@
+Restores a nearby ally's[N]
+weapons to new condition.[X]

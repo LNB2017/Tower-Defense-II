@@ -153,6 +153,27 @@ Ignis
 Despoil
 Capture - will probably make this one mapwide (once you unlock it, every unit can capture)
 
+Definitely want:
+Sure Shot - skill*2 becomes skill*3 in hit formula
+Bow Range +1
+Staff Savant
+Adept
+Luna
+Sol
+Astra
+Aegis
+Pavise
+Live to Serve
+Impale
+
+Longshot - Bow range +1
+Staff Savant - Staff range +1
+Live to Serve - heal self when healing others
+Luna - doubles weapon might
+Sol - heal for min(damage, weapon might) damage
+Aegis - negate 25% of physical damage
+Pavise - negate 25% of magical damage
+
 Class skills:
 Steal - thief
 Steal+ - rogue
@@ -217,14 +238,14 @@ Summoner?
 Waves:
 Soldier
 Fighter
-Monk
-Myrmidon
-Archer
 Mage
+Archer
+Monk
 Knight
 Mercenary
 Shaman
 Thief
+Assorted
 
 Warrior
 Druid
