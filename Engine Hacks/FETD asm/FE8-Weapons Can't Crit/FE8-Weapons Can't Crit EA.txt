@@ -28,7 +28,7 @@ POP
 
 ALIGN 4
 Crit_Calculation:
-#incbin "Crit_Calculation.dmp
+#incbin "Crit_Calculation.dmp"
 
 ALIGN 4
 Crit_Display:

@@ -1,7 +1,7 @@
 #define csvmacro001(arg000) "WORD arg000 "
 
-#inctext PFinder "C:\Users\duckd\Documents\GitHub\Tower-Defense-II\FE8_clean.gba" 0xe47180 LevelUpSkillTable
-
+PUSH
+POP
 ALIGN 4
 LevelUpSkillTable:
 csvmacro001(0x0)

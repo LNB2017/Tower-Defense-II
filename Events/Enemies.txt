@@ -174,7 +174,7 @@ UNIT
 
 Turn26:
 UNIT Boss1 Knight 0 Level(9,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA3 [LightBrand] [0xA, 0, 0, 0]
-UNIT Mook1 Knight 0 Level(8,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA7 [KillerAxe, HoplonGuard] [0xA, 0, 0, 0]
+UNIT Mook1 Knight 0 Level(8,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA7 [KillerAxe, HoplonShield] [0xA, 0, 0, 0]
 UNIT
 
 Turn28:

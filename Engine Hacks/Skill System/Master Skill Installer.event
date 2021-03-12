@@ -101,8 +101,8 @@ ORG $2B7F8
   jumpToHack(Armsthrift)
 
 //remove critup ability (for critup skill)
-ORG $2AC4A
-SHORT 0x46C0
+//ORG $2AC4A
+//SHORT 0x46C0
 
 //Triangle Adept
 ORG $2C830
@@ -424,6 +424,7 @@ ALIGN 4
 Autopromote_Func:
 #incbin "Teq Skills/Remove and Promote/Autopromote_Func.dmp"
 
+
 //Remove
 ALIGN 4
 RemoveUsability:
@@ -435,7 +436,7 @@ RemoveEffect:
 #incbin "Teq Skills/Remove and Promote/RemoveEffect.dmp"
 POIN Remove_Unit_Events
 Remove_Unit_Events:
-TutorialText(Really_Remove)
+CenterTextbox(Really_Remove)
 SETVAL 1 1
 BNE 24 0xC 1
 CHECK_COORDS 0xFFFF

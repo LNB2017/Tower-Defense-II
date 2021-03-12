@@ -1,6 +1,7 @@
 #ifndef installlightning
 
-#include "_6CDefinitions.event"
+//#include "_6CDefinitions.event"
+#define _6C_WHILE_EXISTS(ap6CToCheck)               "SHORT 0x08 0; POIN ap6CToCheck"
 
 ALIGN 4
 lightningAnim:
@@ -106,4 +107,5 @@ lightning09image:
 ALIGN 4
 lightning10image:
 #incext png2dmp "10.png"
+
 #endif

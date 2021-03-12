@@ -1,0 +1,639 @@
+#include EAStdlib.event
+EventPointerTable(0x7, Ch01_Events_Table)
+
+#define Tutorial_Event_ID 0x9
+
+#define Spawn1X 2
+#define Spawn1Y 12
+#define Spawn2X 12
+#define Spawn2Y 2
+#define StairSWX 1
+#define StairSWY 20
+#define StairNEX 20
+#define StairNEY 1
+#define StairNWX 5
+#define StairNWY 5
+#define StairE1X 16
+#define StairE1Y 11
+#define StairE2X 20
+#define StairE2Y 11
+#define StairS1X 11
+#define StairS1Y 16
+#define StairS2X 11
+#define StairS2Y 20
+#define StairSEX 17
+#define StairSEY 17
+
+#define Shop1X 2
+#define Shop1Y 6
+#define Shop2X 2
+#define Shop2Y 4
+#define Shop3X 2
+#define Shop3Y 2
+#define Shop4X 4
+#define Shop4Y 2
+#define Shop5X 6
+#define Shop5Y 2
+
+#include "Enemies.txt"
+
+Ch01_Events_Table:
+POIN Ch01_TurnBasedEvents
+POIN Ch01_CharacterBasedEvents
+POIN Ch01_LocationBasedEvents
+POIN Ch01_MiscBasedEvents
+POIN Ch01_Dunno Ch01_Dunno Ch01_Dunno
+POIN Ch01_Tutorial
+POIN Ch01_TrapData Ch01_HMExtraTrapData
+POIN Ch01_Units Ch01_Units
+POIN $0 $0 $0 //these are for skirmish units (ally 1, ally 2, ally 3)
+POIN $0 $0 $0 //(enemy 1, enemy 2, enemy 3)
+POIN Ch01_BeginningScene Ch01_EndingScene
+
+Ch01_TurnBasedEvents:
+TurnEventPlayer(0, Ch01_Spawn_Enemies, 1, 100)
+TurnEventPlayer(0, Ch01_Give_Money, 2, 255)
+TurnEventPlayer(0, Ch01_Tutorial1, 1, 1) //buy units
+TurnEventPlayer(0, Ch01_Tutorial2, 2, 1) //enemy waves
+TurnEventPlayer(0, Ch01_Tutorial3, 3, 1) //money
+TurnEventPlayer(0, Ch01_Tutorial4, 4, 1) //characters
+TurnEventPlayer(0, Ch01_Tutorial5, 5, 1) //removing units
+TurnEventPlayer(0, Ch01_Tutorial6, 6, 1) //shops
+TurnEventPlayer(0, Ch01_Tutorial7, 7, 1) //items changed
+TurnEventPlayer(0, Ch01_Tutorial8, 8, 1) //capture
+TurnEventPlayer(0, Ch01_Tutorial9, 9, 1) //selling items
+TurnEventPlayer(0, Ch01_Tutorial10, 10, 1) //supply
+TurnEventPlayer(0, Ch01_Tutorial11, 11, 1) //relocate
+TurnEventPlayer(0, Ch01_Tutorial16, 12, 1) //bosses
+TurnEventPlayer(0, Ch01_Tutorial12, 13, 1) //dancers
+TurnEventPlayer(0, Ch01_Tutorial13, 14, 1) //thieves
+TurnEventPlayer(0, Ch01_Tutorial14, 15, 1) //promotions
+TurnEventPlayer(0, Ch01_Tutorial17, 19, 1) //assassins
+TurnEventPlayer(0, Ch01_Tutorial15, 20, 1) //summoners
+TurnEventPlayer(Unlock_Shop2_ID, Unlock_Shop2_Event_Turn, 15, 1)
+TurnEventPlayer(Unlock_Shop3_ID, Unlock_Shop3_Event_Turn, 30, 1)
+TurnEventPlayer(Unlock_Shop4_ID, Unlock_Shop4_Event_Turn, 50, 1)
+TurnEventPlayer(Unlock_Shop5_ID, Unlock_Shop5_Event_Turn, 70, 1)
+TurnEventPlayer(0, Lightning_Hit1, 40, 1)
+TurnEventPlayer(0, Lightning_Hit2, 45, 1)
+TurnEventPlayer(0, Lightning_Hit3, 60, 1)
+TurnEventPlayer(0, Lightning_Hit4, 65, 1)
+TurnEventPlayer(0, Unblock_Second_Spawn, 25, 1)
+TurnEventPlayer(0, Unlock_North_Doors, 40, 1)
+TurnEventPlayer(0, Unlock_West_Doors, 55, 1)
+TurnEventPlayer(0, Unlock_NW_Room, 70, 1)
+TurnEventPlayer(0, SetBossID, 46, 1)
+END_MAIN
+
+Ch01_CharacterBasedEvents:
+CharacterEvent(Unlock_Shop2_ID, Unlock_Shop2_Event_Talk, Merlinus, Shop_Anna2)
+CharacterEvent(Unlock_Shop3_ID, Unlock_Shop3_Event_Talk, Merlinus, Shop_Anna3)
+CharacterEvent(Unlock_Shop4_ID, Unlock_Shop4_Event_Talk, Merlinus, Shop_Anna4)
+CharacterEvent(Unlock_Shop5_ID, Unlock_Shop5_Event_Talk, Merlinus, Shop_Anna5)
+CharacterEvent(Capture_Event_ID, Unlock_Capture_Talk, Merlinus, Capture_Anna)
+END_MAIN
+
+Ch01_LocationBasedEvents:
+SHOP 0x0 Ch01_Shop1 [Shop1X, Shop1Y] 0x16
+SHOP 0x0 Ch01_Shop2 [Shop2X, Shop2Y] 0x16
+SHOP 0x0 Ch01_Shop3 [Shop3X, Shop3Y] 0x16
+SHOP 0x0 Ch01_Shop4 [Shop4X, Shop4Y] 0x16
+SHOP 0x0 Ch01_Shop5 [Shop5X, Shop5Y] 0x16
+SHOP 0x0 Ch01_SecretShop [3, 3] 0x18
+END_MAIN
+
+Ch01_MiscBasedEvents:
+CauseGameOverIfLordDies
+AFEV 0 CheckIfBossDead 6
+END_MAIN
+
+Ch01_Dunno:
+END_MAIN
+
+Ch01_Tutorial:
+END_MAIN
+
+Ch01_TrapData:
+ENDTRAP
+ALIGN 4
+
+Ch01_HMExtraTrapData:
+ENDTRAP
+ALIGN 4
+
+Ch01_Units:
+UNIT
+
+Ch01_Wagon:
+UNIT Merlinus Tent 0 Level(1,Ally,0) [3,3] 0 0 0 0 [0] NoAI
+UNIT
+
+Ch01_Target:
+UNIT SittingDuck Pontifex 0 Level(1,NPC,0) [20,20] 0 0 0 0 [0] NeverMoveAI
+UNIT
+
+Ch01_Annas:
+//UNIT Shop_Anna1 Civilian_F_3 0 Level(1,NPC,0) [Shop1X-1,Shop1Y] 0 0 0 0 [IronSword, Fire, Heal, Relocate] NeverMoveAI //not needed anymore
+UNIT Shop_Anna2 Civilian_F_3 0 Level(1,NPC,0) [Shop2X,Shop2Y] 0 0 0 0 [SteelSword, Elfire, Restore, MasterSeal] NeverMoveAI
+UNIT Shop_Anna3 Civilian_F_3 0 Level(1,NPC,0) [Shop3X,Shop3Y] 0 0 0 0 [Lancereaver, Thunder, Physic] NeverMoveAI
+UNIT Shop_Anna4 Civilian_F_3 0 Level(1,NPC,0) [Shop4X,Shop4Y] 0 0 0 0 [BraveSword, Bolting, Sleep] NeverMoveAI
+UNIT Shop_Anna5 Civilian_F_3 0 Level(1,NPC,0) [Shop5X,Shop5Y] 0 0 0 0 [SilverSword, Fimbulvetr, Fortify] NeverMoveAI
+UNIT Capture_Anna Civilian_F_3 0 Level(1,NPC,0) [1,1] 0 0 0 0 [0] NeverMoveAI
+UNIT
+
+Ch01_BeginningScene:
+LOAD1 0x1 Ch01_Wagon
+ENUN
+LOAD1 0x1 Ch01_Target
+ENUN
+LOAD1 0x1 Ch01_Annas
+ENUN
+FADU 0x10
+FlashCursor(Capture_Anna, 60)
+Text(AnnaSpeaks1)		//turn on tutorial?
+Text(AnnaSpeaks3)		//attempt to make this thing work
+SVAL 1 2				//1=yes, 2=no
+BNE 23 0xC 1			//branch if yes is selected
+//if no
+STAL 60
+Text(FirstTimeNo)
+ENUT Tutorial_Event_ID
+SVAL 0x3 Initial_Gold_Amount
+GIVEITEMTOMAIN 0x0
+GOTO 24
+LABEL 23
+//if yes
+STAL 60
+Text(FirstTimeYes)
+STAL 60
+CAM1 [20,20]
+Text(AnnaSpeaks2)		//"plot" introduction
+LABEL 24
+NoFade
+ENDA
+
+Ch01_EndingScene:
+ASMC 0x85C71 //0x381F5 //congratulations banner and records screen
+MNTS 0
+ENDA
+
+Ch01_Spawn_Enemies:
+ASMC Get_Enemies|1		//puts a pointer to reinforcements in slot 2
+BEQ 5 2 0				//skip loading if slot 2 = slot 0 (0)
+EVBIT_T 0x9				//supposedly makes the camera pan to the reinforcements
+LOAD_SLOT2 0x1			//no idea what the argument is
+ENUN
+LABEL 5
+NoFade
+ENDA
+
+Ch01_Give_Money:
+ASMC Give_Money_Every_Wave_ASMC|1
+NoFade
+ENDA
+
+Ch01_Shop1:
+SHLI IronSword IronLance Javelin IronAxe HandAxe IronBow Fire Lightning Flux Heal Mend Relocate Vulnerary
+Ch01_Shop2:
+SHLI SteelSword SteelLance SteelAxe SteelBow Elfire Shine MachinShin Recover Restore MasterSeal
+Ch01_Shop3:
+SHLI Lancereaver Axereaver Swordreaver Longbow Thunder Resire Luna Physic Barrier 
+Ch01_Shop4:
+SHLI BraveSword BraveLance BraveAxe BraveBow Bolting Purge Eclipse Freeze Silence FillasMight NinissGrace ThorsIre SetsLitany
+Ch01_Shop5:
+SHLI SilverSword SilverLance SilverAxe SilverBow Fimbulvetr Aura Fenrir Fortify
+Ch01_SecretShop:
+SHLI StaffSavantItem LiveToServeItem LongshotItem
+
+ALIGN 4
+Lightning_Hit1:
+CAM1 [18,12]
+STAL 20
+doThunder(18,12)
+SETVAL 0xB 0x0C0012
+TILECHANGE 0xFFFF
+STAL 100
+CAM1 [2,2]
+FlashCursor(Capture_Anna, 60)
+Text(LightningStrikeText)
+NoFade
+ENDA
+
+ALIGN 4
+Lightning_Hit2:
+CAM1 [18, 12]
+STAL 20
+doThunder(18, 12)
+SETVAL 0xB 0x0C000F
+TILECHANGE 0xFFFF
+NoFade
+ENDA
+
+ALIGN 4
+Lightning_Hit3:
+CAM1 [12, 18]
+STAL 20
+doThunder(12,18)
+SETVAL 0xB 0x12000C
+TILECHANGE 0xFFFF
+NoFade
+ENDA
+
+ALIGN 4
+Lightning_Hit4:
+CAM1 [12, 18]
+STAL 20
+doThunder(12,18)
+SETVAL 0xB 0x0F000C
+TILECHANGE 0xFFFF
+NoFade
+ENDA
+
+Ch01_Tutorial1:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 26 0xC 0
+CAM1 [2,2]
+FlashCursor(Capture_Anna, 60)
+Text(Tutorial1)
+FADI 16
+STAL 60
+FADU 16
+SVAL 0x3 Initial_Gold_Amount
+GIVEITEMTOMAIN 0x0
+STAL 40
+Text(Tutorial2)
+LABEL 26
+NoFade
+ENDA
+
+Ch01_Tutorial2:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 27 0xC 0
+CAM1 [Spawn1X, Spawn1Y]
+STAL 60
+Text(Tutorial3)
+LABEL 27
+NoFade
+ENDA
+
+Ch01_Tutorial3:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 28 0xC 0
+Text(Tutorial4)
+LABEL 28
+NoFade
+ENDA
+
+Ch01_Tutorial4:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 29 0xC 0
+Text(Tutorial5)
+LABEL 29
+NoFade
+ENDA
+
+Ch01_Tutorial5:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 30 0xC 0
+Text(Tutorial6)
+LABEL 30
+NoFade
+ENDA
+
+Ch01_Tutorial6:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 31 0xC 0
+CAM1 [2,2]
+Text(Tutorial7)
+LABEL 31
+NoFade
+ENDA
+
+Ch01_Tutorial7:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 32 0xC 0
+Text(Tutorial8)
+LABEL 32
+NoFade
+ENDA
+
+Ch01_Tutorial8:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 31 0xC 0
+CAM1 [2,2]
+FlashCursor(Capture_Anna, 60)
+Text(Tutorial9)
+LABEL 31
+NoFade
+ENDA
+
+Ch01_Tutorial9:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 32 0xC 0
+Text(Tutorial10)
+LABEL 32
+NoFade
+ENDA
+
+Ch01_Tutorial10:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 32 0xC 0
+Text(Tutorial11)
+LABEL 32
+NoFade
+ENDA
+
+Ch01_Tutorial11:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 32 0xC 0
+Text(Tutorial12)
+LABEL 32
+NoFade
+ENDA
+
+Ch01_Tutorial12:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 32 0xC 0
+Text(Tutorial13)
+LABEL 32
+NoFade
+ENDA
+
+Ch01_Tutorial13:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 32 0xC 0
+Text(Tutorial14)
+LABEL 32
+NoFade
+ENDA
+
+Ch01_Tutorial14:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 32 0xC 0
+Text(Tutorial15)
+LABEL 32
+NoFade
+ENDA
+
+Ch01_Tutorial15:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 32 0xC 0
+Text(Tutorial16)
+LABEL 32
+NoFade
+ENDA
+
+Ch01_Tutorial16:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 32 0xC 0
+CAM1 [Spawn1X, Spawn1Y]
+Text(Tutorial17)
+LABEL 32
+NoFade
+ENDA
+
+Ch01_Tutorial17:
+CHECK_EVENTID Tutorial_Event_ID
+BNE 32 0xC 0
+CAM1 [StairE2X, StairE2Y]
+Text(Tutorial18)
+LABEL 32
+NoFade
+ENDA
+
+Unlock_Shop2_Event_Talk:
+Text(NanTalk)
+STAL 20
+CenterTextbox(Unlock_Shop_Choice)
+SVAL 1 1
+BEQ 44 0xC 1
+//if no
+ENUF Unlock_Shop2_ID
+GOTO 46
+LABEL 44
+//if yes
+SVAL 1 Unlock_Shop2_Price
+CHECK_MONEY
+BLT 45 0xC 1
+ASMC Subtract_Money_ASMC|1
+SOUN 0xB9 //cha ching
+STAL 40
+Text(Unlock_Shop_Yes)
+//MOVE_1STEP 0 Shop_Anna2 Left
+DISA Shop_Anna2
+GOTO 46
+//not enough money
+LABEL 45
+Text(Unlock_Shop_No_Money)
+ENUF Unlock_Shop2_ID
+LABEL 46
+NoFade
+ENDA
+
+Unlock_Shop3_Event_Talk:
+Text(AnnTalk)
+STAL 20
+CenterTextbox(Unlock_Shop_Choice)
+SVAL 1 1
+BEQ 44 0xC 1
+//if no
+ENUF Unlock_Shop3_ID
+GOTO 46
+LABEL 44
+//if yes
+SVAL 1 Unlock_Shop3_Price
+CHECK_MONEY
+BLT 45 0xC 1
+ASMC Subtract_Money_ASMC|1
+SOUN 0xB9 //cha ching
+STAL 40
+Text(Unlock_Shop_Yes)
+//MOVE_1STEP 0 Shop_Anna3 Left
+DISA Shop_Anna3
+GOTO 46
+//not enough money
+LABEL 45
+Text(Unlock_Shop_No_Money)
+ENUF Unlock_Shop3_ID
+LABEL 46
+NoFade
+ENDA
+
+Unlock_Shop4_Event_Talk:
+Text(NanaTalk)
+STAL 20
+CenterTextbox(Unlock_Shop_Choice)
+SVAL 1 1
+BEQ 44 0xC 1
+//if no
+ENUF Unlock_Shop4_ID
+GOTO 46
+LABEL 44
+//if yes
+SVAL 1 Unlock_Shop4_Price
+CHECK_MONEY
+BLT 45 0xC 1
+ASMC Subtract_Money_ASMC|1
+SOUN 0xB9 //cha ching
+STAL 40
+Text(Unlock_Shop_Yes)
+//MOVE_1STEP 0 Shop_Anna4 Up
+DISA Shop_Anna4
+GOTO 46
+//not enough money
+LABEL 45
+Text(Unlock_Shop_No_Money)
+ENUF Unlock_Shop4_ID
+LABEL 46
+NoFade
+ENDA
+
+Unlock_Shop5_Event_Talk:
+Text(NotANumberTalk)
+STAL 20
+CenterTextbox(Unlock_Shop_Choice)
+SVAL 1 1
+BEQ 44 0xC 1
+//if no
+ENUF Unlock_Shop5_ID
+GOTO 46
+LABEL 44
+//if yes
+SVAL 1 Unlock_Shop5_Price
+CHECK_MONEY
+BLT 45 0xC 1
+ASMC Subtract_Money_ASMC|1
+SOUN 0xB9 //cha ching
+STAL 40
+Text(Unlock_Shop_Yes)
+//MOVE_1STEP 0 Shop_Anna5 Up
+DISA Shop_Anna5
+GOTO 46
+//not enough money
+LABEL 45
+Text(Unlock_Shop_No_Money)
+ENUF Unlock_Shop5_ID
+LABEL 46
+NoFade
+ENDA
+
+Unlock_Shop2_Event_Turn:
+CAM1 [Shop2X, Shop2Y]
+FlashCursor(Shop_Anna2, 60)
+Text(Unlock_Shop_Via_Turn)
+DISA Shop_Anna2
+NoFade
+ENDA
+
+Unlock_Shop3_Event_Turn:
+CAM1 [Shop3X, Shop3Y]
+FlashCursor(Shop_Anna3, 60)
+Text(Unlock_Shop_Via_Turn)
+DISA Shop_Anna3
+NoFade
+ENDA
+
+Unlock_Shop4_Event_Turn:
+CAM1 [Shop4X, Shop4Y]
+FlashCursor(Shop_Anna4, 60)
+Text(Unlock_Shop_Via_Turn)
+DISA Shop_Anna4
+NoFade
+ENDA
+
+Unlock_Shop5_Event_Turn:
+CAM1 [Shop5X, Shop5Y]
+FlashCursor(Shop_Anna5, 60)
+Text(Unlock_Shop_Via_Turn)
+DISA Shop_Anna5
+NoFade
+ENDA
+
+Unlock_Capture_Talk:
+Text(Unlock_Capture1)
+STAL 20
+CenterTextbox(Unlock_Capture2)
+SVAL 1 1
+BEQ 44 0xC 1
+//if no
+ENUF Capture_Event_ID
+GOTO 46
+LABEL 44
+//if yes
+SVAL 1 Unlock_Capture_Price
+CHECK_MONEY
+BLT 45 0xC 1
+ASMC Subtract_Money_ASMC|1
+SOUN 0xB9 //cha ching
+STAL 40
+Text(Unlock_Capture3)
+FADI 16
+STAL 100
+FADU 16
+STAL 40
+CenterTextbox(Unlock_Capture4)
+GOTO 46
+//not enough money
+LABEL 45
+Text(Unlock_Capture5)
+ENUF Unlock_Capture_Price
+LABEL 46
+NoFade
+ENDA
+
+Unlock_North_Doors:
+CAM1 [18, 3]
+SETVAL 0xB 0x3000F
+TILECHANGE 0xFFFF
+SOUN 0xB1 //door opens
+STAL 20
+SETVAL 0xB 0x30014
+TILECHANGE 0xFFFF
+SOUN 0xB1 //door opens
+NoFade
+ENDA
+
+Unlock_West_Doors:
+CAM1 [3, 18]
+SETVAL 0xB 0xF0003
+TILECHANGE 0xFFFF
+SOUN 0xB1 //door opens
+STAL 20
+SETVAL 0xB 0x140003
+TILECHANGE 0xFFFF
+SOUN 0xB1 //door opens
+NoFade
+ENDA
+
+Unlock_NW_Room:
+CAM1 [6, 7]
+SETVAL 0xB 0x70006
+TILECHANGE 0xFFFF
+SOUN 0xB1 //door opens
+NoFade
+ENDA
+
+Unblock_Second_Spawn:
+CAM1 [12, 2]
+SOUN 0xAF //destroyed snag
+SETVAL 0xB 0xA //0,10
+TILECHANGE 0xFFFF
+NoFade
+ENDA
+
+CheckIfBossDead:
+CHECK_EVENTID 0x2
+BNE 73 0xC 0
+//if not set
+ENUF 6
+GOTO 74
+LABEL 73
+CALL Ch01_EndingScene
+LABEL 74
+NoFade
+ENDA
+
+SetBossID:
+ENUT 2
+NoFade
+ENDA

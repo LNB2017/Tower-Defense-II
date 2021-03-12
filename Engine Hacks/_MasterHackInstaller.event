@@ -60,9 +60,6 @@ POP
 
 ////////////////////////////////FREE SPACE OUT OF BL RANGE
 //start of Free space
-
-  //FETD asm
-  //#include "FETD asm/_FETD Engine Hacks.txt" //#included in Buildfile1
   
   //HP Bars (and effective weapon warning)
   #include "HPbars.txt"
@@ -235,3 +232,6 @@ ALIGN 4
   MenuCommand(UM_Remove, UM_RemoveDesc, NormalText, RemoveUsability, RemoveEffect)
   UM_Wait
   UM_Separator 
+
+  //FETD asm
+  #include "FETD asm/_FETD Engine Hacks.txt"

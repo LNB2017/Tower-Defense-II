@@ -42,7 +42,7 @@ POP
 
 ALIGN 4
 Main_Menu:
-MenuCommand(Buy_Name, Buy_NameDesc, 0, Buy_Usability|1, Buy_Effect|1)
+BuyMenuCommand(Buy_Name, Buy_NameDesc, 0, Buy_Usability|1, Buy_Effect|1)
 MM_Unit
 MM_Status
 MM_Guide
