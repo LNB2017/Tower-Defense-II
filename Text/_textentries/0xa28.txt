@@ -1,2 +1,0 @@
-Pay to open the shop early?[N]
-[No][X]

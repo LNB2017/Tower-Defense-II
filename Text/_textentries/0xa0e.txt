@@ -1,3 +1,0 @@
-[oml][Anna]
-Is this your first time playing?[N]
-[Yes][X]

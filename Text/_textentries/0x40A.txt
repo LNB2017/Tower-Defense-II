@@ -1,2 +1,0 @@
-Bow range +1.[N]
--1 use when in combat.[X]

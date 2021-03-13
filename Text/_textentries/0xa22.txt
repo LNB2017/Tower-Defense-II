@@ -1,5 +1,0 @@
-[omr][Anna]
-Oh![.4] A boss just spawned.[.4] These are[N]
-stronger than their normal counterparts,[AN]
-but they offer more exp, more gold,[N]
-and a nice droppable item to compensate.[A][X]
