@@ -152,8 +152,9 @@ FADU 0x10
 FlashCursor(Capture_Anna, 60)
 Text(AnnaSpeaks1)		//turn on tutorial?
 Text(AnnaSpeaks3)		//attempt to make this thing work
-SVAL 1 2				//1=yes, 2=no
-BNE 23 0xC 1			//branch if yes is selected
+SVAL 1 1				//1=yes, 2=no
+BEQ 23 0xC 0x1			//branch if yes is selected
+
 //if no
 STAL 60
 Text(FirstTimeNo)
@@ -161,19 +162,22 @@ ENUT Tutorial_Event_ID
 SVAL 0x3 Initial_Gold_Amount
 GIVEITEMTOMAIN 0x0
 GOTO 24
-LABEL 23
+
 //if yes
+LABEL 23
 STAL 60
 Text(FirstTimeYes)
 STAL 60
 CAM1 [20,20]
 Text(AnnaSpeaks2)		//"plot" introduction
+
 LABEL 24
 NoFade
 ENDA
 
 Ch01_EndingScene:
 ASMC 0x85C71 //0x381F5 //congratulations banner and records screen
+STAL 350
 MNTS 0
 ENDA
 
