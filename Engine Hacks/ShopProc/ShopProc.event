@@ -1,0 +1,133 @@
+//#include "_6CDefinitions.event"
+
+// always send to supply
+PUSH
+ORG 0xB4656 // adding the item to inventory
+SHORT 0x46C0 // nop
+ORG 0xB4666 // ask to send to storage
+SHORT 0x46C0 0x46C0 // nop nop
+ORG 0xB46BA // check if you said yes or no when asked to send to storage
+SHORT 0x46C0 0x46C0 0x46C0 0x46C0 0x46C0 // nop nop nop nop nop
+POP
+
+/*
+PUSH
+ORG 0xB4264
+POIN ShopProc
+ORG 0xB42AC
+POIN ShopProc
+ORG 0xB4304
+POIN ShopProc
+ORG 0xB4324
+POIN ShopProc
+POP
+
+ALIGN 4
+
+ShopProc:
+// A39210
+_6C_CALL_ROUTINE(0x80B4B7D)
+_6C_SLEEP(0)
+_6C_CALL_ROUTINE(0x8015361)
+_6C_CALL_ROUTINE(0x80B4BED)
+_6C_CALL_ROUTINE(0x80B4475)
+_6C_NEW_CHILD(0x8A394D0)
+_6C_CALL_ROUTINE(0x8013FC5)
+_6C_SLEEP(1)
+_6C_CALL_ROUTINE(0x80B432D)
+
+// Welcome to the shop
+_6C_LABEL(0)
+_6C_SLEEP(1)
+_6C_LOOP_ROUTINE(0x80B4351)
+
+// Buying
+_6C_LABEL(1)
+_6C_CALL_ROUTINE(0x80B43A9)
+
+// Confirm buying
+_6C_LABEL(2)
+_6C_CALL_ROUTINE(0x80B4475)
+_6C_SLEEP(1)
+_6C_LOOP_ROUTINE(0x80B44A9)
+_6C_CALL_ROUTINE(0x80B4631)
+_6C_GOTO(9)
+
+// After buying
+_6C_LABEL(3)
+_6C_CALL_ROUTINE(0x80B4761)
+_6C_GOTO(2)
+
+// Selling
+_6C_LABEL(4)
+_6C_CALL_ROUTINE(0x80B4775)
+
+// Confirm selling
+_6C_LABEL(5)
+_6C_CALL_ROUTINE(0x80B4789)
+_6C_SLEEP(1)
+_6C_LOOP_ROUTINE(0x80B47B5)
+_6C_CALL_ROUTINE(0x80B4931)
+_6C_SLEEP(2)
+_6C_CALL_ROUTINE(0x80B49B9)
+_6C_GOTO(5)
+
+// Return to buy menu
+_6C_LABEL(7) // there is no label 6
+_6C_SLEEP(2)
+_6C_CALL_ROUTINE(0x80B49CD)
+_6C_GOTO(0)
+
+// Unused?
+_6C_LABEL(8)
+_6C_SLEEP(1)
+_6C_CALL_ROUTINE(0x80B49E9) // text id 0x008A "Favorite"
+_6C_GOTO(0)
+
+// Buying try add the item
+_6C_LABEL(9)
+_6C_CALL_ROUTINE(0x80B464D) // if space add item and goto 3, else if has no convoy access goto 11, else ask to send
+_6C_SLEEP(0)
+_6C_CALL_ROUTINE(0x80B46B1) // if said no to send to convoy goto 11
+_6C_SLEEP(0)
+_6C_CALL_ROUTINE(0x80B4731) // if supply not full goto 10
+_6C_CALL_ROUTINE(0x80B474D) // supply full
+_6C_SLEEP(0)
+_6C_GOTO(7)
+
+// Buying send to supply
+_6C_LABEL(10)
+_6C_CALL_ROUTINE(0x80B46FD)
+_6C_SLEEP(0)
+_6C_CALL_ROUTINE(0x80B471D)
+_6C_SLEEP(0)
+_6C_GOTO(3)
+
+// Buying send to supply said no / have no convoy access
+_6C_LABEL(11)
+_6C_SLEEP(0)
+_6C_CALL_ROUTINE(0x80B46CD)
+_6C_SLEEP(0)
+_6C_GOTO(7)
+
+// Welcome to the shop (prep screen)
+_6C_LABEL(13) // yes they are out of order
+_6C_CALL_ROUTINE(0x80B4A41)
+_6C_SLEEP(0)
+_6C_LOOP_ROUTINE(0x80B4A55)
+
+// End shop
+_6C_LABEL(12)
+_6C_CALL_ROUTINE(0x80B49F9)
+_6C_SLEEP(1)
+_6C_CALL_ROUTINE_ARG(0x8014BD1, 2)
+_6C_CALL_ROUTINE(0x8013F41)
+_6C_SLEEP(1)
+_6C_CALL_ROUTINE(0x80B4A21)
+_6C_END_ALL(0x8A394D0)
+_6C_CALL_ROUTINE(0x80B4BB1)
+_6C_SLEEP(0)
+_6C_CALL_ROUTINE(0x8015371)
+_6C_END
+
+*/

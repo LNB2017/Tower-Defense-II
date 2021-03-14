@@ -236,6 +236,9 @@ ALIGN 4
   //FETD asm
   #include "FETD asm/_FETD Engine Hacks.txt"
 
+  // shop
+  #include "ShopProc/ShopProc.event"
+
   // No victory music
   PUSH
   ORG 0x1609E
