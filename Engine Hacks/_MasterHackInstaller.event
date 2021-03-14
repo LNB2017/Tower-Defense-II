@@ -84,6 +84,9 @@ POP
 
   //Dragon Veins
   #include "DragonVeins.event"
+  
+  //RNG Randomizer (Used to make the game always change RNs on start)
+  #include "RNGRandomizer/RNGRandomizerInstaller.event"
 
   //Modular Stat Screen
   #include "ModularStatScreen.event"

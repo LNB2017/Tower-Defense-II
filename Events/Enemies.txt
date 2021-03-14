@@ -103,6 +103,7 @@ WORD 0
 WORD 0
 WORD 0
 
+// CharID, ClassID, LeaderID, Level(Number,Affiliation,Autoleveled?) [X, Y] ItemDrop 0 REDANums REDAs [Inventory] AI
 Turn2:
 UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [IronLance] [0xA, 0, 0, 0]
 UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin] [0xA, 0, 0, 0]
@@ -234,6 +235,8 @@ UNIT Assassin1 Monk 0 Level(13,Enemy,True) [StairNEX, StairNEY] 0x2 0 1 StairNER
 UNIT Assassin1 Knight 0 Level(14,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA1 [Axereaver, KillerLance] [0, 0, 0, 0]
 UNIT Assassin1 Shaman 0 Level(14,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA9 [MachinShin, Luna] [0, 0, 0, 0]
 UNIT
+
+#include "REDAs.event"
 
 Spawn1REDA1:
 REDA [Spawn1X-1,Spawn1Y-1] 0 0 0 0 0
