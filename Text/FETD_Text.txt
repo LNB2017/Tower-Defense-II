@@ -531,7 +531,7 @@ I'll have to ask for [Red]1000 gold[Red].[A][X]
 Oooh[Silent...]ow.[.5] Ow[.4] ow[.4] ow.[.4] Please go away[N]
 and leave me to die,[.4] I beg of you.[AN]
 What?[.4] If you want me to open the[N]
-shop before [Red]turn 50[Red],[.4] I'll need [Red]3000[AN]
+shop before [Red]turn 50[Red],[.4] I'll need [Red]2000[AN]
 gold[Red].[.4] Money is a great hangover cure.[A][X]
 
 ## NotANumberTalk
@@ -541,7 +541,7 @@ Live my life the way I want tooooo--[AN]
 Oh,[.4] sorry,[.4] did you want something?[.4][N]
 You want me to stop listening to[AN]
 sweet tunes and open before [Red]turn 70[Red]?[N]
-Ok,[.4] but it's gonna cost you [Red]6000 gold[Red].[A][X]
+Ok,[.4] but it's gonna cost you [Red]3000 gold[Red].[A][X]
 
 ## Unlock_Shop_Choice
 Pay to open the shop early?[N]
@@ -572,7 +572,7 @@ If you were to hold back your attacks[N]
 a bit,[.4] you could capture your enemies[AN]
 alive and nick their stuff instead.[AN]
 You interested in learning how to do[N]
-that?[.4] It'll cost you [Red]5000 gold[Red],[.4] though.[A][X]
+that?[.4] It'll cost you [Red]2000 gold[Red],[.4] though.[A][X]
 
 ## Unlock_Capture2
 Take crash course in pillaging?[N]
