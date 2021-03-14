@@ -44,3 +44,11 @@
 
 #include "FE8 Nightmare modules\Item editors\Stat Bonuses Editor.event"
 
+#include "FE8 Nightmare modules\RandomizedMonsterEditors\FE8 Class Changer.event"
+
+#include "FE8 Nightmare modules\RandomizedMonsterEditors\FE8 Random Item Probability Group Editor.event"
+
+#include "FE8 Nightmare modules\RandomizedMonsterEditors\FE8 Random Item Table.event"
+
+#include "FE8 Nightmare modules\RandomizedMonsterEditors\Random Item Group Editor.event"
+
