@@ -60,9 +60,9 @@
 #define AssassinsBonus			400				//indicated by Forblaze lock
 #define Unlock_Shop2_Price		300
 #define Unlock_Shop3_Price		1000
-#define Unlock_Shop4_Price		3000
-#define Unlock_Shop5_Price		6000
-#define Unlock_Capture_Price	5000
+#define Unlock_Shop4_Price		2000
+#define Unlock_Shop5_Price		3000
+#define Unlock_Capture_Price	2000
 
 #define Merlinus 0x65
 #define PhantomChar1 0x66
