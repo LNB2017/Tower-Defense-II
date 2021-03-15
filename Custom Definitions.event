@@ -90,5 +90,6 @@
 #define CenterTextbox(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND"
 
 #include "Engine Hacks/Skill System/skill_definitions.event"
+//#include "Tables/FE8 Nightmare Modules/RandomEnemies/RandomEnemyGroups.event"
 
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p
