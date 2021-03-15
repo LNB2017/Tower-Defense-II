@@ -9,6 +9,10 @@ ldr		r2,[r0,#4]
 mov		r3,#33
 ldrb	r2,[r2,r3]
 add		r1,r2
+cmp 	r1, #0
+bge     Cont
+mov		r1, #0
+Cont:
 mov		r2,#16		@index of luk boost
 ldr		r3,Extra_Growth_Boosts
 bx		r3
