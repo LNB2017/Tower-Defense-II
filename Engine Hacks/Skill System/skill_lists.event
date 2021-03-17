@@ -46,6 +46,7 @@ BYTE 00 00
 ALIGN 4
 
 KnightSkillList:
+BYTE 255 ParagonID
 //BYTE 1 ProvokeID
 // BYTE 1 SlowBurnID
 //BYTE 10 NaturalCoverID
@@ -70,6 +71,7 @@ ALIGN 4
 
 ThiefSkillList:
 BYTE 255 PassableID
+BYTE 255 ParagonID
 //BYTE 15 AcrobatID
 //BYTE 1 DespoilID
 BYTE 00 00
@@ -310,6 +312,7 @@ BYTE 00 00
 ALIGN 4
 
 DancerSkillList:
+BYTE 255 ParagonID
 //BYTE 255 WaryFighterID
 //BYTE 10 AmaterasuID
 //BYTE 20 CelerityID
