@@ -173,3 +173,4 @@
 #define QuietStrengthID 172
 #define SpurSklID 173
 #define SpurLukID 174
+#define RenegadeID 175

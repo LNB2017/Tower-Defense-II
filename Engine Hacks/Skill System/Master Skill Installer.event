@@ -237,6 +237,7 @@ Paragon:
 #incbin "Other Skills/Paragon.dmp"
 POIN SkillTester
 WORD ParagonID
+WORD RenegadeID
 
 Lunge:
 #incbin "Teq Skills/lunge.dmp"
