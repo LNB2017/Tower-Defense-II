@@ -504,3 +504,6 @@ ORG SkillIcon(StealID)
 
 ORG SkillIcon(StealPlusID)
 #incext Png2Dmp "Skill Icons\StealPlus.png"
+
+ORG SkillIcon(RenegadeID)
+#incext Png2Dmp "Skill Icons\Renegade.png"

@@ -708,3 +708,7 @@ allies have +6 skill.[X]
 ## SD_SpurLuk
 Spur Luck: Adjacent[N]
 allies have +6 luck.[X]
+
+## SD_Renegade
+Renegade: Experience gain[N]
+is halved.[X]
