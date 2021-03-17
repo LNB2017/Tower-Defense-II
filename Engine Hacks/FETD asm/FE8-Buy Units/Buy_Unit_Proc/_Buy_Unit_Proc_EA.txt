@@ -46,11 +46,11 @@ BYTE 0 0 //terminator
 
 ALIGN 4
 RandomRingsTable:
-BYTE 0				20
-BYTE FillasMight	20
-BYTE NinissGrace	20
-BYTE ThorsIre		20
-BYTE SetsLitany		20
+BYTE 0 				00
+BYTE FillasMight	25
+BYTE NinissGrace	25
+BYTE ThorsIre		25
+BYTE SetsLitany		25
 BYTE 0 0 //terminator
 
 ALIGN 4
