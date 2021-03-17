@@ -1,4 +1,39 @@
 ALIGN 4
-TestList:
-BYTE IronSword 50
-BYTE IronLance 50
+KnightSword:
+BYTE 0 				90
+BYTE IronSword 		8
+BYTE LightBrand 	2
+
+ALIGN 4
+KnightAxe:
+BYTE 0 				90
+BYTE IronAxe 		8
+BYTE HandAxe 		2
+
+ALIGN 4
+KnightLance:
+BYTE 0 				90
+BYTE IronLance 		8
+BYTE Javelin 		2
+
+ALIGN 4
+KnightItem:
+BYTE 0 				70
+BYTE Vulnerary		15
+BYTE PureWater		10
+BYTE Relocate		5
+
+ALIGN 4
+IronSwdMag:
+BYTE IronSword 		80
+BYTE LightBrand 	20
+
+ALIGN 4
+IronAxeHandaxe:
+BYTE IronAxe 		80
+BYTE HandAxe 		20
+
+ALIGN 4
+IronLncJav:
+BYTE IronLance 		80
+BYTE Javelin 		20
