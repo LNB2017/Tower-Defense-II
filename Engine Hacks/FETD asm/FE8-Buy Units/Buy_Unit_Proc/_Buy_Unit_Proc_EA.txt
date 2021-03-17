@@ -1,3 +1,5 @@
+#include "RandomItem/InventoryTable.event"
+
 #define Buy_Unit(unit_name, unit_price, usability) "BYTE unit_name 0; SHORT unit_price; POIN usability"
 
 ALIGN 4
@@ -116,9 +118,30 @@ Keypress_Check:
 POIN Draw_Description_Pane Fill_In_Menu Calc_Max_Entries
 
 ALIGN 4
-A_Press:
-#incbin "A_Press.dmp"
-POIN Get_Entry_Pointer Get_Unit_Level RandomItemsTable RandomRingsTable Choose_Item_From_List
+Get_Entry_Pointer_Pointer:
+POIN Get_Entry_Pointer
+
+ALIGN 4
+Get_Unit_Level_Pointer:
+POIN Get_Unit_Level
+
+ALIGN 4
+Random_Items_Table_Pointer:
+POIN RandomItemsTable
+
+ALIGN 4
+Random_Rings_Table_Pointer:
+POIN RandomRingsTable
+
+ALIGN 4
+Inventory_Table_Pointer:
+POIN InventoryTable
+
+ALIGN 4
+Choose_Item_From_List_Pointer:
+POIN Choose_Item_From_List
+
+#include "A_Press.lyn.event"
 
 ALIGN 4
 Choose_Item_From_List:

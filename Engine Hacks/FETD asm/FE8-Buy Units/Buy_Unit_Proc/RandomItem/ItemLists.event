@@ -1,0 +1,4 @@
+ALIGN 4
+TestList:
+BYTE IronSword 50
+BYTE IronLance 50

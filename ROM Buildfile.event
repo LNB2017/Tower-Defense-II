@@ -26,6 +26,7 @@
     #include "Maps/Master Map Installer.event"
     
     MESSAGE Used free space ends at currentOffset
+    MESSAGE InventoryTable
 	
 #else
     ERROR You are not assembling FE8 events!
