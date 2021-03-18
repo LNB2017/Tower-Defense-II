@@ -1,6 +1,6 @@
 #include "ItemLists.event"
 
-#define InventoryTableEntry(class, list1, list2, list3, list4) "PUSH; ORG InventoryTable + (class * 16); WORD list1 list2 list3 list4; POP"
+#define InventoryTableEntry(class, list1, list2, list3, list4) "PUSH; ORG InventoryTable + ((class) * 16); WORD list1 list2 list3 list4; POP"
 
 ALIGN 4
 InventoryTable:
@@ -8,4 +8,4 @@ InventoryTable:
 
 InventoryTableEntry(Knight,KnightSword|IsPointer,KnightAxe|IsPointer,KnightLance|IsPointer,KnightItem|IsPointer)
 InventoryTableEntry(Mercenary,IronSwdMag|IsPointer,0,0,0)
-
+InventoryTableEntry(Mercenary+Elite,IronLncJav|IsPointer,0,0,0)

@@ -20,6 +20,7 @@ A_Press:
 	bl		bx_r1
 	cmp		r0,#0
 	beq		BadAPress
+
 	CheckMoney:
 	_blh	GetPartyGoldAmount
 	ldrh	r1,[r5,#0x2]		@unit price
@@ -28,15 +29,7 @@ A_Press:
 	sub		r0,r0,r1
 	ldr		r1,=gChapterData
 	str		r0,[r1,#0x8]		@remove gold
-	add		r1,#0x41
-	ldrb	r1,[r1]
-	lsl		r1,#0x1E
-	cmp		r1,#0
-	blt		NoChaChing
-	mov		r0,#0xB9			@Cha ching noise
-	_blh	PlaySound
 
-	NoChaChing:
 	@making the unit
 	mov		r6,r4
 	add		r6,#0x48
@@ -51,10 +44,45 @@ A_Press:
 	strb	r7,[r6]
 	ldrb	r0,[r5]
 	strb	r0,[r6,#0x1]			@class id
+
+	_blh	Get_Class_Data
+	mov r1, #0x29
+	ldrb r0, [r0, r1] // ability2
+	mov r1, #0x1 // ispromoted
+	and r1, r0
+	cmp r1, #0x1
+	beq NotElite // promoted units arent elite
+
+	// roll for elites
+	_blh NextRN_100
+	ldr r1, =Elite_Chance_Pointer
+	ldr r1, [r1]
+	ldr r1, [r1]
+	cmp r0, r1
+	bge NotElite
+	mov r7, #1
+	b CntElite
+	NotElite:
+	mov r7, #0
+	CntElite:
+
 	mov		r0,r4
+	mov r1, r7
 	ldr		r3, =Get_Unit_Level_Pointer
 	ldr r3, [r3]
 	_blr	r3
+
+	cmp r7, #1
+	bne NoLevelBonus
+	ldr r1, =Elite_Bonus_Pointer
+	ldr r1, [r1]
+	ldr r1, [r1]
+	add r0, r1
+	cmp r0, #20
+	ble NoLevelBonus
+	mov r0, #20
+	NoLevelBonus:
+
 	ldr		r1,[r5,#0x28]
 	mov		r2,#1
 	lsl		r2,#8
@@ -77,10 +105,11 @@ A_Press:
 	str		r0,[r6,#0x8]			@pointer to REDAs
 	str		r0,[r6,#0xC]			@inventory initialization
 	str		r0,[r6,#0x10]			@AI
-	ldrb	r0,[r6,#1]
-	cmp		r0,#9
-	beq		InventoryDone			@knights dont get an inventory
+	//ldrb	r0,[r6,#1]
+	//cmp		r0,#9
+	//beq		InventoryDone			@knights dont get an inventory
 	mov		r0,r6
+	mov r1, r7
 	bl		CreateInventory
 	InventoryDone:
 	mov		r0,r6
@@ -100,8 +129,26 @@ A_Press:
 	mov		r1,#0
 	mov		r0,r4
 	_blh	GoToProcLabel
+	b NoSound
 
 	GoBack:
+	ldr		r1,=gChapterData
+	add		r1,#0x41
+	ldrb	r1,[r1]
+	lsl		r1,#0x1E
+	cmp		r1,#0
+	blt		NoSound
+	cmp r7, #1
+	bne NoEliteSound
+	ldr r0, = #0x2CD @ level up ping noise
+	b PlayTheSound
+	NoEliteSound:
+	mov		r0,#0x76			@stat ping noise
+	PlayTheSound:
+	_blh	PlaySound
+
+	NoSound:
+
 	pop		{r4-r7}
 	pop		{r0}
 	bx		r0
@@ -115,9 +162,15 @@ A_Press:
 CreateInventory:
 
 	@r0=UNIT entry, so far
+	@r1=bool true if elite
+
 	push	{r4-r7,r14}
 	mov		r4,r0
 	ldrb	r0,[r4,#1]		@class id
+	cmp r1, #1
+	bne NotEliteInv
+	add r0, #127
+	NotEliteInv:
 
 	// check for our random inventory nonsense
 	ldr r1, =Inventory_Table_Pointer

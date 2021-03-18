@@ -141,6 +141,22 @@ ALIGN 4
 Choose_Item_From_List_Pointer:
 POIN Choose_Item_From_List
 
+ALIGN 4
+Elite_Chance_Pointer:
+POIN EliteChanceWord
+
+ALIGN 4
+EliteChanceWord:
+WORD Elite_Chance
+
+ALIGN 4
+Elite_Bonus_Pointer:
+POIN EliteBonusWord
+
+ALIGN 4
+EliteBonusWord:
+WORD Elite_Level_Bonus
+
 #include "A_Press.lyn.event"
 
 ALIGN 4
