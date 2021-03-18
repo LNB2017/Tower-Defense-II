@@ -32,6 +32,9 @@ $RECYCLE.BIN/
 *.sa8
 *.sa9
 
+*.ups
+*.sym
+
 # =========================
 # Operating System Files
 # =========================
