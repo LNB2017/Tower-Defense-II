@@ -436,6 +436,7 @@ ALIGN 4
 RemoveEffect:
 #incbin "Teq Skills/Remove and Promote/RemoveEffect.dmp"
 POIN Remove_Unit_Events
+
 Remove_Unit_Events:
 CenterTextbox(Really_Remove)
 SETVAL 1 1
@@ -445,11 +446,19 @@ SADD 0xCB					//Move results into slot B
 ASMC MakeFakeCurrentUnit|1
 SET_SOMETHING 0xFFFE
 DISA_IF 0xFFFE
+GOTO 25
 LABEL 24
+ASMC DidNotRemove|1
+LABEL 25
 ENDA
+
 ALIGN 4
 MakeFakeCurrentUnit:
 #incbin "Teq Skills/Remove and Promote/MakeFakeCurrentUnit.dmp"
+
+ALIGN 4
+DidNotRemove:
+#incbin "Teq Skills/Remove and Promote/DidNotRemove.dmp"
 
 //Phantom movement cost
 PhantomMoveCost:
