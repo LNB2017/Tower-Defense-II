@@ -6,5 +6,6 @@ ALIGN 4
 InventoryTable:
 #incbin "InventoryTable.bin"
 
-InventoryTableEntry(Mercenary,TestList|IsPointer,TestList|IsPointer,0,0)
+InventoryTableEntry(Knight,KnightSword|IsPointer,KnightAxe|IsPointer,KnightLance|IsPointer,KnightItem|IsPointer)
+InventoryTableEntry(Mercenary,IronSwdMag|IsPointer,0,0,0)
 
