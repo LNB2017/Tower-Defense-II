@@ -232,7 +232,7 @@ ALIGN 4
   UM_Trade
   UM_Supply
   MenuCommand(UM_Promote, UM_PromoteDesc, NormalText, Promote_Usability, Promote_Effect)
-  MenuCommand(UM_Remove, UM_RemoveDesc, NormalText, RemoveUsability, RemoveEffect)
+  MenuCommand(UM_Remove, UM_RemoveDesc, NormalText, RemoveUsability, RemoveYesNo)
   UM_Wait
   UM_Separator 
 
