@@ -1,8 +1,16 @@
+
+
 ALIGN 4
 KnightSword:
 BYTE 0 				90
 BYTE IronSword 		8
 BYTE LightBrand 	2
+
+ALIGN 4
+KnightSwordEl:
+BYTE 0 				50
+BYTE IronSword 		25
+BYTE LightBrand 	25
 
 ALIGN 4
 KnightAxe:
@@ -11,10 +19,22 @@ BYTE IronAxe 		8
 BYTE HandAxe 		2
 
 ALIGN 4
+KnightAxeEl:
+BYTE 0 				50
+BYTE IronAxe 		25
+BYTE HandAxe 		25
+
+ALIGN 4
 KnightLance:
 BYTE 0 				90
 BYTE IronLance 		8
 BYTE Javelin 		2
+
+ALIGN 4
+KnightLanceEl:
+BYTE 0 				50
+BYTE IronLance 		25
+BYTE Javelin 		25
 
 ALIGN 4
 KnightItem:
@@ -24,9 +44,32 @@ BYTE PureWater		10
 BYTE Relocate		5
 
 ALIGN 4
+KnightItemEl:
+BYTE 0 				30
+BYTE Vulnerary		45
+BYTE PureWater		15
+BYTE Relocate		10
+
+ALIGN 4
 IronSwdMag:
 BYTE IronSword 		80
 BYTE LightBrand 	20
+
+ALIGN 4
+IronSwdMagEl:
+BYTE IronSword 		50
+BYTE LightBrand 	35
+BYTE Runesword		15
+
+ALIGN 4
+EliteBonusSword:
+BYTE SteelSword 	70
+BYTE SilverSword 	5
+BYTE KillingEdge	5
+BYTE Armorslayer	5
+BYTE Zanbato		5
+BYTE Wyrmslayer		5
+BYTE Lancereaver	5
 
 ALIGN 4
 IronAxeHandaxe:
@@ -34,6 +77,58 @@ BYTE IronAxe 		80
 BYTE HandAxe 		20
 
 ALIGN 4
+IronAxeHandaxeEl:
+BYTE IronAxe 		50
+BYTE HandAxe 		35
+BYTE Tomahawk		15
+
+ALIGN 4
+EliteBonusAxe:
+BYTE SteelAxe	 	70
+BYTE SilverAxe	 	5
+BYTE KillerAxe		5
+BYTE Hammer			5
+BYTE Halberd		5
+BYTE DevilAxe		5
+BYTE Swordreaver	5
+
+ALIGN 4
 IronLncJav:
 BYTE IronLance 		80
 BYTE Javelin 		20
+
+ALIGN 4
+IronLncJavEl:
+BYTE IronLance 		50
+BYTE Javelin 		50
+
+ALIGN 4
+EliteBonusLance:
+BYTE 0 				50
+BYTE SteelLance 	35
+BYTE SilverLance 	15
+
+ALIGN 4
+BasicItem:
+BYTE 0 				60
+BYTE Vulnerary		20
+BYTE Elixir			13
+BYTE Relocate		7
+
+ALIGN 4
+EliteItem:
+BYTE 0 				84
+BYTE MasterSeal		8
+BYTE AngelicRobe	1
+BYTE EnergyRing		1
+BYTE SecretBook		1
+BYTE Speedwings		1
+BYTE GoddessIcon	1
+BYTE Dracoshield	1
+BYTE Talisman		1
+BYTE BodyRing		1
+
+
+
+
+

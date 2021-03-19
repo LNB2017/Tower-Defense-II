@@ -7,5 +7,8 @@ InventoryTable:
 #incbin "InventoryTable.bin"
 
 InventoryTableEntry(Knight,KnightSword|IsPointer,KnightAxe|IsPointer,KnightLance|IsPointer,KnightItem|IsPointer)
-InventoryTableEntry(Mercenary,IronSwdMag|IsPointer,0,0,0)
-InventoryTableEntry(Mercenary+Elite,IronLncJav|IsPointer,0,0,0)
+InventoryTableEntry(Knight+Elite,KnightSwordEl|IsPointer,KnightAxeEl|IsPointer,KnightLanceEl|IsPointer,KnightItemEl|IsPointer)
+InventoryTableEntry(Mercenary,IronSwdMag|IsPointer,BasicItem|IsPointer,0,0)
+InventoryTableEntry(Mercenary+Elite,IronSwdMagEl|IsPointer,EliteBonusSword|IsPointer,EliteItem|IsPointer,0)
+InventoryTableEntry(Fighter,IronAxeHandaxe|IsPointer,BasicItem|IsPointer,0,0)
+InventoryTableEntry(Fighter+Elite,IronAxeHandaxeEl|IsPointer,EliteBonusAxe|IsPointer,EliteItem|IsPointer,0)
