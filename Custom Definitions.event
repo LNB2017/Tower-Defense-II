@@ -63,7 +63,7 @@
 #define Unlock_Shop4_Price		2000
 #define Unlock_Shop5_Price		3000
 #define Unlock_Capture_Price	2000
-#define Elite_Chance			5
+#define Elite_Chance			10
 #define Elite_Level_Bonus		9
 #define Elite					127
 

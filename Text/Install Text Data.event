@@ -1585,6 +1585,10 @@ __TEXTPROCESSA3B:
 #incbin ".TextEntries\text_buildfileReally_Remove.fetxt.dmp"
 setText($A3B, __TEXTPROCESSA3B)
 
+__TEXTPROCESSA3C:
+#incbin ".TextEntries\text_buildfileShortBowDesc.fetxt.dmp"
+setText($A3C, __TEXTPROCESSA3C)
+
 }
 
 #endif // TEXT_INSTALLER_TEXT_BUILDFILE_TXT

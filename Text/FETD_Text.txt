@@ -647,3 +647,6 @@ anyone they see. Lethal and annoying.[X]
 ## Really_Remove
 Remove this unit?[N]
 [No][X]
+
+## ShortBowDesc
+Pierces enemy defenses[X]

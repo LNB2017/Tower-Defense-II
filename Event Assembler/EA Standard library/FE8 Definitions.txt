@@ -250,6 +250,7 @@
 #define LightBrand 0x10
 #define Lightbrand 0x10
 #define Runesword 0x11
+#define RuneSword 0x11
 #define Lancereaver 0x12
 #define Longsword 0x13
 #define Zanbato 0x13

@@ -8,23 +8,23 @@ Buy_Unit(Knight, 50, 0)
 Buy_Unit(Mercenary, 250, 0)
 Buy_Unit(Soldier, 250, 0)
 Buy_Unit(Fighter, 250, 0)
-Buy_Unit(Archer, 250, 0)
-Buy_Unit(Monk, 300, 0)
+Buy_Unit(Archer, 400, 0)
 Buy_Unit(Mage, 300, 0)
+Buy_Unit(Monk, 300, 0)
 Buy_Unit(Shaman, 300, 0)
-Buy_Unit(Priest, 300, 0)
+Buy_Unit(Priest, 400, 0)
 Buy_Unit(Thief, 750, 0)
 Buy_Unit(Dancer, 1000, 0)
 BYTE 0 //Terminator
 
 ALIGN 4
 Buy_Unit_Table_Promoted:
-Buy_Unit(Hero, 1000, 0)
-Buy_Unit(Landsknecht, 1000, 0)
-Buy_Unit(Warrior, 1000, 0)
-Buy_Unit(Bishop, 1000, 0)
-Buy_Unit(Sage, 1000, 0)
-Buy_Unit(Druid, 1000, 0)
+Buy_Unit(Hero, 1250, 0)
+Buy_Unit(Landsknecht, 1250, 0)
+Buy_Unit(Warrior, 1250, 0)
+Buy_Unit(Sage, 1250, 0)
+Buy_Unit(Bishop, 1250, 0)
+Buy_Unit(Druid, 1250, 0)
 BYTE 0 //Terminator
 
 ALIGN 4

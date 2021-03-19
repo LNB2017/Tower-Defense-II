@@ -353,5 +353,6 @@
 #define SytingDeathQuote $A39
 #define DemonKingDeathQuote $A3A
 #define Really_Remove $A3B
+#define ShortBowDesc $A3C
 
 #endif // TEXT_DEFINITIONS_TEXT_BUILDFILE_TXT

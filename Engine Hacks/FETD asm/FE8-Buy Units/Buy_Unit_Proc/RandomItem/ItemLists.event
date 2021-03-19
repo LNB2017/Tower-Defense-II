@@ -1,4 +1,4 @@
-
+// ------------TIER 1 UNITS LOCATED BELOW--------------
 
 ALIGN 4
 KnightSword:
@@ -13,18 +13,6 @@ BYTE IronSword 		25
 BYTE LightBrand 	25
 
 ALIGN 4
-KnightAxe:
-BYTE 0 				90
-BYTE IronAxe 		8
-BYTE HandAxe 		2
-
-ALIGN 4
-KnightAxeEl:
-BYTE 0 				50
-BYTE IronAxe 		25
-BYTE HandAxe 		25
-
-ALIGN 4
 KnightLance:
 BYTE 0 				90
 BYTE IronLance 		8
@@ -35,6 +23,18 @@ KnightLanceEl:
 BYTE 0 				50
 BYTE IronLance 		25
 BYTE Javelin 		25
+
+ALIGN 4
+KnightAxe:
+BYTE 0 				90
+BYTE IronAxe 		8
+BYTE HandAxe 		2
+
+ALIGN 4
+KnightAxeEl:
+BYTE 0 				50
+BYTE IronAxe 		25
+BYTE HandAxe 		25
 
 ALIGN 4
 KnightItem:
@@ -49,6 +49,7 @@ BYTE 0 				30
 BYTE Vulnerary		45
 BYTE PureWater		15
 BYTE Relocate		10
+
 
 ALIGN 4
 IronSwdMag:
@@ -71,6 +72,29 @@ BYTE Zanbato		5
 BYTE Wyrmslayer		5
 BYTE Lancereaver	5
 
+
+ALIGN 4
+IronLncJav:
+BYTE IronLance 		80
+BYTE Javelin 		20
+
+ALIGN 4
+IronLncJavEl:
+BYTE IronLance 		50
+BYTE Javelin 		35
+BYTE Spear			15
+
+ALIGN 4
+EliteBonusLance:
+BYTE SteelLance 	70
+BYTE SilverLance 	5
+BYTE KillerLance	5
+BYTE HeavySpear		5
+BYTE Horseslayer	5
+BYTE DragonSpear	5
+BYTE Axereaver		5
+
+
 ALIGN 4
 IronAxeHandaxe:
 BYTE IronAxe 		80
@@ -92,21 +116,116 @@ BYTE Halberd		5
 BYTE DevilAxe		5
 BYTE Swordreaver	5
 
-ALIGN 4
-IronLncJav:
-BYTE IronLance 		80
-BYTE Javelin 		20
 
 ALIGN 4
-IronLncJavEl:
-BYTE IronLance 		50
-BYTE Javelin 		50
+BasicBow:
+BYTE IronBow 		80
+BYTE ShortBow 		20
 
 ALIGN 4
-EliteBonusLance:
-BYTE 0 				50
-BYTE SteelLance 	35
-BYTE SilverLance 	15
+EliteBasicBow:
+BYTE IronBow		50
+BYTE ShortBow		50
+
+ALIGN 4
+EliteBonusBow:
+BYTE SteelBow		70
+BYTE Longbow	 	5
+BYTE SilverBow	 	5
+BYTE PoisonBow		5
+BYTE KillerBow		5
+BYTE BeaconBow		5
+BYTE BraveBow		5
+
+
+ALIGN 4
+BasicAnima:
+BYTE Fire			80
+BYTE Elfire	 		20
+
+ALIGN 4
+EliteBasicAnima:
+BYTE Fire			50
+BYTE Elfire	 		50
+
+ALIGN 4
+EliteAnima:
+BYTE Thunder	 	90
+BYTE Fimbulvetr		10
+
+
+ALIGN 4
+BasicLight:
+BYTE Lightning		80
+BYTE Shine	 		20
+
+ALIGN 4
+EliteBasicLight:
+BYTE Lightning		50
+BYTE Shine	 		50
+
+ALIGN 4
+EliteLight:
+BYTE Resire	 		90
+BYTE Aura			10
+
+
+ALIGN 4
+BasicDark:
+BYTE Flux			80
+BYTE MachinShin	 	20
+
+ALIGN 4
+EliteBasicDark:
+BYTE Flux			50
+BYTE MachinShin	 	50
+
+ALIGN 4
+EliteDark:
+BYTE Nosferatu	 	60
+BYTE Luna			40
+
+
+ALIGN 4
+BasicStaff:
+BYTE Heal			60
+BYTE Mend	 		30
+BYTE Recover		10
+
+ALIGN 4
+EliteBasicStaff:
+BYTE Mend			70
+BYTE Recover	 	30
+
+ALIGN 4
+EliteStaff:
+BYTE Physic	 		50
+BYTE Fortify		10
+BYTE Silence	 	10
+BYTE Sleep			10
+BYTE Berserk	 	10
+BYTE Barrier		10
+
+
+ALIGN 4
+ThiefEliteSword:
+BYTE SilverSword 	20
+BYTE KillingEdge	20
+BYTE LightBrand		20
+BYTE Runesword		20
+BYTE Lancereaver	20
+
+ALIGN 4
+DancerRings:
+BYTE FillasMight	25
+BYTE NinissGrace	25
+BYTE ThorsIre		25
+BYTE SetsLitany		25
+
+ALIGN 4
+DancerStaff:
+BYTE Recover		100
+
 
 ALIGN 4
 BasicItem:
@@ -130,5 +249,152 @@ BYTE BodyRing		1
 
 
 
+// ------------TIER 2 UNITS LOCATED BELOW--------------
 
 
+
+ALIGN 4
+HeroBasic:
+BYTE SteelSword		85
+BYTE SilverSword	10
+BYTE BraveSword		5
+
+ALIGN 4
+HeroPlus:
+BYTE 0				40
+BYTE SteelAxe		30
+BYTE SilverAxe		15
+BYTE KillerAxe		10
+BYTE Swordslayer	5
+
+ALIGN 4
+HeroRanged:
+BYTE 0				40
+BYTE LightBrand		15
+BYTE Runesword		15
+BYTE HandAxe		15
+BYTE Tomahawk		15
+
+
+ALIGN 4
+LandsBasic:
+BYTE SteelSword		40
+BYTE SteelLance		40
+BYTE SilverSword	5
+BYTE SilverLance	5
+BYTE BraveSword		5
+BYTE BraveLance		5
+
+ALIGN 4
+LandsPlus:
+BYTE 0				40
+BYTE Longsword		15
+BYTE Armorslayer	15
+BYTE Horseslayer	15
+BYTE HeavySpear		15
+
+ALIGN 4
+LandsRanged:
+BYTE 0				40
+BYTE LightBrand		10
+BYTE Runesword		10
+BYTE Javelin		20
+BYTE ShortSpear		10
+BYTE Spear			10
+
+
+ALIGN 4
+WarriorBasic:
+BYTE SilverAxe		55
+BYTE KillerAxe		25
+BYTE Swordreaver	15
+BYTE Swordslayer	5
+
+ALIGN 4
+WarriorPlus:
+BYTE 0				40
+BYTE SteelBow		30
+BYTE BeaconBow		20
+BYTE SilverBow		10
+
+ALIGN 4
+WarriorRanged:
+BYTE 0				30
+BYTE HandAxe		40
+BYTE Tomahawk		30
+
+
+
+
+ALIGN 4
+BishopBasic:
+BYTE Shine			60
+BYTE Resire			40
+
+ALIGN 4
+BishopPlus:
+BYTE 0				40
+BYTE Purge			45
+BYTE Physic			10
+BYTE Aura			5
+
+ALIGN 4
+BishopStaff:
+BYTE 0				40
+BYTE Recover		45
+BYTE Freeze			10
+BYTE Mend			5
+
+
+ALIGN 4
+SageBasic:
+BYTE Elfire			60
+BYTE Thunder		40
+
+ALIGN 4
+SagePlus:
+BYTE 0				40
+BYTE Bolting		45
+BYTE Fimbulvetr		15
+
+ALIGN 4
+SageStaff:
+BYTE 0				40
+BYTE Recover		45
+BYTE Silence		10
+BYTE Physic			5
+
+
+ALIGN 4
+DruidBasic:
+BYTE MachinShin		60
+BYTE Nosferatu		40
+
+ALIGN 4
+DruidPlus:
+BYTE 0				35
+BYTE Eclipse		35
+BYTE Luna			20
+BYTE Fenrir			10
+
+ALIGN 4
+DruidStaff:
+BYTE 0				40
+BYTE Recover		45
+BYTE Berserk		10
+BYTE Rescue			5
+
+
+
+ALIGN 4
+PromoItem:
+BYTE 0				59
+BYTE Elixir			25
+BYTE AngelicRobe	2
+BYTE EnergyRing		2
+BYTE SecretBook		2
+BYTE Speedwings		2
+BYTE GoddessIcon	2
+BYTE Dracoshield	2
+BYTE Talisman		2
+BYTE BodyRing		2
