@@ -288,7 +288,7 @@ BYTE BraveLance		5
 ALIGN 4
 LandsPlus:
 BYTE 0				40
-BYTE Longsword		15
+BYTE Zanbato		15
 BYTE Armorslayer	15
 BYTE Horseslayer	15
 BYTE HeavySpear		15
@@ -387,7 +387,7 @@ BYTE Rescue			5
 
 
 ALIGN 4
-PromoItem:
+PromotedItem:
 BYTE 0				59
 BYTE Elixir			25
 BYTE AngelicRobe	2

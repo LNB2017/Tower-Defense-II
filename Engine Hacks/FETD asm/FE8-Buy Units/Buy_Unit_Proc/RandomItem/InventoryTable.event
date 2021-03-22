@@ -39,10 +39,10 @@ InventoryTableEntry(Thief+Elite,ThiefEliteSword|IsPointer,EliteItem|IsPointer,0,
 InventoryTableEntry(Dancer,DancerRings|IsPointer,BasicItem|IsPointer,0,0)
 InventoryTableEntry(Dancer+Elite,DancerRings|IsPointer,DancerStaff|IsPointer,EliteItem|IsPointer,0)
 
-InventoryTableEntry(Hero,HeroBasic|IsPointer,HeroPlus|IsPointer,HeroRanged|IsPointer,PromoItem|IsPointer)
-InventoryTableEntry(Landsknecht,LandsBasic|IsPointer,LandsPlus|IsPointer,LandsRanged|IsPointer,PromoItem|IsPointer)
-InventoryTableEntry(Warrior,WarriorBasic|IsPointer,WarriorPlus|IsPointer,WarriorRanged|IsPointer,PromoItem|IsPointer)
+InventoryTableEntry(Hero,HeroBasic|IsPointer,HeroPlus|IsPointer,HeroRanged|IsPointer,PromotedItem|IsPointer)
+InventoryTableEntry(Landsknecht,LandsBasic|IsPointer,LandsPlus|IsPointer,LandsRanged|IsPointer,PromotedItem|IsPointer)
+InventoryTableEntry(Warrior,WarriorBasic|IsPointer,WarriorPlus|IsPointer,WarriorRanged|IsPointer,PromotedItem|IsPointer)
 
-InventoryTableEntry(Bishop,BishopBasic|IsPointer,BishopPlus|IsPointer,BishopStaff|IsPointer,PromoItem|IsPointer)
-InventoryTableEntry(Sage,SageBasic|IsPointer,SagePlus|IsPointer,SageStaff|IsPointer,PromoItem|IsPointer)
-InventoryTableEntry(Druid,DruidBasic|IsPointer,DruidPlus|IsPointer,DruidStaff|IsPointer,PromoItem|IsPointer)
+InventoryTableEntry(Bishop,BishopBasic|IsPointer,BishopPlus|IsPointer,BishopStaff|IsPointer,PromotedItem|IsPointer)
+InventoryTableEntry(Sage,SageBasic|IsPointer,SagePlus|IsPointer,SageStaff|IsPointer,PromotedItem|IsPointer)
+InventoryTableEntry(Druid,DruidBasic|IsPointer,DruidPlus|IsPointer,DruidStaff|IsPointer,PromotedItem|IsPointer)
