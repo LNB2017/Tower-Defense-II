@@ -32,6 +32,16 @@ $RECYCLE.BIN/
 *.sa8
 *.sa9
 
+*.sg1
+*.sg2
+*.sg3
+*.sg4
+*.sg5
+*.sg6
+*.sg7
+*.sg8
+*.sg9
+
 *.ups
 *.sym
 

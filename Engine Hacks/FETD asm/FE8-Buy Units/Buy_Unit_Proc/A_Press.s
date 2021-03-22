@@ -175,7 +175,7 @@ CreateInventory:
 	// check for our random inventory nonsense
 	ldr r1, =Inventory_Table_Pointer
 	ldr r1, [r1]
-	mov r2, #16 // entry length
+	mov r2, #20 // entry length
 	mul r0, r2
 	add r1, r0
 	mov r5, r1
