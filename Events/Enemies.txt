@@ -105,10 +105,16 @@ WORD 0
 
 // CharID, ClassID, LeaderID, Level(Number,Affiliation,Autoleveled?) [X, Y] ItemDrop 0 REDANums REDAs [Inventory] AI
 Turn2:
-UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [IronLance] [0xA, 0, 0, 0]
-UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin] [0xA, 0, 0, 0]
-UNIT Mook1 Soldier 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [IronLance] [0xA, 0, 0, 0]
-UNIT
+RANDOMNUMBER 7
+RNLoad(0,WeakMercs)
+RNLoad(1,WeakFighters)
+RNLoad(2,WeakSoldiers)
+RNLoad(3,WeakArchers)
+RNLoad(4,WeakMages)
+RNLoad(5,WeakMonks)
+RNLoad(6,WeakShamans)
+RNLoad(7,WeakPegs)
+ENDA
 
 Turn3:
 UNIT Mook1 Soldier 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA1 [SteelLance] [0xA, 0, 0, 0]
@@ -234,6 +240,56 @@ Turn46:
 UNIT Assassin1 Monk 0 Level(13,Enemy,True) [StairNEX, StairNEY] 0x2 0 1 StairNEREDA5 [Shine, Resire] [0, 0, 0, 0]
 UNIT Assassin1 Knight 0 Level(14,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA1 [Axereaver, KillerLance] [0, 0, 0, 0]
 UNIT Assassin1 Shaman 0 Level(14,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA9 [MachinShin, Luna] [0, 0, 0, 0]
+UNIT
+
+
+
+WeakMercs:
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [IronLance] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [IronLance] [0xA, 0, 0, 0]
+UNIT
+
+WeakFighters:
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [IronLance] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [IronLance] [0xA, 0, 0, 0]
+UNIT
+
+WeakSoldiers:
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [IronLance] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [IronLance] [0xA, 0, 0, 0]
+UNIT
+
+WeakArchers:
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [IronLance] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [IronLance] [0xA, 0, 0, 0]
+UNIT
+
+WeakMages:
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [IronLance] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [IronLance] [0xA, 0, 0, 0]
+UNIT
+
+WeakMonks:
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [IronLance] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [IronLance] [0xA, 0, 0, 0]
+UNIT
+
+WeakShamans:
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [IronLance] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [IronLance] [0xA, 0, 0, 0]
+UNIT
+
+WeakPegs:
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [IronLance] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin] [0xA, 0, 0, 0]
+UNIT Mook1 Soldier 0 Level(2,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [IronLance] [0xA, 0, 0, 0]
 UNIT
 
 #include "REDAs.event"
