@@ -7,9 +7,11 @@
 #ifndef ItemTable
   #define ItemTable 0x809B10
 #endif
+
 #ifndef DebuffTable
     #define DebuffTable 0x203F100
 #endif
+
 #ifndef Promotion_Branch_Table
 	#define Promotion_Branch_Table 0x95DFA4
 #endif
