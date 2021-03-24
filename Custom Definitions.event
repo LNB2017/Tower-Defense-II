@@ -92,6 +92,8 @@
 #define Landsknecht Knight_F
 #define Wizard Sage_F
 
+#define RNLoad(rnvalue, units) "SVAL 0x1 rnvalue; BNE rnvalue 0x1 0xC; LOAD1 0x1 units; LABEL rnvalue"
+
 #define CenterTextbox(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND"
 
 #include "Engine Hacks/Skill System/skill_definitions.event"
