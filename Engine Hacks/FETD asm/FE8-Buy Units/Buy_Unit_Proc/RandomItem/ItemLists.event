@@ -38,10 +38,10 @@ BYTE HandAxe 		25
 
 ALIGN 4
 KnightItem:
-BYTE 0 				86
-BYTE Vulnerary		8
-BYTE Relocate		4
-BYTE PureWater		2
+BYTE 0 				70
+BYTE Vulnerary		15
+BYTE PureWater		10
+BYTE Relocate		5
 
 ALIGN 4
 KnightItemEl:
