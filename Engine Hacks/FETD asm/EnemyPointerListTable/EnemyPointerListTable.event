@@ -1,0 +1,13 @@
+ALIGN 4
+Enemy_Pointer_List_Table:
+#incbin "EnemyPointerListTable.bin"
+
+#define TurnUnitList(turn, list) "PUSH; ORG Enemy_Pointer_List_Table + (turn*4); POIN list; POP"
+
+Turn2UnitList:
+WORD 3 // number of possible unit groups
+POIN Turn2
+POIN Turn3
+POIN Turn5
+
+TurnUnitList(2,Turn2UnitList)
