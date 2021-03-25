@@ -114,9 +114,3 @@ SPAWN_ENEMY, 0x3242, 8, -game:FE8 -indexMode:8
 SPAWN_CUTSCENE_ALLY, 0x324F, 8, -game:FE8 -indexMode:8
 	Char, 2, 2
 	Position, 4, 2, -coordinates:2 -preferredBase:10
-
-#Used for reinforcement loading
-#Pointer to unit data read from Memory Slot 0x2.
-LOAD_SLOT2, 0x2C40, 8, -game:FE8 -indexMode:8 
-	Dunno, 2, 2
-	0xFFFFFFFF, 4, 4, -fixed
