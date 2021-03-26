@@ -1,0 +1,48 @@
+#include "ItemLists.event"
+
+#define InventoryTableEntry(class, list1, list2, list3, list4) "PUSH; ORG InventoryTable + ((class) * 20); WORD list1 list2 list3 list4; WORD 0; POP"
+
+ALIGN 4
+InventoryTable:
+#incbin "InventoryTable.bin"
+
+InventoryTableEntry(Knight,KnightSword|IsPointer,KnightAxe|IsPointer,KnightLance|IsPointer,KnightItem|IsPointer)
+InventoryTableEntry(Knight+Elite,KnightSwordEl|IsPointer,KnightAxeEl|IsPointer,KnightLanceEl|IsPointer,KnightItemEl|IsPointer)
+
+InventoryTableEntry(Mercenary,IronSwdMag|IsPointer,BasicItem|IsPointer,0,0)
+InventoryTableEntry(Mercenary+Elite,IronSwdMagEl|IsPointer,EliteBonusSword|IsPointer,EliteItem|IsPointer,0)
+
+InventoryTableEntry(Soldier,IronLncJav|IsPointer,BasicItem|IsPointer,0,0)
+InventoryTableEntry(Soldier+Elite,IronLncJavEl|IsPointer,EliteBonusLance|IsPointer,EliteItem|IsPointer,0)
+
+InventoryTableEntry(Fighter,IronAxeHandaxe|IsPointer,BasicItem|IsPointer,0,0)
+InventoryTableEntry(Fighter+Elite,IronAxeHandaxeEl|IsPointer,EliteBonusAxe|IsPointer,EliteItem|IsPointer,0)
+
+InventoryTableEntry(Archer,BasicBow|IsPointer,BasicItem|IsPointer,0,0)
+InventoryTableEntry(Archer+Elite,EliteBasicBow|IsPointer,EliteBonusBow|IsPointer,EliteItem|IsPointer,0)
+
+InventoryTableEntry(Mage,BasicAnima|IsPointer,BasicItem|IsPointer,0,0)
+InventoryTableEntry(Mage+Elite,EliteBasicAnima|IsPointer,EliteAnima|IsPointer,EliteItem|IsPointer,0)
+
+InventoryTableEntry(Monk,BasicLight|IsPointer,BasicItem|IsPointer,0,0)
+InventoryTableEntry(Monk+Elite,EliteBasicLight|IsPointer,EliteLight|IsPointer,EliteItem|IsPointer,0)
+
+InventoryTableEntry(Shaman,BasicDark|IsPointer,BasicItem|IsPointer,0,0)
+InventoryTableEntry(Shaman+Elite,EliteBasicDark|IsPointer,EliteDark|IsPointer,EliteItem|IsPointer,0)
+
+InventoryTableEntry(Priest,BasicStaff|IsPointer,BasicItem|IsPointer,0,0)
+InventoryTableEntry(Priest+Elite,EliteBasicStaff|IsPointer,EliteStaff|IsPointer,EliteItem|IsPointer,0)
+
+InventoryTableEntry(Thief,IronSwdMag|IsPointer,BasicItem|IsPointer,0,0)
+InventoryTableEntry(Thief+Elite,ThiefEliteSword|IsPointer,EliteItem|IsPointer,0,0)
+
+InventoryTableEntry(Dancer,DancerRings|IsPointer,BasicItem|IsPointer,0,0)
+InventoryTableEntry(Dancer+Elite,DancerRings|IsPointer,DancerStaff|IsPointer,EliteItem|IsPointer,0)
+
+InventoryTableEntry(Hero,HeroBasic|IsPointer,HeroPlus|IsPointer,HeroRanged|IsPointer,PromotedItem|IsPointer)
+InventoryTableEntry(Landsknecht,LandsBasic|IsPointer,LandsPlus|IsPointer,LandsRanged|IsPointer,PromotedItem|IsPointer)
+InventoryTableEntry(Warrior,WarriorBasic|IsPointer,WarriorPlus|IsPointer,WarriorRanged|IsPointer,PromotedItem|IsPointer)
+
+InventoryTableEntry(Bishop,BishopBasic|IsPointer,BishopPlus|IsPointer,BishopStaff|IsPointer,PromotedItem|IsPointer)
+InventoryTableEntry(Sage,SageBasic|IsPointer,SagePlus|IsPointer,SageStaff|IsPointer,PromotedItem|IsPointer)
+InventoryTableEntry(Druid,DruidBasic|IsPointer,DruidPlus|IsPointer,DruidStaff|IsPointer,PromotedItem|IsPointer)

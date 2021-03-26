@@ -1,2 +1,0 @@
-Spur Skill: Adjacent[N]
-allies have +6 skill.[X]

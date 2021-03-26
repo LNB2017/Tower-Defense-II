@@ -1,4 +1,4 @@
-#define MenuCommand(name,description,colour,usability,effect) "WORD $80D7EA4; SHORT name description; BYTE colour $6E; SHORT 0; POIN usability|1; WORD 0; POIN effect|1; WORD 0 0 0"
+#define BuyMenuCommand(name,description,colour,usability,effect) "WORD $80D7EA4; SHORT name description; BYTE colour $6E; SHORT 0; POIN usability|1; WORD 0; POIN effect|1; WORD 0 0 0"
 
 #define MM_Unit		"BYTE $DC $7E $0D $08 $9A $06 $DF $06 $00 $6E $00 $00 $49 $F4 $04 $08 $00 $00 $00 $00 $0D $26 $02 $08 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00"
 #define MM_Status	"BYTE $D4 $7E $0D $08 $90 $06 $E0 $06 $00 $6F $00 $00 $49 $F4 $04 $08 $00 $00 $00 $00 $51 $26 $02 $08 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00 $00"

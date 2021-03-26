@@ -1,5 +1,0 @@
-[oml][Anna]
-There may come a time when a unit[N]
-you placed simply isn't working out.[AN]
-You can remove them by selecting[N]
-'Remove' from the unit action menu.[A][X]

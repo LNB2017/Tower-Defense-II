@@ -1,7 +1,6 @@
 #ifdef _FE8_
     #include "EAstdlib.event"
     #include "Custom Definitions.event"
-	#include "Event Assembler/FETD_GraphicsSymbols1.txt"
 
     ORG FreeSpace
     //Text first for Text ID definitions
@@ -12,19 +11,19 @@
     #include "Tables/Table Installer.event"
     //MESSAGE Used table space ends at currentOffset
 
+    //Graphics
+    #include "Graphics/_Graphics_Installer.event"
+
     //Engine Hacks
     #include "Engine Hacks/_MasterHackInstaller.event"
     //MESSAGE Used hax space ends at currentOffset
-	
-	//Graphics
-//	#include "Graphics/_Graphics_Installer.event"
 
     //Events
-    //#include "Events/Release_map.event"
-    //#include "Events/World Map Events Installer.event"
+    #include "Events/Ch01 Events.event"
+    #include "Events/World Map Events.txt"
 
     //Maps
-    //#include "Maps/Master Map Installer.event"
+    #include "Maps/Master Map Installer.event"
     
     MESSAGE Used free space ends at currentOffset
 	

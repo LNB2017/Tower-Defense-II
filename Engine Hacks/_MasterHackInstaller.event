@@ -60,9 +60,6 @@ POP
 
 ////////////////////////////////FREE SPACE OUT OF BL RANGE
 //start of Free space
-
-  //FETD asm
-  //#include "FETD asm/_FETD Engine Hacks.txt" //#included in Buildfile1
   
   //HP Bars (and effective weapon warning)
   #include "HPbars.txt"
@@ -87,6 +84,9 @@ POP
 
   //Dragon Veins
   #include "DragonVeins.event"
+  
+  //RNG Randomizer (Used to make the game always change RNs on start)
+  #include "RNGRandomizer/RNGRandomizerInstaller.event"
 
   //Modular Stat Screen
   #include "ModularStatScreen.event"
@@ -232,6 +232,18 @@ ALIGN 4
   UM_Trade
   UM_Supply
   MenuCommand(UM_Promote, UM_PromoteDesc, NormalText, Promote_Usability, Promote_Effect)
-  MenuCommand(UM_Remove, UM_RemoveDesc, NormalText, RemoveUsability, RemoveEffect)
+  MenuCommand(UM_Remove, UM_RemoveDesc, NormalText, RemoveUsability, RemoveYesNo)
   UM_Wait
   UM_Separator 
+
+  //FETD asm
+  #include "FETD asm/_FETD Engine Hacks.txt"
+
+  // shop
+  #include "ShopProc/ShopProc.event"
+
+  // No victory music
+  PUSH
+  ORG 0x1609E
+  SHORT 0x0
+  POP

@@ -1,3 +1,0 @@
-Increases all valid[N]
-weapon ranks by 1.[N]
-Can have multiple S's.[X]

@@ -1,7 +1,7 @@
 #define csvmacro003(arg000) "WORD arg000 "
 
-#inctext PFinder "C:\Users\duckd\Documents\GitHub\Tower-Defense-II\FE8_clean.gba" 0xe47180 SkillAnimationPointerTable
-
+PUSH
+POP
 ALIGN 4
 SkillAnimationPointerTable:
 csvmacro003(0)

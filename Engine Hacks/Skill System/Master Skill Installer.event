@@ -101,8 +101,8 @@ ORG $2B7F8
   jumpToHack(Armsthrift)
 
 //remove critup ability (for critup skill)
-ORG $2AC4A
-SHORT 0x46C0
+//ORG $2AC4A
+//SHORT 0x46C0
 
 //Triangle Adept
 ORG $2C830
@@ -237,6 +237,7 @@ Paragon:
 #incbin "Other Skills/Paragon.dmp"
 POIN SkillTester
 WORD ParagonID
+WORD RenegadeID
 
 Lunge:
 #incbin "Teq Skills/lunge.dmp"
@@ -424,6 +425,7 @@ ALIGN 4
 Autopromote_Func:
 #incbin "Teq Skills/Remove and Promote/Autopromote_Func.dmp"
 
+
 //Remove
 ALIGN 4
 RemoveUsability:
@@ -434,20 +436,75 @@ ALIGN 4
 RemoveEffect:
 #incbin "Teq Skills/Remove and Promote/RemoveEffect.dmp"
 POIN Remove_Unit_Events
+#include "Teq Skills/Remove and Promote/NewRemove.lyn.event"
+
+ALIGN 4
+RemoveYesNoMenuPointer:
+POIN RemoveYesNoMenu
+
+#define CloseMenu 0x1BCCD //0x234FD
+#define MenuAlwaysUsability 0x4F449
+
+ALIGN 4
+RemoveYesNoMenu:
+BYTE 0 0 // x y
+BYTE 5 0 // height width
+WORD 1 // unk
+WORD RemoveYesNoCommands|IsPointer // menu commands
+WORD 0 // oninit
+WORD 0 //onend
+WORD 0 // unk
+WORD CloseMenu|IsPointer // onB
+WORD 0 // onR
+WORD 0 // onHelp
+
+ALIGN 4
+RemoveYesNoCommands:
+//Yes
+WORD 0 // jp name dont care
+SHORT 0x843 // name
+SHORT 0x0 // help
+BYTE 0 // color
+BYTE 0x32 // id
+BYTE 0 0 // unk
+POIN MenuAlwaysUsability|IsPointer // usability
+WORD 0 // draw routine
+WORD RemoveEffect+1|IsPointer // effect
+WORD 0 // loop
+WORD 0 // select
+WORD 0 // cancel
+
+//No
+WORD 0 // jp name dont care
+SHORT 0x844 // name
+SHORT 0x0 // help
+BYTE 0 // color
+BYTE 0x33 // id
+BYTE 0 0 // unk
+POIN MenuAlwaysUsability|IsPointer // usability
+WORD 0 // draw routine
+WORD CloseMenu|IsPointer // effect
+WORD 0 // loop
+WORD 0 // select
+WORD 0 // cancel
+
+WORD 0 0 0 0 0 0 0 0 0 // term
+
 Remove_Unit_Events:
-TutorialText(Really_Remove)
-SETVAL 1 1
-BNE 24 0xC 1
 CHECK_COORDS 0xFFFF
 SADD 0xCB					//Move results into slot B
 ASMC MakeFakeCurrentUnit|1
 SET_SOMETHING 0xFFFE
 DISA_IF 0xFFFE
-LABEL 24
 ENDA
+
 ALIGN 4
 MakeFakeCurrentUnit:
 #incbin "Teq Skills/Remove and Promote/MakeFakeCurrentUnit.dmp"
+
+ALIGN 4
+DidNotRemove:
+#incbin "Teq Skills/Remove and Promote/DidNotRemove.dmp"
 
 //Phantom movement cost
 PhantomMoveCost:

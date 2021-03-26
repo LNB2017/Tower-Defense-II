@@ -1,6 +1,7 @@
 .thumb
 @hook at 802b960, r0=exp
 .equ ParagonID, SkillTester+4
+.equ RenegadeID, SkillTester+8
 push {r4}
 
 mov r4, r0 @store the exp value here
@@ -16,12 +17,29 @@ ldr r1, ParagonID
 .short 0xf800
 cmp r0, #0x0
 beq no_Paragon1
+
  @double exp
  lsl r4, #1
  cmp r4, #100
  ble no_Paragon1
   mov r4, #100
+
 no_Paragon1:
+
+@Check for renegade
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r5 @defender
+ldr r1, RenegadeID
+.short 0xf800
+cmp r0, #0x0
+beq no_Renegade1
+
+ @half exp
+ lsr r4, #1
+
+no_Renegade1:
+
 mov r0, r4 @return the amount healed.
 pop {r4}
 
@@ -45,12 +63,30 @@ ldr r1, ParagonID
 .short 0xf800
 cmp r0, #0x0
 beq no_Paragon
+
  @double exp
  lsl r5, #1
  cmp r5, #100
  ble no_Paragon
   mov r5, #100
+
 no_Paragon:
+
+@Now check for Renegade skill again
+
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r4 @attacker
+ldr r1, RenegadeID
+.short 0xf800
+cmp r0, #0x0
+beq no_Renegade
+
+ @half exp
+ lsr r5, #1
+
+no_Renegade:
+
 mov r0, r5 @return the amount healed.
 pop {r5}
 
@@ -67,3 +103,4 @@ bx r1
 SkillTester:
 @POIN SkillTester
 @WORD ParagonID
+@WORD RenegadeID

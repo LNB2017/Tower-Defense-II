@@ -99,7 +99,7 @@ jumpToHack(Create_Phantom)
 //Goal window
 ORG $8D288
 #incbin "Goal_Window.dmp"
-POIN Enemy_Pointer_Table
+POIN Enemy_Pointer_List_Table
 
 //Make sold items sell for 25%
 ORG $B5274
@@ -207,10 +207,12 @@ ALIGN 4
 Decompress_Fix:
 #incbin "Decompress_Fix.dmp"
 
+#include "EnemyPointerListTable/EnemyPointerListTable.event"
+
 ALIGN 4
 Get_Enemies:
 #incbin "Get_Enemies.dmp"
-POIN Enemy_Pointer_Table
+POIN Enemy_Pointer_List_Table
 
 ALIGN 4
 New_AI:

@@ -1,2 +1,0 @@
-Promote a unit without[N]
-using a promotion item.[X]

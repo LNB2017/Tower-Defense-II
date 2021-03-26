@@ -1,3 +1,5 @@
+#include "RandomItem/InventoryTable.event"
+
 #define Buy_Unit(unit_name, unit_price, usability) "BYTE unit_name 0; SHORT unit_price; POIN usability"
 
 ALIGN 4
@@ -6,10 +8,10 @@ Buy_Unit(Knight, 50, 0)
 Buy_Unit(Mercenary, 250, 0)
 Buy_Unit(Soldier, 250, 0)
 Buy_Unit(Fighter, 250, 0)
-Buy_Unit(Archer, 250, 0)
-Buy_Unit(Monk, 500, 0)
-Buy_Unit(Mage, 500, 0)
-Buy_Unit(Shaman, 500, 0)
+Buy_Unit(Archer, 400, 0)
+Buy_Unit(Mage, 300, 0)
+Buy_Unit(Monk, 300, 0)
+Buy_Unit(Shaman, 300, 0)
 Buy_Unit(Priest, 400, 0)
 Buy_Unit(Thief, 750, 0)
 Buy_Unit(Dancer, 1000, 0)
@@ -17,12 +19,12 @@ BYTE 0 //Terminator
 
 ALIGN 4
 Buy_Unit_Table_Promoted:
-Buy_Unit(Hero, 1000, 0)
-Buy_Unit(Landsknecht, 1000, 0)
-Buy_Unit(Warrior, 1000, 0)
-Buy_Unit(Bishop, 1000, 0)
-Buy_Unit(Sage, 1000, 0)
-Buy_Unit(Druid, 1000, 0)
+Buy_Unit(Hero, 1250, 0)
+Buy_Unit(Landsknecht, 1250, 0)
+Buy_Unit(Warrior, 1250, 0)
+Buy_Unit(Sage, 1250, 0)
+Buy_Unit(Bishop, 1250, 0)
+Buy_Unit(Druid, 1250, 0)
 BYTE 0 //Terminator
 
 ALIGN 4
@@ -46,11 +48,11 @@ BYTE 0 0 //terminator
 
 ALIGN 4
 RandomRingsTable:
-BYTE 0				20
-BYTE FillasMight	20
-BYTE NinissGrace	20
-BYTE ThorsIre		20
-BYTE SetsLitany		20
+BYTE 0 				00
+BYTE FillasMight	25
+BYTE NinissGrace	25
+BYTE ThorsIre		25
+BYTE SetsLitany		25
 BYTE 0 0 //terminator
 
 ALIGN 4
@@ -116,9 +118,46 @@ Keypress_Check:
 POIN Draw_Description_Pane Fill_In_Menu Calc_Max_Entries
 
 ALIGN 4
-A_Press:
-#incbin "A_Press.dmp"
-POIN Get_Entry_Pointer Get_Unit_Level RandomItemsTable RandomRingsTable Choose_Item_From_List
+Get_Entry_Pointer_Pointer:
+POIN Get_Entry_Pointer
+
+ALIGN 4
+Get_Unit_Level_Pointer:
+POIN Get_Unit_Level
+
+ALIGN 4
+Random_Items_Table_Pointer:
+POIN RandomItemsTable
+
+ALIGN 4
+Random_Rings_Table_Pointer:
+POIN RandomRingsTable
+
+ALIGN 4
+Inventory_Table_Pointer:
+POIN InventoryTable
+
+ALIGN 4
+Choose_Item_From_List_Pointer:
+POIN Choose_Item_From_List
+
+ALIGN 4
+Elite_Chance_Pointer:
+POIN EliteChanceWord
+
+ALIGN 4
+EliteChanceWord:
+WORD Elite_Chance
+
+ALIGN 4
+Elite_Bonus_Pointer:
+POIN EliteBonusWord
+
+ALIGN 4
+EliteBonusWord:
+WORD Elite_Level_Bonus
+
+#include "A_Press.lyn.event"
 
 ALIGN 4
 Choose_Item_From_List:

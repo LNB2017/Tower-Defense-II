@@ -1,2 +1,0 @@
-Restores Mag+10 HP to[N]
-allies at a distance.[X]

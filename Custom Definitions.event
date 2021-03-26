@@ -1,4 +1,4 @@
-#define FreeSpace 0xb2a610
+#define FreeSpace 0xEFB2E0
 #define FreeSpaceBLRange 0x1c1ec0
 
 #define ChapterTileset(chapter, object, palette, config) "PUSH; ORG 0x8b0890 + (148* chapter) + 4; SHORT object; BYTE palette config; POP"
@@ -7,9 +7,11 @@
 #ifndef ItemTable
   #define ItemTable 0x809B10
 #endif
+
 #ifndef DebuffTable
     #define DebuffTable 0x203F100
 #endif
+
 #ifndef Promotion_Branch_Table
 	#define Promotion_Branch_Table 0x95DFA4
 #endif
@@ -19,6 +21,7 @@
 #ifndef ItemEffectTable
 	#define ItemEffectTable 0x2FC90
 #endif
+#define PortraitTable 0xFF0000
 	
 #define Resire Nosferatu
 #define MachinShin Divine
@@ -44,8 +47,8 @@
 #define RingAvoidBoost 20
 #define WTA_Hit 25
 #define WTA_Dmg 3
-#define WTD_Hit 0x100-WTA_Hit
-#define WTD_Dmg 0x100-WTA_Dmg
+#define WTD_Hit (0x100-WTA_Hit)
+#define WTD_Dmg (0x100-WTA_Dmg)
 
 #define Initial_Gold_Amount 	5000			//Amount of gold you start with
 #define Gold_Per_Level 			100				//Amount of gold you get per level
@@ -59,9 +62,12 @@
 #define AssassinsBonus			400				//indicated by Forblaze lock
 #define Unlock_Shop2_Price		300
 #define Unlock_Shop3_Price		1000
-#define Unlock_Shop4_Price		3000
-#define Unlock_Shop5_Price		6000
-#define Unlock_Capture_Price	5000
+#define Unlock_Shop4_Price		2000
+#define Unlock_Shop5_Price		3000
+#define Unlock_Capture_Price	2000
+#define Elite_Chance			10
+#define Elite_Level_Bonus		9
+#define Elite					127
 
 #define Merlinus 0x65
 #define PhantomChar1 0x66
@@ -86,6 +92,11 @@
 #define Landsknecht Knight_F
 #define Wizard Sage_F
 
+#define RNLoad(rnvalue, units) "SVAL 0x1 rnvalue; BNE rnvalue 0x1 0xC; LOAD1 0x1 units; LABEL rnvalue"
+
+#define CenterTextbox(textid) "CenterTutorialTextBox; TUTORIALTEXTBOXSTART; TEXTSHOW textid; TEXTEND"
+
 #include "Engine Hacks/Skill System/skill_definitions.event"
+//#include "Tables/FE8 Nightmare Modules/RandomEnemies/RandomEnemyGroups.event"
 
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p
