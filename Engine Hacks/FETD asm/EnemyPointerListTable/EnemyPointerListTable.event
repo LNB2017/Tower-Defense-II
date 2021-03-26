@@ -4,10 +4,23 @@ Enemy_Pointer_List_Table:
 
 #define TurnUnitList(turn, list) "PUSH; ORG Enemy_Pointer_List_Table + (turn*4); POIN list; POP"
 
-Turn2UnitList:
-WORD 3 // number of possible unit groups
-POIN Turn2
-POIN Turn3
-POIN Turn5
+TurnUnitList(2,Turn2Enemies)
 
-TurnUnitList(2,Turn2UnitList)
+Turn2Enemies:
+WORD 16 // number of possible unit groups
+POIN WeakMercsL1
+POIN WeakFightersL1
+POIN WeakSoldiersL1
+POIN WeakArchersL1
+POIN WeakMagesL1
+POIN WeakMonksL1
+POIN WeakShamansL1
+POIN WeakFliersL1
+POIN WeakThievesL1
+POIN WeakArmorsL1
+POIN WeakAssassinPoisonL1
+POIN WeakAssassinArchersL1
+POIN WeakChampionMercL5
+POIN WeakChampionFighterL5
+POIN WeakChampionSoldierL5
+POIN WeakChampionArcherL5
