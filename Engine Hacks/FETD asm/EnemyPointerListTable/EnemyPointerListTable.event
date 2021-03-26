@@ -5,9 +5,15 @@ Enemy_Pointer_List_Table:
 #define TurnUnitList(turn, list) "PUSH; ORG Enemy_Pointer_List_Table + (turn*4); POIN list; POP"
 
 TurnUnitList(2,Turn2Enemies)
+TurnUnitList(3,Turn3Enemies)
+TurnUnitList(4,Turn4Enemies)
+TurnUnitList(7,Turn7Enemies)
+TurnUnitList(9,Turn9Enemies)
+TurnUnitList(12,Turn12Enemies)
+TurnUnitList(13,Turn13Enemies)
 
 Turn2Enemies:
-WORD 16 // number of possible unit groups
+WORD 8 // number of possible unit groups
 POIN WeakMercsL1
 POIN WeakFightersL1
 POIN WeakSoldiersL1
@@ -16,11 +22,58 @@ POIN WeakMagesL1
 POIN WeakMonksL1
 POIN WeakShamansL1
 POIN WeakFliersL1
-POIN WeakThievesL1
-POIN WeakArmorsL1
-POIN WeakAssassinPoisonL1
-POIN WeakAssassinArchersL1
+
+Turn3Enemies:
+WORD 8 // number of possible unit groups
+POIN WeakMercsL1
+POIN WeakFightersL1
+POIN WeakSoldiersL1
+POIN WeakArchersL1
+POIN WeakMagesL1
+POIN WeakMonksL1
+POIN WeakShamansL1
+POIN WeakFliersL1
+
+Turn4Enemies:
+WORD 8 // number of possible unit groups
+POIN WeakMercsL1
+POIN WeakFightersL1
+POIN WeakSoldiersL1
+POIN WeakArchersL1
+POIN WeakMagesL1
+POIN WeakMonksL1
+POIN WeakShamansL1
+POIN WeakFliersL1
+
+Turn7Enemies:
+WORD 4 // number of possible unit groups
+POIN WeakArmorsL4
+POIN WeakPegsL4
+POIN WeakWyvernsL4
+POIN WeakFliersL4
+
+Turn9Enemies:
+WORD 4 // number of possible unit groups
+POIN WeakArmorsL4
+POIN WeakPegsL4
+POIN WeakWyvernsL4
+POIN WeakFliersL4
+
+Turn12Enemies:
+WORD 4 // number of possible unit groups
 POIN WeakChampionMercL5
 POIN WeakChampionFighterL5
 POIN WeakChampionSoldierL5
 POIN WeakChampionArcherL5
+
+Turn13Enemies:
+WORD 4 // number of possible unit groups
+POIN WeakChampionMercL5
+POIN WeakChampionFighterL5
+POIN WeakChampionSoldierL5
+POIN WeakChampionArcherL5
+
+//POIN WeakThievesL1
+//POIN WeakArmorsL1
+//POIN WeakAssassinPoisonL1
+//POIN WeakAssassinArchersL1

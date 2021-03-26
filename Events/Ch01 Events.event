@@ -5,52 +5,36 @@ EventPointerTable(0x7, Ch01_Events_Table)
 
 #define Spawn1X 2
 #define Spawn1Y 12
-
 #define Spawn2X 12
 #define Spawn2Y 2
-
 #define StairSWX 1
 #define StairSWY 20
-
 #define StairNEX 20
 #define StairNEY 1
-
 #define StairNWX 5
 #define StairNWY 5
-
 #define StairE1X 16
 #define StairE1Y 11
-
 #define StairE2X 20
 #define StairE2Y 11
-
 #define StairS1X 11
 #define StairS1Y 16
-
 #define StairS2X 11
 #define StairS2Y 20
-
 #define StairSEX 17
 #define StairSEY 17
 
 
-
 #define Shop1X 2
 #define Shop1Y 6
-
 #define Shop2X 2
 #define Shop2Y 4
-
 #define Shop3X 2
 #define Shop3Y 2
-
 #define Shop4X 4
 #define Shop4Y 2
-
 #define Shop5X 6
 #define Shop5Y 2
-
-
 
 #include "Enemies.txt"
 

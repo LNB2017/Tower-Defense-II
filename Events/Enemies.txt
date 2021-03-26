@@ -1,4 +1,5 @@
 ALIGN 4
+Enemy_Pointer_Table:
 
 // CharID, ClassID, LeaderID, Level(Number,Affiliation,Autoleveled?) [X, Y] ItemDrop 0 REDANums REDAs [Inventory] AI
 WeakMercsL1:
@@ -49,21 +50,43 @@ UNIT Mook1 WyvernRider 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA
 UNIT Mook1 PegasusRider 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [IronLance, Vulnerary] [0xA, 0, 0, 0]
 UNIT
 
+WeakPegsL4:
+UNIT Mook1 PegasusRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [IronLance, Vulnerary] [0xA, 0, 0, 0]
+UNIT Mook1 PegasusRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA4 [Javelin, Vulnerary] [0xA, 0, 0, 0]
+UNIT Mook1 PegasusRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin, Vulnerary] [0xA, 0, 0, 0]
+UNIT Mook1 PegasusRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [IronLance, Vulnerary] [0xA, 0, 0, 0]
+UNIT
+
+WeakWyvernsL4:
+UNIT Mook1 WyvernRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [IronLance, Vulnerary] [0xA, 0, 0, 0]
+UNIT Mook1 WyvernRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA4 [Javelin, Vulnerary] [0xA, 0, 0, 0]
+UNIT Mook1 WyvernRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin, Vulnerary] [0xA, 0, 0, 0]
+UNIT Mook1 WyvernRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [IronLance, Vulnerary] [0xA, 0, 0, 0]
+UNIT
+
+WeakFliersL4:
+UNIT Mook1 PegasusRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [IronLance, Vulnerary] [0xA, 0, 0, 0]
+UNIT Mook1 WyvernRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA4 [Javelin, Vulnerary] [0xA, 0, 0, 0]
+UNIT Mook1 WyvernRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin, Vulnerary] [0xA, 0, 0, 0]
+UNIT Mook1 PegasusRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [IronLance, Vulnerary] [0xA, 0, 0, 0]
+UNIT
+
+WeakArmorsL4:
+UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [HandAxe] [0xA, 0, 0, 0]
+UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [HandAxe] [0xA, 0, 0, 0]
+UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [HandAxe] [0xA, 0, 0, 0]
+UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [Javelin] [0xA, 0, 0, 0]
+UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Javelin] [0xA, 0, 0, 0]
+UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [Javelin] [0xA, 0, 0, 0]
+UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA1 [LightBrand] [0xA, 0, 0, 0]
+UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA4 [LightBrand] [0xA, 0, 0, 0]
+UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA7 [LightBrand] [0xA, 0, 0, 0]
+UNIT
+
 WeakThievesL1:
 UNIT Mook1 Thief 0 Level(1,Enemy,True) [StairS1X, StairS1Y] 0 0 1 StairS1REDA5 [SlimSword] [0xA, 0, 0, 0]
 UNIT Mook1 Thief 0 Level(1,Enemy,True) [StairS2X, StairS2Y] 0 0 1 REDA11R20 [SlimSword] [0xA, 0, 0, 0]
 UNIT
-
-WeakArmorsL1:
-UNIT Mook1 Knight 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [HandAxe] [0xA, 0, 0, 0]
-UNIT Mook1 Knight 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [HandAxe] [0xA, 0, 0, 0]
-UNIT Mook1 Knight 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [HandAxe] [0xA, 0, 0, 0]
-UNIT Mook1 Knight 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [Javelin] [0xA, 0, 0, 0]
-UNIT Mook1 Knight 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Javelin] [0xA, 0, 0, 0]
-UNIT Mook1 Knight 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [Javelin] [0xA, 0, 0, 0]
-UNIT Mook1 Knight 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA1 [LightBrand] [0xA, 0, 0, 0]
-UNIT Mook1 Knight 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA4 [LightBrand] [0xA, 0, 0, 0]
-UNIT Mook1 Knight 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA7 [LightBrand] [0xA, 0, 0, 0]
 
 WeakAssassinPoisonL1:
 UNIT Assassin1 Mercenary 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [PoisonSword] [0, 0, 0, 0]
@@ -80,23 +103,20 @@ UNIT Assassin1 Archer 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8
 UNIT
 
 WeakChampionMercL5:
-UNIT Boss1 Mercenary 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Runesword, Elixir] [0xA, 0, 0, 0]
+UNIT Boss1 Mercenary 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Runesword, Elixir] [0xA, 0, 0, 0]
 UNIT
 
 WeakChampionFighterL5:
-UNIT Boss1 Fighter 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Tomahawk, Elixir] [0xA, 0, 0, 0]
+UNIT Boss1 Fighter 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Tomahawk, Elixir] [0xA, 0, 0, 0]
 UNIT
 
 WeakChampionSoldierL5:
-UNIT Boss1 Soldier 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Spear, Elixir] [0xA, 0, 0, 0]
+UNIT Boss1 Soldier 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Spear, Elixir] [0xA, 0, 0, 0]
 UNIT
 
 WeakChampionArcherL5:
-UNIT Boss1 Archer 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [SilverBow, Elixir] [0xA, 0, 0, 0]
+UNIT Boss1 Archer 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [SilverBow, Elixir] [0xA, 0, 0, 0]
 UNIT
-
-
-
 
 Turn2:
 UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [IronLance] [0xA, 0, 0, 0]
