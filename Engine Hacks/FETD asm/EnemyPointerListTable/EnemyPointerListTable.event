@@ -1,8 +1,19 @@
 ALIGN 4
+// these need to be sequential
 Enemy_Pointer_List_Table:
 #incbin "EnemyPointerListTable.bin"
+Enemy_Pointer_List_Table_2:
+#incbin "EnemyPointerListTable.bin"
+
+Enemy_Pointer_List_Tables:
+POIN Enemy_Pointer_List_Table
+POIN Enemy_Pointer_List_Table_2
+WORD 0
 
 #define TurnUnitList(turn, list) "PUSH; ORG Enemy_Pointer_List_Table + (turn*4); POIN list; POP"
+#define TurnUnitList(id, turn, list) "PUSH; ORG Enemy_Pointer_List_Table + (turn*4) + (id * 0x410); POIN list; POP"
+
+#define ExtraUnits 1
 
 TurnUnitList(2,Turn2Enemies)
 TurnUnitList(3,Turn3Enemies)
@@ -12,16 +23,25 @@ TurnUnitList(9,Turn9Enemies)
 TurnUnitList(12,Turn12Enemies)
 TurnUnitList(13,Turn13Enemies)
 
+TurnUnitList(ExtraUnits,2,Turn2Enemies2)
+
 Turn2Enemies:
-WORD 8 // number of possible unit groups
+WORD 2 // number of possible unit groups
 POIN WeakMercsL1
 POIN WeakFightersL1
+/*
 POIN WeakSoldiersL1
 POIN WeakArchersL1
 POIN WeakMagesL1
 POIN WeakMonksL1
 POIN WeakShamansL1
 POIN WeakFliersL1
+*/
+
+Turn2Enemies2:
+WORD 2 // number of possible unit groups
+POIN WeakSoldiersL1
+POIN WeakArchersL1
 
 Turn3Enemies:
 WORD 8 // number of possible unit groups
@@ -72,8 +92,3 @@ POIN WeakChampionMercL5
 POIN WeakChampionFighterL5
 POIN WeakChampionSoldierL5
 POIN WeakChampionArcherL5
-
-//POIN WeakThievesL1
-//POIN WeakArmorsL1
-//POIN WeakAssassinPoisonL1
-//POIN WeakAssassinArchersL1

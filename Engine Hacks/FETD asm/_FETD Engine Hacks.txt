@@ -212,7 +212,7 @@ Decompress_Fix:
 ALIGN 4
 Get_Enemies:
 #incbin "Get_Enemies.dmp"
-POIN Enemy_Pointer_List_Table
+POIN Enemy_Pointer_List_Tables
 
 ALIGN 4
 New_AI:

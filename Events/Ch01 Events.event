@@ -143,6 +143,7 @@ UNIT Capture_Anna Civilian_F_3 0 Level(1,NPC,0) [1,1] 0 0 0 0 [0] NeverMoveAI
 UNIT
 
 Ch01_BeginningScene:
+COUNTER_SET 0 0
 LOAD1 0x1 Ch01_Wagon
 ENUN
 LOAD1 0x1 Ch01_Target
@@ -183,12 +184,22 @@ MNTS 0
 ENDA
 
 Ch01_Spawn_Enemies:
+
+GOTO 2 // dont add the first time
+LABEL 1
+COUNTER_ADD 0 0 // check the next table
+LABEL 2
+COUNTER_CHECK 0 // memslot C = Enemy_Pointer_List_Tables offset
 ASMC Get_Enemies|1		//puts a pointer to reinforcements in slot 2
 BEQ 5 2 0				//skip loading if slot 2 = slot 0 (0)
 EVBIT_T 0x9				//supposedly makes the camera pan to the reinforcements
 LOAD_SLOT2 0x1			//no idea what the argument is
 ENUN
+STAL 60
+GOTO 1
+
 LABEL 5
+COUNTER_SET 0 0 // for the next call
 NoFade
 ENDA
 
