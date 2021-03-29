@@ -69,19 +69,19 @@ TurnEventPlayer(0, Ch01_Tutorial16, 12, 1) //bosses
 TurnEventPlayer(0, Ch01_Tutorial12, 13, 1) //dancers
 TurnEventPlayer(0, Ch01_Tutorial13, 14, 1) //thieves
 TurnEventPlayer(0, Ch01_Tutorial14, 15, 1) //promotions
+TurnEventPlayer(Unlock_Shop2_ID, Unlock_Shop2_Event_Turn, 15, 1)
 TurnEventPlayer(0, Ch01_Tutorial17, 19, 1) //assassins
 TurnEventPlayer(0, Ch01_Tutorial15, 20, 1) //summoners
-TurnEventPlayer(Unlock_Shop2_ID, Unlock_Shop2_Event_Turn, 15, 1)
+TurnEventPlayer(0, Unblock_Second_Spawn, 25, 1)
 TurnEventPlayer(Unlock_Shop3_ID, Unlock_Shop3_Event_Turn, 30, 1)
-TurnEventPlayer(Unlock_Shop4_ID, Unlock_Shop4_Event_Turn, 50, 1)
-TurnEventPlayer(Unlock_Shop5_ID, Unlock_Shop5_Event_Turn, 70, 1)
 TurnEventPlayer(0, Lightning_Hit1, 40, 1)
+TurnEventPlayer(0, Unlock_North_Doors, 40, 1)
 TurnEventPlayer(0, Lightning_Hit2, 45, 1)
+TurnEventPlayer(Unlock_Shop4_ID, Unlock_Shop4_Event_Turn, 50, 1)
+TurnEventPlayer(0, Unlock_West_Doors, 55, 1)
 TurnEventPlayer(0, Lightning_Hit3, 60, 1)
 TurnEventPlayer(0, Lightning_Hit4, 65, 1)
-TurnEventPlayer(0, Unblock_Second_Spawn, 25, 1)
-TurnEventPlayer(0, Unlock_North_Doors, 40, 1)
-TurnEventPlayer(0, Unlock_West_Doors, 55, 1)
+TurnEventPlayer(Unlock_Shop5_ID, Unlock_Shop5_Event_Turn, 70, 1)
 TurnEventPlayer(0, Unlock_NW_Room, 70, 1)
 TurnEventPlayer(0, SetBossID, 46, 1)
 END_MAIN
@@ -195,7 +195,7 @@ BEQ 5 2 0				//skip loading if slot 2 = slot 0 (0)
 EVBIT_T 0x9				//supposedly makes the camera pan to the reinforcements
 LOAD_SLOT2 0x1			//no idea what the argument is
 ENUN
-STAL 60
+STAL 15
 GOTO 1
 
 LABEL 5
