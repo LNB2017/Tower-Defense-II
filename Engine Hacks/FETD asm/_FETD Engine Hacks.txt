@@ -7,6 +7,7 @@
 #include "FE8-Weapons Can't Crit/FE8-Weapons Can't Crit EA.txt"
 #include "lightningAnimation/anim.event"
 #include "LootBox/LootBox.event"
+#include "Random Level/Random Level.event"
 
 PUSH
 
