@@ -1,0 +1,56 @@
+ALIGN 4
+
+#include "LootBox.lyn.event"
+
+#define Item_Self_Targeting 0x2905C
+
+#ifndef ItemUsabilityTable
+	#define ItemUsabilityTable 0x288B0
+#endif
+#ifndef ItemEffectTable
+	#define ItemEffectTable 0x2FC90
+#endif
+#ifndef ItemTargetingTable
+	#define ItemTargetingTable 0x28E8C
+#endif
+
+ALIGN 4
+LootBox_Type_Table:
+#incbin "LootBox_Type_Table.bin"
+
+ALIGN 4
+LootBox_Type_Table_Pointer:
+POIN LootBox_Type_Table
+
+#define LootBoxType(ItemID, ItemLists) "PUSH; ORG LootBox_Type_Table + (ItemID * 4); POIN ItemLists; POP"
+#define NewLootBox(ItemID) "PUSH; ORG ItemTable + (ItemID * 36) + 0x1E; BYTE 1; ORG ItemEffectTable + ((ItemID - Heal) * 4); POIN (LootBox_Effect_Ladder-1); ORG ItemUsabilityTable + ((ItemID - Heal) * 4); POIN (LootBox_Usability_Ladder-1); ORG ItemTargetingTable + ((ItemID - Heal) * 4); POIN Item_Self_Targeting; POP"
+
+// Custom Stuff Starts Here
+
+NewLootBox(EpicBox)
+LootBoxType(EpicBox,EpicBox_Items)
+
+ALIGN 4
+EpicBox_Items:
+POIN BasicWeapons // List
+BYTE 50 // % Chance
+BYTE 0 0 0 // 4 alignment
+POIN EffectiveWeapons 
+BYTE 50
+BYTE 0 0 0
+
+ALIGN 4
+BasicWeapons:
+WORD 5 // Length
+BYTE IronSword
+BYTE IronLance
+BYTE IronAxe
+BYTE IronBow
+BYTE Fire
+
+ALIGN 4
+EffectiveWeapons:
+WORD 3
+BYTE Armorslayer
+BYTE Horseslayer
+BYTE Wyrmslayer

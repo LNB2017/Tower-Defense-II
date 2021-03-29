@@ -6,6 +6,7 @@
 #include "ModularMinimugBox/MMB Installer RedFE.event"
 #include "FE8-Weapons Can't Crit/FE8-Weapons Can't Crit EA.txt"
 #include "lightningAnimation/anim.event"
+#include "LootBox/LootBox.event"
 
 PUSH
 

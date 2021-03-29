@@ -126,7 +126,7 @@ Ch01_Units:
 UNIT
 
 Ch01_Wagon:
-UNIT Merlinus Tent 0 Level(1,Ally,0) [3,3] 0 0 0 0 [0] NoAI
+UNIT Merlinus Tent 0 Level(1,Ally,0) [3,3] 0 0 0 0 [EnergyRing] NoAI
 UNIT
 
 Ch01_Target:

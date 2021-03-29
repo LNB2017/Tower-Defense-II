@@ -33,6 +33,7 @@
 #define StaffSavantItem IronBlade
 #define LiveToServeItem SteelBlade
 #define LongshotItem SilverBlade
+#define EpicBox EnergyRing
 
 #define Capture_Event_ID 0xB //event id is set if Capture is allowed
 #define Unlock_Shop2_ID 0xC
