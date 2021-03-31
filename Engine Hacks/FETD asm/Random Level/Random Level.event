@@ -1,0 +1,14 @@
+ALIGN 4
+Random_Level_Word:
+WORD Random_Level
+
+ALIGN 4
+Random_Hard_Level_Word:
+WORD Random_Hard_Level
+
+#include "Random Level.lyn.event"
+
+PUSH
+ORG 0x1C20E0
+jumpToHack(InitUnit)
+POP

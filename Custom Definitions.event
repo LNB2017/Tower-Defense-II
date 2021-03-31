@@ -69,6 +69,8 @@
 #define Elite_Chance			10
 #define Elite_Level_Bonus		9
 #define Elite					127
+#define Random_Level 			3
+#define Random_Hard_Level 		1
 
 #define Merlinus 0x65
 #define PhantomChar1 0x66

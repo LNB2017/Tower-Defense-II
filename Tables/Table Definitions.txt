@@ -110,6 +110,9 @@
   #define UnlockEphraim 0x20
   #define UnlockLock3 0x40
   #define UnlockLock4 0x80
+
+  #define NoLevelBonus 0x40
+  #define IsAssassin 0x80
 #endif
 
 //weapon types
