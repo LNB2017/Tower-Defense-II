@@ -32,25 +32,107 @@ LootBoxType(EpicBox,EpicBox_Items)
 
 ALIGN 4
 EpicBox_Items:
-POIN BasicWeapons // List
+POIN TierOneWeapons // List
 BYTE 50 // % Chance
 BYTE 0 0 0 // 4 alignment
 POIN EffectiveWeapons 
 BYTE 50
 BYTE 0 0 0
 
+//------------Creating the item groups below------------
+
 ALIGN 4
-BasicWeapons:
-WORD 5 // Length
+SlimWeapons:
+WORD 4 // Length
+BYTE SlimSword
+BYTE SlimLance
+BYTE Hatchet
+BYTE ShortBow
+
+ALIGN 4
+ERankWeapons:
+WORD 8 // Length
 BYTE IronSword
 BYTE IronLance
 BYTE IronAxe
 BYTE IronBow
 BYTE Fire
+BYTE Lightning
+BYTE Flux
+BYTE Heal
+
+ALIGN 4
+DRankWeapons:
+WORD 8 // Length
+BYTE SteelSword
+BYTE SteelLance
+BYTE SteelAxe
+BYTE SteelBow
+BYTE Elfire
+BYTE Shine
+BYTE MachinShin
+BYTE Mend
 
 ALIGN 4
 EffectiveWeapons:
-WORD 3
+WORD 15 // Length
 BYTE Armorslayer
-BYTE Horseslayer
+BYTE Zanbato
 BYTE Wyrmslayer
+BYTE Rapier
+BYTE Horseslayer
+BYTE HeavySpear
+BYTE Reginleif
+BYTE Halberd
+BYTE Hammer
+BYTE Swordslayer
+BYTE DragonAxe
+BYTE ShadowKiller
+BYTE BrightLance
+BYTE FiendCleaver
+BYTE BeaconBow
+
+
+ALIGN 4
+CritPack:
+WORD 5 // Length
+BYTE KillingEdge
+BYTE Shamshir
+BYTE KillerAxe
+BYTE KillerLance
+BYTE KillerBow
+
+ALIGN 4
+MagicSwords:
+WORD 3 // Length
+BYTE LightBrand
+BYTE WindEdge
+BYTE Runesword
+
+ALIGN 4
+MeleeRangedWeapons:
+WORD 8 // Length
+BYTE LightBrand
+BYTE WindEdge
+BYTE Runesword
+BYTE HandAxe
+BYTE Tomahawk
+BYTE Javelin
+BYTE ShortSpear
+BYTE Spear
+
+ALIGN 4
+Reavers:
+WORD 4 // Length
+BYTE Lancereaver
+BYTE Axereaver
+BYTE Swordreaver
+BYTE Swordslayer
+
+ALIGN 4
+PoisonPack:
+WORD 4 // Length
+BYTE PoisonSword
+BYTE ToxinLance
+BYTE PoisonAxe
+BYTE PoisonBow

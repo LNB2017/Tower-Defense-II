@@ -247,3 +247,9 @@ ALIGN 4
   ORG 0x1609E
   SHORT 0x0
   POP
+  
+  // Remove Silver Card Effect
+  PUSH
+  ORG 0xB5242 // silver card id check
+  BYTE 0x0
+  POP

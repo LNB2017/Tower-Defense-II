@@ -103,3 +103,9 @@
 //#include "Tables/FE8 Nightmare Modules/RandomEnemies/RandomEnemyGroups.event"
 
 // #define __DEBUG__ // Uncomment to get the Debug startup menu :p
+
+// Remove Silver Card Effect
+PUSH
+ORG 0xB5242 // silver card id check
+BYTE 0x0
+POP
