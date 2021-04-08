@@ -32,7 +32,7 @@ LootBoxType(EpicBox,EpicBox_Items)
 
 ALIGN 4
 EpicBox_Items:
-POIN TierOneWeapons // List
+POIN ERankWeapons // List
 BYTE 50 // % Chance
 BYTE 0 0 0 // 4 alignment
 POIN EffectiveWeapons 
@@ -106,14 +106,14 @@ ALIGN 4
 MagicSwords:
 WORD 3 // Length
 BYTE LightBrand
-BYTE WindEdge
+BYTE WindSword
 BYTE Runesword
 
 ALIGN 4
 MeleeRangedWeapons:
 WORD 8 // Length
 BYTE LightBrand
-BYTE WindEdge
+BYTE WindSword
 BYTE Runesword
 BYTE HandAxe
 BYTE Tomahawk

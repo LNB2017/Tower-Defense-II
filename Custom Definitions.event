@@ -28,7 +28,7 @@
 #define Blizzard Bolting
 #define Freeze Sleep
 #define Relocate HeroCrest			//don't need promotion items outside of master seal
-#define OtataralBow KnightCrest
+#define OtataralBow KnightCrest		//Inflicts Silence, fairly strong. https://i.imgur.com/hfKoUzg.png
 #define ArmsScroll OrionBolt
 #define StaffSavantItem IronBlade
 #define LiveToServeItem SteelBlade
