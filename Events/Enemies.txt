@@ -4,148 +4,67 @@ Enemy_Pointer_Table:
 
 // CharID, ClassID, LeaderID, Level(Number,Affiliation,Autoleveled?) [X, Y] ItemDrop 0 REDANums REDAs [Inventory] AI
 //------------------------------Level 1 Units----------------------------//
-WestMercsL1:
+WestMercsBasic:
 UNIT Mook1 Mercenary 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [IronSword] [0xA, 0, 0, 0]
 UNIT Mook1 Mercenary 0 Level(3,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [LightBrand] [0xA, 0, 0, 0]
 UNIT Mook1 Mercenary 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [IronSword] [0xA, 0, 0, 0]
 UNIT
-WestFightersL1:
+WestFightersBasic:
 UNIT Mook1 Fighter 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [IronAxe] [0xA, 0, 0, 0]
 UNIT Mook1 Fighter 0 Level(3,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [HandAxe] [0xA, 0, 0, 0]
 UNIT Mook1 Fighter 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [IronAxe] [0xA, 0, 0, 0]
 UNIT
-WestSoldiersL1:
+WestSoldiersBasic:
 UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [IronLance] [0xA, 0, 0, 0]
 UNIT Mook1 Soldier 0 Level(3,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Javelin] [0xA, 0, 0, 0]
 UNIT Mook1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [IronLance] [0xA, 0, 0, 0]
 UNIT
-WestArchersL1:
+WestArchersBasic:
 UNIT Mook1 Archer 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [IronBow] [0xA, 0, 0, 0]
 UNIT Mook1 Archer 0 Level(3,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [SteelBow] [0xA, 0, 0, 0]
 UNIT Mook1 Archer 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [IronBow] [0xA, 0, 0, 0]
 UNIT
-WestMagesL1:
+WestMagesBasic:
 UNIT Mook1 Mage 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [Fire] [0xA, 0, 0, 0]
 UNIT Mook1 Mage 0 Level(3,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Elfire] [0xA, 0, 0, 0]
 UNIT Mook1 Mage 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [Fire] [0xA, 0, 0, 0]
 UNIT
-WestMonksL1:
+WestMonksBasic:
 UNIT Mook1 Monk 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [Lightning] [0xA, 0, 0, 0]
 UNIT Mook1 Monk 0 Level(3,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Shine] [0xA, 0, 0, 0]
 UNIT Mook1 Monk 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [Lightning] [0xA, 0, 0, 0]
 UNIT
-WestShamansL1:
+WestShamansBasic:
 UNIT Mook1 Shaman 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [Flux] [0xA, 0, 0, 0]
 UNIT Mook1 Shaman 0 Level(3,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [MachinShin] [0xA, 0, 0, 0]
 UNIT Mook1 Shaman 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [Flux] [0xA, 0, 0, 0]
 UNIT
-WestFliersL1:
+WestFliersBasic:
 UNIT Mook1 PegasusRider 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [IronLance, Vulnerary] [0xA, 0, 0, 0]
 UNIT Mook1 WyvernRider 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [IronLance, Vulnerary] [0xA, 0, 0, 0]
 UNIT Mook1 PegasusRider 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [IronLance, Vulnerary] [0xA, 0, 0, 0]
 UNIT
-//------------------------------Level 5 Units----------------------------//
-WestMercsL5:
-UNIT Mook1 Mercenary 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [SteelSword] [0xA, 0, 0, 0]
-UNIT Mook1 Mercenary 0 Level(7,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [LightBrand] [0xA, 0, 0, 0]
-UNIT Mook1 Mercenary 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [SteelSword] [0xA, 0, 0, 0]
-UNIT
-WestFightersL5:
-UNIT Mook1 Fighter 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [SteelAxe] [0xA, 0, 0, 0]
-UNIT Mook1 Fighter 0 Level(7,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [HandAxe] [0xA, 0, 0, 0]
-UNIT Mook1 Fighter 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [SteelAxe] [0xA, 0, 0, 0]
-UNIT
-WestSoldiersL5:
-UNIT Mook1 Soldier 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [SteelLance] [0xA, 0, 0, 0]
-UNIT Mook1 Soldier 0 Level(7,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Javelin] [0xA, 0, 0, 0]
-UNIT Mook1 Soldier 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [SteelLance] [0xA, 0, 0, 0]
-UNIT
-WestArchersL5:
-UNIT Mook1 Archer 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [IronBow] [0xA, 0, 0, 0]
-UNIT Mook1 Archer 0 Level(7,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [SteelBow] [0xA, 0, 0, 0]
-UNIT Mook1 Archer 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [IronBow] [0xA, 0, 0, 0]
-UNIT
-WestMagesL5:
-UNIT Mook1 Mage 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [Elfire] [0xA, 0, 0, 0]
-UNIT Mook1 Mage 0 Level(7,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Elfire] [0xA, 0, 0, 0]
-UNIT Mook1 Mage 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [Elfire] [0xA, 0, 0, 0]
-UNIT
-WestMonksL5:
-UNIT Mook1 Monk 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [Shine] [0xA, 0, 0, 0]
-UNIT Mook1 Monk 0 Level(7,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Shine] [0xA, 0, 0, 0]
-UNIT Mook1 Monk 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [Shine] [0xA, 0, 0, 0]
-UNIT
-WestShamansL5:
-UNIT Mook1 Shaman 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [MachinShin] [0xA, 0, 0, 0]
-UNIT Mook1 Shaman 0 Level(7,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [MachinShin] [0xA, 0, 0, 0]
-UNIT Mook1 Shaman 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [MachinShin] [0xA, 0, 0, 0]
-UNIT
-WestFliersL5:
-UNIT Mook1 PegasusRider 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [SteelLance, Vulnerary] [0xA, 0, 0, 0]
-UNIT Mook1 WyvernRider 0 Level(7,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [SteelLance, Vulnerary] [0xA, 0, 0, 0]
-UNIT Mook1 PegasusRider 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [SteelLance, Vulnerary] [0xA, 0, 0, 0]
-UNIT
-//------------------------------Level 10 Units----------------------------//
-WestMercsL10:
-UNIT Mook1 Mercenary 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [LightBrand] [0xA, 0, 0, 0]
-UNIT Mook1 Mercenary 0 Level(10,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [SteelSword] [0xA, 0, 0, 0]
-UNIT Mook1 Mercenary 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [LightBrand] [0xA, 0, 0, 0]
-UNIT
-WestFightersL10:
-UNIT Mook1 Fighter 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [HandAxe] [0xA, 0, 0, 0]
-UNIT Mook1 Fighter 0 Level(10,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [SteelAxe] [0xA, 0, 0, 0]
-UNIT Mook1 Fighter 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [HandAxe] [0xA, 0, 0, 0]
-UNIT
-WestSoldiersL10:
-UNIT Mook1 Soldier 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [ShortSpear] [0xA, 0, 0, 0]
-UNIT Mook1 Soldier 0 Level(10,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [SteelLance] [0xA, 0, 0, 0]
-UNIT Mook1 Soldier 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [ShortSpear] [0xA, 0, 0, 0]
-UNIT
-WestArchersL10:
-UNIT Mook1 Archer 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [SteelBow] [0xA, 0, 0, 0]
-UNIT Mook1 Archer 0 Level(10,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [ShortBow] [0xA, 0, 0, 0]
-UNIT Mook1 Archer 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [SteelBow] [0xA, 0, 0, 0]
-UNIT
-WestMagesL10:
-UNIT Mook1 Mage 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [Thunder] [0xA, 0, 0, 0]
-UNIT Mook1 Mage 0 Level(10,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Elfire] [0xA, 0, 0, 0]
-UNIT Mook1 Mage 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [Thunder] [0xA, 0, 0, 0]
-UNIT
-WestMonksL10:
-UNIT Mook1 Monk 0 Level(10,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [Resire] [0xA, 0, 0, 0]
-UNIT Mook1 Monk 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [Shine] [0xA, 0, 0, 0]
-UNIT Mook1 Monk 0 Level(10,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [Resire] [0xA, 0, 0, 0]
-UNIT
-WestShamansL10:
-UNIT Mook1 Shaman 0 Level(10,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [Luna] [0xA, 0, 0, 0]
-UNIT Mook1 Shaman 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [MachinShin] [0xA, 0, 0, 0]
-UNIT Mook1 Shaman 0 Level(10,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [Luna] [0xA, 0, 0, 0]
-UNIT
-WestFliersL10:
-UNIT Mook1 PegasusRider 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [ShortSpear, Vulnerary] [0xA, 0, 0, 0]
-UNIT Mook1 WyvernRider 0 Level(10,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA5 [SteelLance, Vulnerary] [0xA, 0, 0, 0]
-UNIT Mook1 PegasusRider 0 Level(12,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [ShortSpear, Vulnerary] [0xA, 0, 0, 0]
-UNIT
+
 //------------------------------West Auxiliary Units----------------------------//
-WestPegsL4:
+WestPegsAux:
 UNIT Mook1 PegasusRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [IronLance, Vulnerary] [0xA, 0, 0, 0]
 UNIT Mook1 PegasusRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA4 [Javelin, Vulnerary] [0xA, 0, 0, 0]
 UNIT Mook1 PegasusRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin, Vulnerary] [0xA, 0, 0, 0]
 UNIT Mook1 PegasusRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [IronLance, Vulnerary] [0xA, 0, 0, 0]
 UNIT
-WestWyvernsL4:
+WestWyvernsAux:
 UNIT Mook1 WyvernRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [IronLance, Vulnerary] [0xA, 0, 0, 0]
 UNIT Mook1 WyvernRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA4 [Javelin, Vulnerary] [0xA, 0, 0, 0]
 UNIT Mook1 WyvernRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin, Vulnerary] [0xA, 0, 0, 0]
 UNIT Mook1 WyvernRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [IronLance, Vulnerary] [0xA, 0, 0, 0]
 UNIT
-WestFliersL4:
+WestFliersAux:
 UNIT Mook1 PegasusRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [IronLance, Vulnerary] [0xA, 0, 0, 0]
 UNIT Mook1 WyvernRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA4 [Javelin, Vulnerary] [0xA, 0, 0, 0]
 UNIT Mook1 WyvernRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [Javelin, Vulnerary] [0xA, 0, 0, 0]
 UNIT Mook1 PegasusRider 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [IronLance, Vulnerary] [0xA, 0, 0, 0]
 UNIT
-WestArmorsL4:
+WestArmorsAux:
 UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA3 [HandAxe] [0xA, 0, 0, 0]
 UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [HandAxe] [0xA, 0, 0, 0]
 UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA9 [HandAxe] [0xA, 0, 0, 0]
@@ -156,7 +75,7 @@ UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA1 [Li
 UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA4 [LightBrand] [0xA, 0, 0, 0]
 UNIT Mook1 Knight 0 Level(4,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA7 [LightBrand] [0xA, 0, 0, 0]
 UNIT
-WestAssassinPoisonL1:
+WestAssassinPoisonAux:
 UNIT Assassin1 Mercenary 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA2 [PoisonSword] [0, 0, 0, 0]
 UNIT Assassin1 Fighter 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA8 [PoisonAxe] [0, 0, 0, 0]
 UNIT Assassin1 Soldier 0 Level(1,Enemy,True) [Spawn1X, Spawn1Y] 0 0 1 Spawn1REDA6 [PoisonLance] [0, 0, 0, 0]
@@ -238,81 +157,58 @@ UNIT
 
 
 
-SouthMiddleThievesL1:
+SouthMiddleThievesBasic:
 UNIT Mook1 Thief 0 Level(1,Enemy,True) [StairS1X, StairS1Y] 0 0 1 StairS1REDA5 [SlimSword] [0xA, 0, 0, 0]
 UNIT Mook1 Thief 0 Level(1,Enemy,True) [StairS2X, StairS2Y] 0 0 1 REDA11R20 [SlimSword] [0xA, 0, 0, 0]
 UNIT
-EastMiddleThievesL1:
+EastMiddleThievesBasic:
 UNIT Mook1 Thief 0 Level(1,Enemy,True) [StairE1X, StairE1Y] 0 0 1 StairE1REDA5 [SlimSword] [0xA, 0, 0, 0]
 UNIT Mook1 Thief 0 Level(1,Enemy,True) [StairE2X, StairE2Y] 0 0 1 StairE2REDA5 [SlimSword] [0xA, 0, 0, 0]
 UNIT
 
 
 //------------------------------Level 5 Bosses----------------------------//
-WestChampionMercL5:
+WestChampionMercWeak:
 UNIT Boss1 Mercenary 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Runesword, Elixir] [0xA, 0, 0, 0]
 UNIT
-WestChampionFighterL5:
+WestChampionFighterWeak:
 UNIT Boss1 Fighter 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Tomahawk, Elixir] [0xA, 0, 0, 0]
 UNIT
-WestChampionSoldierL5:
+WestChampionSoldierWeak:
 UNIT Boss1 Soldier 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Spear, Elixir] [0xA, 0, 0, 0]
 UNIT
-WestChampionArcherL5:
+WestChampionArcherWeak:
 UNIT Boss1 Archer 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [SilverBow, Elixir] [0xA, 0, 0, 0]
 UNIT
-WestChampionMageL5:
+WestChampionMageWeak:
 UNIT Boss1 Mage 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Elfire, Elixir] [0xA, 0, 0, 0]
 UNIT
-WestChampionMonkL5:
+WestChampionMonkWeak:
 UNIT Boss1 Monk 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Shine, Elixir] [0xA, 0, 0, 0]
 UNIT
-WestChampionShamanL5:
+WestChampionShamanWeak:
 UNIT Boss1 Shaman 0 Level(5,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [MachinShin, Elixir] [0xA, 0, 0, 0]
 UNIT
 
 
-//------------------------------Level 15 Bosses----------------------------//
-WestChampionMercL15:
-UNIT Boss1 Mercenary 0 Level(15,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Runesword, Elixir] [0xA, 0, 0, 0]
+NorthChampionMercWeak:
+UNIT Boss1 Mercenary 0 Level(5,Enemy,True) [Spawn2X,Spawn2Y] 0x2 0 1 Spawn2REDA5 [Runesword, Elixir] [0xA, 0, 0, 0]
 UNIT
-WestChampionFighterL15:
-UNIT Boss1 Fighter 0 Level(15,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Tomahawk, Elixir] [0xA, 0, 0, 0]
+NorthChampionFighterWeak:
+UNIT Boss1 Fighter 0 Level(5,Enemy,True) [Spawn2X,Spawn2Y] 0x2 0 1 Spawn2REDA5 [Tomahawk, Elixir] [0xA, 0, 0, 0]
 UNIT
-WestChampionSoldierL15:
-UNIT Boss1 Soldier 0 Level(15,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Spear, Elixir] [0xA, 0, 0, 0]
+NorthChampionSoldierWeak:
+UNIT Boss1 Soldier 0 Level(5,Enemy,True) [Spawn2X,Spawn2Y] 0x2 0 1 Spawn2REDA5 [Spear, Elixir] [0xA, 0, 0, 0]
 UNIT
-WestChampionArcherL15:
-UNIT Boss1 Archer 0 Level(15,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [SilverBow, Elixir] [0xA, 0, 0, 0]
+NorthChampionArcherWeak:
+UNIT Boss1 Archer 0 Level(5,Enemy,True) [Spawn2X,Spawn2Y] 0x2 0 1 Spawn2REDA5 [SilverBow, Elixir] [0xA, 0, 0, 0]
 UNIT
-WestChampionMageL15:
-UNIT Boss1 Mage 0 Level(15,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Elfire, Elixir] [0xA, 0, 0, 0]
+NorthChampionMageWeak:
+UNIT Boss1 Mage 0 Level(5,Enemy,True) [Spawn2X,Spawn2Y] 0x2 0 1 Spawn2REDA5 [Elfire, Elixir] [0xA, 0, 0, 0]
 UNIT
-WestChampionMonkL15:
-UNIT Boss1 Monk 0 Level(15,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [Shine, Elixir] [0xA, 0, 0, 0]
+NorthChampionMonkWeak:
+UNIT Boss1 Monk 0 Level(5,Enemy,True) [Spawn2X,Spawn2Y] 0x2 0 1 Spawn2REDA5 [Shine, Elixir] [0xA, 0, 0, 0]
 UNIT
-WestChampionShamanL15:
-UNIT Boss1 Shaman 0 Level(15,Enemy,True) [Spawn1X, Spawn1Y] 0x2 0 1 Spawn1REDA5 [MachinShin, Elixir] [0xA, 0, 0, 0]
-UNIT
-
-NorthChampionMercL15:
-UNIT Boss1 Mercenary 0 Level(15,Enemy,True) [Spawn2X,Spawn2Y] 0x2 0 1 Spawn2REDA5 [Runesword, Elixir] [0xA, 0, 0, 0]
-UNIT
-NorthChampionFighterL15:
-UNIT Boss1 Fighter 0 Level(15,Enemy,True) [Spawn2X,Spawn2Y] 0x2 0 1 Spawn2REDA5 [Tomahawk, Elixir] [0xA, 0, 0, 0]
-UNIT
-NorthChampionSoldierL15:
-UNIT Boss1 Soldier 0 Level(15,Enemy,True) [Spawn2X,Spawn2Y] 0x2 0 1 Spawn2REDA5 [Spear, Elixir] [0xA, 0, 0, 0]
-UNIT
-NorthChampionArcherL15:
-UNIT Boss1 Archer 0 Level(15,Enemy,True) [Spawn2X,Spawn2Y] 0x2 0 1 Spawn2REDA5 [SilverBow, Elixir] [0xA, 0, 0, 0]
-UNIT
-NorthChampionMageL15:
-UNIT Boss1 Mage 0 Level(15,Enemy,True) [Spawn2X,Spawn2Y] 0x2 0 1 Spawn2REDA5 [Elfire, Elixir] [0xA, 0, 0, 0]
-UNIT
-NorthChampionMonkL15:
-UNIT Boss1 Monk 0 Level(15,Enemy,True) [Spawn2X,Spawn2Y] 0x2 0 1 Spawn2REDA5 [Shine, Elixir] [0xA, 0, 0, 0]
-UNIT
-NorthChampionShamanL15:
-UNIT Boss1 Shaman 0 Level(15,Enemy,True) [Spawn2X,Spawn2Y] 0x2 0 1 Spawn2REDA5 [MachinShin, Elixir] [0xA, 0, 0, 0]
+NorthChampionShamanWeak:
+UNIT Boss1 Shaman 0 Level(5,Enemy,True) [Spawn2X,Spawn2Y] 0x2 0 1 Spawn2REDA5 [MachinShin, Elixir] [0xA, 0, 0, 0]
 UNIT

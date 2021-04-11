@@ -100,8 +100,6 @@ TurnUnitList(FivU,27,Turn27WestSecondEnemies)
 
 
 
-
-
 //TurnUnitList(SixU,2,TurnXEnemies)
 //TurnUnitList(SevU,2,TurnXEnemies)
 //TurnUnitList(EigU,2,TurnXEnemies)
@@ -110,213 +108,213 @@ TurnUnitList(FivU,27,Turn27WestSecondEnemies)
 
 Turn2WestFirstEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL1
-POIN WestFightersL1
-POIN WestSoldiersL1
-POIN WestArchersL1
-POIN WestMagesL1
-POIN WestMonksL1
-POIN WestShamansL1
-POIN WestFliersL1
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 
 Turn3WestFirstEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL1
-POIN WestFightersL1
-POIN WestSoldiersL1
-POIN WestArchersL1
-POIN WestMagesL1
-POIN WestMonksL1
-POIN WestShamansL1
-POIN WestFliersL1
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn4WestFirstEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL1
-POIN WestFightersL1
-POIN WestSoldiersL1
-POIN WestArchersL1
-POIN WestMagesL1
-POIN WestMonksL1
-POIN WestShamansL1
-POIN WestFliersL1
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn6WestFirstEnemies:
 WORD 4 // number of possible unit groups
-POIN WestArmorsL4
-POIN WestPegsL4
-POIN WestWyvernsL4
-POIN WestFliersL4
+POIN WestArmorsAux
+POIN WestPegsAux
+POIN WestWyvernsAux
+POIN WestFliersAux
 
 Turn8WestFirstEnemies:
 WORD 4 // number of possible unit groups
-POIN WestArmorsL4
-POIN WestPegsL4
-POIN WestWyvernsL4
-POIN WestFliersL4
+POIN WestArmorsAux
+POIN WestPegsAux
+POIN WestWyvernsAux
+POIN WestFliersAux
 
 Turn10WestFirstEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn10WestSecondEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn12WestFirstBoss:
 WORD 7 // number of possible unit groups
-POIN WestChampionMercL5
-POIN WestChampionFighterL5
-POIN WestChampionSoldierL5
-POIN WestChampionArcherL5
-POIN WestChampionMageL5
-POIN WestChampionMonkL5
-POIN WestChampionShamanL5
+POIN WestChampionMercWeak
+POIN WestChampionFighterWeak
+POIN WestChampionSoldierWeak
+POIN WestChampionArcherWeak
+POIN WestChampionMageWeak
+POIN WestChampionMonkWeak
+POIN WestChampionShamanWeak
 
 Turn12WestFirstEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL1
-POIN WestFightersL1
-POIN WestSoldiersL1
-POIN WestArchersL1
-POIN WestMagesL1
-POIN WestMonksL1
-POIN WestShamansL1
-POIN WestFliersL1
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn12WestSecondEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL1
-POIN WestFightersL1
-POIN WestSoldiersL1
-POIN WestArchersL1
-POIN WestMagesL1
-POIN WestMonksL1
-POIN WestShamansL1
-POIN WestFliersL1
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn14WestFirstBoss:
 WORD 7 // number of possible unit groups
-POIN WestChampionMercL5
-POIN WestChampionFighterL5
-POIN WestChampionSoldierL5
-POIN WestChampionArcherL5
-POIN WestChampionMageL5
-POIN WestChampionMonkL5
-POIN WestChampionShamanL5
+POIN WestChampionMercWeak
+POIN WestChampionFighterWeak
+POIN WestChampionSoldierWeak
+POIN WestChampionArcherWeak
+POIN WestChampionMageWeak
+POIN WestChampionMonkWeak
+POIN WestChampionShamanWeak
 
 Turn14WestFirstEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL1
-POIN WestFightersL1
-POIN WestSoldiersL1
-POIN WestArchersL1
-POIN WestMagesL1
-POIN WestMonksL1
-POIN WestShamansL1
-POIN WestFliersL1
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn14WestSecondEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL1
-POIN WestFightersL1
-POIN WestSoldiersL1
-POIN WestArchersL1
-POIN WestMagesL1
-POIN WestMonksL1
-POIN WestShamansL1
-POIN WestFliersL1
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn14FirstThieves:
 WORD 2 // number of possible unit groups
-POIN SouthMiddleThievesL1
-POIN EastMiddleThievesL1
+POIN SouthMiddleThievesBasic
+POIN EastMiddleThievesBasic
 
 Turn16WestFirstEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn16WestSecondEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn16WestThirdEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn17FirstThieves:
 WORD 2 // number of possible unit groups
-POIN SouthMiddleThievesL1
-POIN EastMiddleThievesL1
+POIN SouthMiddleThievesBasic
+POIN EastMiddleThievesBasic
 
 Turn18WestFirstEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn18WestSecondEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn18WestThirdEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn19WestAssassins:
 WORD 13 // number of possible unit groups
@@ -336,150 +334,102 @@ POIN WestArchersPoison
 
 Turn20WestFirstEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn20WestSecondEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn20WestThirdEnemies:
 WORD 8 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn22WestFirstEnemies:
-WORD 16 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
-POIN WestMercsL10
-POIN WestFightersL10
-POIN WestSoldiersL10
-POIN WestArchersL10
-POIN WestMagesL10
-POIN WestMonksL10
-POIN WestShamansL10
-POIN WestFliersL10
+WORD 8 // number of possible unit groups
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn22WestSecondEnemies:
-WORD 16 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
-POIN WestMercsL10
-POIN WestFightersL10
-POIN WestSoldiersL10
-POIN WestArchersL10
-POIN WestMagesL10
-POIN WestMonksL10
-POIN WestShamansL10
-POIN WestFliersL10
+WORD 8 // number of possible unit groups
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn22WestThirdEnemies:
-WORD 16 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
-POIN WestMercsL10
-POIN WestFightersL10
-POIN WestSoldiersL10
-POIN WestArchersL10
-POIN WestMagesL10
-POIN WestMonksL10
-POIN WestShamansL10
-POIN WestFliersL10
+WORD 8 // number of possible unit groups
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn24WestFirstEnemies:
-WORD 16 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
-POIN WestMercsL10
-POIN WestFightersL10
-POIN WestSoldiersL10
-POIN WestArchersL10
-POIN WestMagesL10
-POIN WestMonksL10
-POIN WestShamansL10
-POIN WestFliersL10
+WORD 8 // number of possible unit groups
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn24WestSecondEnemies:
-WORD 16 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
-POIN WestMercsL10
-POIN WestFightersL10
-POIN WestSoldiersL10
-POIN WestArchersL10
-POIN WestMagesL10
-POIN WestMonksL10
-POIN WestShamansL10
-POIN WestFliersL10
+WORD 8 // number of possible unit groups
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn24WestThirdEnemies:
-WORD 16 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
-POIN WestMercsL10
-POIN WestFightersL10
-POIN WestSoldiersL10
-POIN WestArchersL10
-POIN WestMagesL10
-POIN WestMonksL10
-POIN WestShamansL10
-POIN WestFliersL10
+WORD 8 // number of possible unit groups
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn25WestAssassins:
 WORD 13 // number of possible unit groups
@@ -499,68 +449,52 @@ POIN WestArchersPoison
 
 Turn27WestFirstBoss:
 WORD 7 // number of possible unit groups
-POIN WestChampionMercL15
-POIN WestChampionFighterL15
-POIN WestChampionSoldierL15
-POIN WestChampionArcherL15
-POIN WestChampionMageL15
-POIN WestChampionMonkL15
-POIN WestChampionShamanL15
+POIN WestChampionMercWeak
+POIN WestChampionFighterWeak
+POIN WestChampionSoldierWeak
+POIN WestChampionArcherWeak
+POIN WestChampionMageWeak
+POIN WestChampionMonkWeak
+POIN WestChampionShamanWeak
 
 Turn27WestSecondBoss:
 WORD 7 // number of possible unit groups
-POIN WestChampionMercL15
-POIN WestChampionFighterL15
-POIN WestChampionSoldierL15
-POIN WestChampionArcherL15
-POIN WestChampionMageL15
-POIN WestChampionMonkL15
-POIN WestChampionShamanL15
+POIN WestChampionMercWeak
+POIN WestChampionFighterWeak
+POIN WestChampionSoldierWeak
+POIN WestChampionArcherWeak
+POIN WestChampionMageWeak
+POIN WestChampionMonkWeak
+POIN WestChampionShamanWeak
 
 Turn27WestThirdBoss:
 WORD 7 // number of possible unit groups
-POIN WestChampionMercL15
-POIN WestChampionFighterL15
-POIN WestChampionSoldierL15
-POIN WestChampionArcherL15
-POIN WestChampionMageL15
-POIN WestChampionMonkL15
-POIN WestChampionShamanL15
+POIN WestChampionMercWeak
+POIN WestChampionFighterWeak
+POIN WestChampionSoldierWeak
+POIN WestChampionArcherWeak
+POIN WestChampionMageWeak
+POIN WestChampionMonkWeak
+POIN WestChampionShamanWeak
 
 Turn27WestFirstEnemies:
-WORD 16 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
-POIN WestMercsL10
-POIN WestFightersL10
-POIN WestSoldiersL10
-POIN WestArchersL10
-POIN WestMagesL10
-POIN WestMonksL10
-POIN WestShamansL10
-POIN WestFliersL10
+WORD 8 // number of possible unit groups
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
 
 Turn27WestSecondEnemies:
-WORD 16 // number of possible unit groups
-POIN WestMercsL5
-POIN WestFightersL5
-POIN WestSoldiersL5
-POIN WestArchersL5
-POIN WestMagesL5
-POIN WestMonksL5
-POIN WestShamansL5
-POIN WestFliersL5
-POIN WestMercsL10
-POIN WestFightersL10
-POIN WestSoldiersL10
-POIN WestArchersL10
-POIN WestMagesL10
-POIN WestMonksL10
-POIN WestShamansL10
-POIN WestFliersL10
+WORD 8 // number of possible unit groups
+POIN WestMercsBasic
+POIN WestFightersBasic
+POIN WestSoldiersBasic
+POIN WestArchersBasic
+POIN WestMagesBasic
+POIN WestMonksBasic
+POIN WestShamansBasic
+POIN WestFliersBasic
